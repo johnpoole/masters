@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link href="style.css" rel="stylesheet">
+  <style>
+    body {
+      font: 10px sans-serif;
+    }
+
+    svg text{
+      text-anchor:middle;
+      font-size:18px;
+    }
+    svg .values text{
+      pointer-events:none;
+      stroke-width: 0.5px;
+    }
+    .groups:hover{
+      cursor:pointer;
+      font-weight:bold;
+    }
+  </style>
+
+</head>
+<body>
+  <table></table>
+  <div id="mainDiv">
+    <div id="svgDiv"></div>
+  </div>
+  <div id="toolTip" class="tooltip" style="width:250px; height:120px; position:absolute;">
+    <div id="header1" class="header2"></div>
+    <div class="header-rule"></div>
+    <div id="head" class="header"></div>
+    <div class="header-rule"></div>
+    <div id="header2" class="header3"></div>
+  </div>
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="http://d3js.org/queue.v1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="main.js"></script>
+</body>
+</html>
