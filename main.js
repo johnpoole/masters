@@ -1,29 +1,103 @@
+var NUM_PICKS = 6;
+var ENTRY_FEE = 40;
+var FIRST_PLACE_PCT = 0.85;
+var SECOND_PLACE_PCT = 0.15;
+
 // Assuming d3 and necessary libraries are loaded
-document.addEventListener("DOMContentLoaded", function() {
+if (typeof document !== "undefined") document.addEventListener("DOMContentLoaded", function() {
     Promise.all([
         d3.csv("purse.csv"),
         d3.json("scores.json"),
-        d3.csv("MastersPool2023.csv")
+        d3.csv("MastersPool2026.csv")
     ]).then(function([purseData, scoresData, poolData]) {
         const players = processPlayers(scoresData.results.leaderboard);
+        const playerIndex = buildPlayerIndex(players);
+        validateAllPicks(poolData, playerIndex);
+
         const payouts = calcPayouts(purseData, players);
         const nodes = buildNodes(players, payouts);
-        const links = buildLinks(poolData, players);
+        const links = buildLinks(poolData, playerIndex);
 
-        const nodesWithPicks = enrichPicks(poolData, players, payouts);
+        const nodesWithPicks = enrichPicks(poolData, playerIndex, payouts);
         nodes.push(...nodesWithPicks);
 
         const header = ["name", "money"];
         tabulate(nodes, header);
-    }).catch(error => console.error("Failed to load data: ", error));
+        tabulatePoolPayout(nodesWithPicks);
+        drawForce(nodes, links);
+    }).catch(error => {
+        document.body.insertAdjacentHTML("afterbegin",
+            '<div class="alert alert-danger" role="alert">' +
+            '<strong>Fatal error:</strong> ' + error.message +
+            '</div>');
+        throw error;
+    });
 });
+
+function normalizeName(name) {
+    return name.trim().replace(/\s+/g, " ").toLowerCase();
+}
 
 function processPlayers(players) {
     return players.map(p => ({
         ...p,
-        Player: `${p.first_name} ${p.last_name}`,
+        Player: `${p.first_name} ${p.last_name}`.trim(),
         purse: 0
     }));
+}
+
+function buildPlayerIndex(players) {
+    const index = new Map();
+    players.forEach(p => {
+        const key = normalizeName(p.Player);
+        if (index.has(key)) {
+            throw new Error(
+                "Duplicate player name in leaderboard: '" + p.Player +
+                "' (normalized: '" + key + "')"
+            );
+        }
+        index.set(key, p);
+    });
+    return index;
+}
+
+function findPlayer(playerIndex, pickName, poolEntryName, pickNumber) {
+    const key = normalizeName(pickName);
+    const player = playerIndex.get(key);
+    if (!player) {
+        throw new Error(
+            "Unmatched pick: '" + pickName + "' (pick" + pickNumber +
+            " for " + poolEntryName + ") not found on leaderboard. " +
+            "Check spelling in CSV."
+        );
+    }
+    return player;
+}
+
+function validateAllPicks(poolData, playerIndex) {
+    const errors = [];
+    poolData.forEach(d => {
+        for (let i = 1; i <= NUM_PICKS; i++) {
+            const pickName = d["pick" + i];
+            if (!pickName || !pickName.trim()) {
+                errors.push(d.name + " pick" + i + ": empty pick");
+                continue;
+            }
+            const key = normalizeName(pickName);
+            if (!playerIndex.has(key)) {
+                errors.push(
+                    d.name + " pick" + i + ": '" + pickName.trim() +
+                    "' not found on leaderboard"
+                );
+            }
+        }
+    });
+    if (errors.length > 0) {
+        throw new Error(
+            errors.length + " unmatched pick(s) in CSV:\n" +
+            errors.join("\n")
+        );
+    }
 }
 
 function buildNodes(players, payouts) {
@@ -39,32 +113,30 @@ function buildNodes(players, payouts) {
     });
 }
 
-function buildLinks(poolData, players) {
+function buildLinks(poolData, playerIndex) {
     let links = [];
     poolData.forEach(d => {
-        for (let i = 1; i <= 8; i++) {
-            const searchString = d["pick" + i].trim();
-            const player = players.find(item => item.Player === searchString);
-            if (player) {
-                links.push({
-                    source: d.name,
-                    target: player.Player,
-                    value: 3,
-                    label: player.Player
-                });
-            }
+        for (let i = 1; i <= NUM_PICKS; i++) {
+            const pickName = d["pick" + i];
+            const player = findPlayer(playerIndex, pickName, d.name, i);
+            links.push({
+                source: d.name,
+                target: player.Player,
+                value: 3,
+                label: player.Player
+            });
         }
     });
     return links;
 }
 
-function enrichPicks(poolData, players, payouts) {
+function enrichPicks(poolData, playerIndex, payouts) {
     return poolData.map(d => {
         const picks = [];
-        for (let i = 1; i <= 8; i++) {
-            let searchString = d["pick" + i].trim();
-            let player = players.find(item => item.Player === searchString) || null;
-            if (player) picks.push(player);
+        for (let i = 1; i <= NUM_PICKS; i++) {
+            const pickName = d["pick" + i];
+            const player = findPlayer(playerIndex, pickName, d.name, i);
+            picks.push(player);
         }
         const money = estimateMoney(picks, payouts);
         return {
@@ -146,6 +218,31 @@ function tabulate(data, columns) {
     return table;
 }
 
+function tabulatePoolPayout(entries) {
+    var sorted = entries.slice().sort(function(a, b) { return b.money - a.money; });
+    var pot = entries.length * ENTRY_FEE;
+    var first = sorted[0];
+    var second = sorted[1];
+
+    var div = document.createElement("div");
+    div.className = "card mb-3";
+    div.innerHTML =
+        '<div class="card-body">' +
+        '<h5 class="card-title">Pool Payout</h5>' +
+        '<p>' + entries.length + ' entries &times; $' + ENTRY_FEE + ' = <strong>$' + pot + ' pot</strong></p>' +
+        '<table class="table table-sm" style="width:auto;">' +
+        '<tr><td>1st (' + Math.round(FIRST_PLACE_PCT * 100) + '%)</td>' +
+        '<td><strong>' + first.id + '</strong></td>' +
+        '<td>$' + Math.round(pot * FIRST_PLACE_PCT) + '</td></tr>' +
+        '<tr><td>2nd (' + Math.round(SECOND_PLACE_PCT * 100) + '%)</td>' +
+        '<td><strong>' + second.id + '</strong></td>' +
+        '<td>$' + Math.round(pot * SECOND_PLACE_PCT) + '</td></tr>' +
+        '</table></div>';
+
+    var table = document.querySelector("table");
+    table.parentNode.insertBefore(div, table);
+}
+
 function textDisplay(player) {
     var label = player.Player;
     if (player.position)
@@ -154,5 +251,26 @@ function textDisplay(player) {
         label = "<strike>" + label + "</strike>";
     var html = label;
     return html;
+}
+
+if (typeof module !== "undefined" && module.exports) {
+    module.exports = {
+        NUM_PICKS,
+        ENTRY_FEE,
+        FIRST_PLACE_PCT,
+        SECOND_PLACE_PCT,
+        normalizeName,
+        processPlayers,
+        buildPlayerIndex,
+        findPlayer,
+        validateAllPicks,
+        buildNodes,
+        buildLinks,
+        enrichPicks,
+        estimateMoney,
+        calculatePurse,
+        calcPayouts,
+        textDisplay
+    };
 }
 
