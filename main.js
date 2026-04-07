@@ -8,9 +8,24 @@ if (typeof document !== "undefined") document.addEventListener("DOMContentLoaded
     Promise.all([
         d3.csv("purse.csv"),
         d3.json("scores.json"),
+        d3.json("field2026.json"),
         d3.csv("MastersPool2026.csv")
-    ]).then(function([purseData, scoresData, poolData]) {
-        const players = processPlayers(scoresData.results.leaderboard);
+    ]).then(function([purseData, scoresData, fieldData, poolData]) {
+        var isLive = scoresData && scoresData.results && scoresData.results.leaderboard
+            && scoresData.results.tournament
+            && scoresData.results.tournament.start_date
+            && scoresData.results.tournament.start_date.substring(0, 4) === "2026";
+
+        var leaderboard;
+        if (isLive) {
+            leaderboard = scoresData.results.leaderboard;
+        } else {
+            leaderboard = fieldData.players.map(function(p) {
+                return { first_name: p.first_name, last_name: p.last_name, country: p.country, position: 0, status: "pre-tournament" };
+            });
+        }
+
+        const players = processPlayers(leaderboard);
         const playerIndex = buildPlayerIndex(players);
         validateAllPicks(poolData, playerIndex);
 
@@ -21,10 +36,17 @@ if (typeof document !== "undefined") document.addEventListener("DOMContentLoaded
         const nodesWithPicks = enrichPicks(poolData, playerIndex, payouts);
         nodes.push(...nodesWithPicks);
 
+        if (!isLive) {
+            document.body.insertAdjacentHTML("afterbegin",
+                '<div class="alert alert-info" role="alert">' +
+                'Pre-tournament mode — using 2026 invited field. Scores will appear once the tournament is live.' +
+                '</div>');
+        }
+
         const header = ["name", "money"];
         tabulate(nodes, header);
-        tabulatePoolPayout(nodesWithPicks);
-        drawForce(nodes, links);
+        if (isLive) tabulatePoolPayout(nodesWithPicks);
+        drawForce(nodes, links, payouts);
     }).catch(error => {
         document.body.insertAdjacentHTML("afterbegin",
             '<div class="alert alert-danger" role="alert">' +
@@ -154,7 +176,7 @@ function estimateMoney(picks, payouts) {
 }
 
 function calculatePurse(player, payouts) {
-    if (player.status === "cut" || player.position >= 50 || !payouts[player.position]) {
+    if (player.status === "cut" || player.position > 50 || !payouts[player.position]) {
         return 0;
     }
     return payouts[player.position];
@@ -169,10 +191,10 @@ function calcPayouts(purse, players) {
     }, {});
 
     let shared = 0;
-    for (let i = 1; i < 50; i++) {
+    for (let i = 1; i <= 50; i++) {
         if (ranks[i]) {
             shared = 0;
-            for (let j = 0; j < ranks[i] && i + j < 50; j++) {
+            for (let j = 0; j < ranks[i] && i + j <= 50; j++) {
                 shared += parseInt(purse[i + j - 1].amount, 10);
             }
             payouts[i] = shared / ranks[i];
@@ -219,6 +241,8 @@ function tabulate(data, columns) {
 }
 
 function tabulatePoolPayout(entries) {
+    if (entries.length < 2) return;
+
     var sorted = entries.slice().sort(function(a, b) { return b.money - a.money; });
     var pot = entries.length * ENTRY_FEE;
     var first = sorted[0];

@@ -14,13 +14,14 @@ text {
 }
 div.tooltip {
     position: absolute;
-    text-align: center;
-    width: 120px;
-    height: 120px;
-    padding: 2px;
+    text-align: left;
+    min-width: 160px;
+    max-width: 280px;
+    padding: 8px 10px;
     font: 12px sans-serif;
-    background: lightsteelblue;
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
     border: 0px;
-    border-radius: 8px;
+    border-radius: 6px;
     pointer-events: none;
 }

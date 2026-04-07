@@ -223,6 +223,28 @@ describe("calcPayouts", () => {
         expect(payouts[1]).toBe(500000); // position 1 = (50-0)*10000
     });
 
+    test("includes position 50 in payouts", () => {
+        const players = processPlayers([
+            { position: 50, first_name: "Tiger", last_name: "Woods", status: "active" }
+        ]);
+        const purse = makePurse();
+        const payouts = calcPayouts(purse, players);
+        expect(payouts[50]).toBe(10000); // (50-49)*10000
+    });
+
+    test("tie at position 49 splits positions 49 and 50 only", () => {
+        const players = processPlayers([
+            { position: 49, first_name: "A", last_name: "Player", status: "active" },
+            { position: 49, first_name: "B", last_name: "Player2", status: "active" },
+            { position: 49, first_name: "C", last_name: "Player3", status: "active" }
+        ]);
+        const purse = makePurse();
+        const payouts = calcPayouts(purse, players);
+        // 3-way tie at 49: only positions 49 and 50 have purse values (20000 + 10000)
+        // Split 30000 across 3 = 10000 each
+        expect(payouts[49]).toBe(10000);
+    });
+
     test("splits purse evenly for tied positions", () => {
         const players = processPlayers([
             { position: 2, first_name: "Scottie", last_name: "Scheffler", status: "active" },
@@ -251,10 +273,16 @@ describe("calculatePurse", () => {
         expect(calculatePurse({ position: 10, status: "cut" }, payouts)).toBe(0);
     });
 
-    test("returns 0 for position >= 50", () => {
+    test("returns payout for position 50", () => {
         const payouts = [];
-        payouts[50] = 10000;
-        expect(calculatePurse({ position: 50, status: "active" }, payouts)).toBe(0);
+        payouts[50] = 59000;
+        expect(calculatePurse({ position: 50, status: "active" }, payouts)).toBe(59000);
+    });
+
+    test("returns 0 for position > 50", () => {
+        const payouts = [];
+        payouts[51] = 10000;
+        expect(calculatePurse({ position: 51, status: "active" }, payouts)).toBe(0);
     });
 
     test("returns 0 when no payout exists for position", () => {

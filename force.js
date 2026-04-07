@@ -1,6 +1,6 @@
 var color = d3.scaleOrdinal(d3.schemeTableau10);
 
-function drawForce(nodes, links) {
+function drawForce(nodes, links, payouts) {
     var svg = d3.select("svg#forceGraph"),
         width = +svg.attr("width"),
         height = +svg.attr("height");
@@ -59,10 +59,10 @@ function drawForce(nodes, links) {
                 .style("opacity", 0.8);
             var htmlContent = "<table>";
             n.picks.forEach(function(p) {
-                var purse = p.purse || 0;
-                htmlContent += "<tr><td>" + p.Player + "</td><td>$" + parseInt(purse) + "</td></tr>";
+                var earned = (payouts && typeof calculatePurse === "function") ? calculatePurse(p, payouts) : 0;
+                htmlContent += "<tr><td>" + p.Player + "</td><td>$" + parseInt(earned).toLocaleString() + "</td></tr>";
             });
-            htmlContent += "<tr><td><b>Total</b></td><td><b>$" + parseInt(n.money) + "</b></td></tr>";
+            htmlContent += "<tr><td><b>Total</b></td><td><b>$" + parseInt(n.money).toLocaleString() + "</b></td></tr>";
             htmlContent += "</table>";
             div.html(htmlContent)
                 .style("left", (event.pageX) + "px")
