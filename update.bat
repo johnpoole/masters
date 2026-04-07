@@ -1,20 +1,28 @@
 Set-Location "C:\Users\jdpoo\Documents\GitHub\masters2024"
 
+$espnUrl = "https://site.api.espn.com/apis/site/v2/sports/golf/pga/scoreboard/401811941"
+
 try {
-    Invoke-WebRequest -OutFile scores.json https://www.masters.com/en_US/scores/feeds/2026/scores.json -ErrorAction Stop
+    Invoke-WebRequest -OutFile espn-raw.json $espnUrl -ErrorAction Stop
 } catch {
-    Write-Warning "Failed to download scores.json from masters.com — feed may not be live yet"
-    exit 0
+    Write-Error "Failed to download scores from ESPN: $_"
+    exit 1
+}
+
+node transform-espn.js espn-raw.json > scores.json
+if ($LASTEXITCODE -ne 0) {
+    Write-Error "transform-espn.js failed with exit code $LASTEXITCODE"
+    exit 1
 }
 
 $json = Get-Content scores.json -Raw | ConvertFrom-Json
 if (-not $json.results.leaderboard) {
-    Write-Warning "scores.json missing results.leaderboard — feed may not be live yet"
-    exit 0
+    Write-Error "scores.json missing results.leaderboard after transform"
+    exit 1
 }
 
 $count = $json.results.leaderboard.Count
-Write-Host "Downloaded $count players from leaderboard"
+Write-Host "Downloaded $count players from ESPN"
 
 git diff --quiet scores.json
 if ($LASTEXITCODE -eq 0) {
