@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>2026 Masters Player List</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
   <style>
     body { font: 14px sans-serif; margin: 20px; }
     .cut { color: #999; text-decoration: line-through; }
@@ -13,6 +14,7 @@
 <body>
   <h2>2026 Masters Tournament — Player List</h2>
   <p><a href="index.html">&larr; Back to Pool</a></p>
+  <div id="lastUpdated" class="text-muted" style="font-size:12px; margin:5px 0;"></div>
   <div id="error"></div>
   <table class="table table-striped table-bordered table-sm" id="playerTable">
     <thead class="thead-dark">
@@ -29,12 +31,20 @@
   </table>
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script>
-    // Try live scores first; fall back to static field list
-    d3.json("scores.json").then(function(data) {
-        if (data && data.results && data.results.leaderboard
+    var POLL_INTERVAL = 180000;
+    var lastUpdated = null;
+    var pollTimer = null;
+
+    function isLiveData(data) {
+        return data && data.results && data.results.leaderboard
             && data.results.tournament
             && data.results.tournament.start_date
-            && data.results.tournament.start_date.substring(0, 4) === "2026") {
+            && data.results.tournament.start_date.substring(0, 4) === "2026";
+    }
+
+    // Initial load
+    d3.json("scores.json").then(function(data) {
+        if (isLiveData(data)) {
             renderLive(data);
         } else {
             return loadField();
@@ -68,7 +78,6 @@
         });
 
         var tbody = d3.select("#playerTable tbody");
-        // Hide score columns for pre-tournament view
         d3.selectAll("#playerTable thead th").each(function(d, i) {
             if (i >= 3) d3.select(this).style("display", "none");
         });
@@ -81,18 +90,22 @@
         rows.append("td").text(function(d, i) { return i + 1; });
         rows.append("td").text(function(d) { return d.first_name + " " + d.last_name; });
         rows.append("td").text(function(d) { return d.country; });
-        // Hidden score columns (keep table structure consistent)
         rows.append("td").style("display", "none");
         rows.append("td").style("display", "none");
         rows.append("td").style("display", "none");
     }
 
     function renderLive(data) {
+        // Clear previous rows
+        d3.select("#playerTable tbody").selectAll("tr").remove();
+        // Ensure score columns visible
+        d3.selectAll("#playerTable thead th").each(function(d, i) {
+            d3.select(this).style("display", null);
+        });
+
         var tournament = data.results.tournament;
         document.querySelector("h2").textContent =
             tournament.name + " " + tournament.start_date.substring(0, 4) + " — Leaderboard";
-        document.querySelector("p").insertAdjacentHTML("beforeend",
-            ' <span class="badge badge-success badge-live">Live</span>');
 
         var players = data.results.leaderboard.slice().sort(function(a, b) {
             if (a.status === "cut" && b.status !== "cut") return 1;
@@ -119,8 +132,33 @@
         rows.append("td").text(function(d) { return d.strokes || "--"; });
         rows.append("td").text(function(d) { return d.status; });
 
-        document.querySelector("p").insertAdjacentHTML("beforeend",
-            " &middot; " + players.length + " players");
+        // Update status
+        lastUpdated = tournament.live_details ? tournament.live_details.updated : null;
+        var isCompleted = tournament.live_details && tournament.live_details.status === "completed";
+
+        var el = document.getElementById("lastUpdated");
+        if (isCompleted) {
+            if (pollTimer) { clearInterval(pollTimer); pollTimer = null; }
+            el.innerHTML = "Tournament Complete — Final Results &middot; " + players.length + " players";
+        } else {
+            var date = lastUpdated ? new Date(lastUpdated) : null;
+            var timeStr = date ? date.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) : "";
+            el.innerHTML = '<span class="live-dot"></span>Live &middot; ' + players.length + ' players' +
+                (timeStr ? ' &middot; Updated: ' + timeStr : '') +
+                ' (auto-refreshing every ' + Math.round(POLL_INTERVAL / 60000) + ' min)';
+
+            if (!pollTimer) {
+                pollTimer = setInterval(function() {
+                    d3.json("scores.json?_t=" + Date.now()).then(function(newData) {
+                        if (!isLiveData(newData)) return;
+                        var newTimestamp = newData.results.tournament.live_details
+                            ? newData.results.tournament.live_details.updated : null;
+                        if (newTimestamp && newTimestamp === lastUpdated) return;
+                        renderLive(newData);
+                    }).catch(function() {});
+                }, POLL_INTERVAL);
+            }
+        }
     }
   </script>
 </body>

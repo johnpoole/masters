@@ -2,6 +2,13 @@ var NUM_PICKS = 6;
 var ENTRY_FEE = 40;
 var FIRST_PLACE_PCT = 0.85;
 var SECOND_PLACE_PCT = 0.15;
+var POLL_INTERVAL = 180000; // 3 minutes
+
+var cachedPurseData = null;
+var cachedFieldData = null;
+var cachedPoolData = null;
+var lastUpdated = null;
+var pollTimer = null;
 
 // Assuming d3 and necessary libraries are loaded
 if (typeof document !== "undefined") document.addEventListener("DOMContentLoaded", function() {
@@ -11,43 +18,12 @@ if (typeof document !== "undefined") document.addEventListener("DOMContentLoaded
         d3.json("field2026.json"),
         d3.csv("MastersPool2026.csv")
     ]).then(function([purseData, scoresData, fieldData, poolData]) {
-        var isLive = scoresData && scoresData.results && scoresData.results.leaderboard
-            && scoresData.results.tournament
-            && scoresData.results.tournament.start_date
-            && scoresData.results.tournament.start_date.substring(0, 4) === "2026";
+        cachedPurseData = purseData;
+        cachedFieldData = fieldData;
+        cachedPoolData = poolData;
 
-        var leaderboard;
-        if (isLive) {
-            leaderboard = scoresData.results.leaderboard;
-        } else {
-            leaderboard = fieldData.players.map(function(p) {
-                return { first_name: p.first_name, last_name: p.last_name, country: p.country, position: 0, status: "pre-tournament" };
-            });
-        }
-
-        const players = processPlayers(leaderboard);
-        const playerIndex = buildPlayerIndex(players);
-        validateAllPicks(poolData, playerIndex);
-
-        const payouts = calcPayouts(purseData, players);
-        const nodes = buildNodes(players, payouts);
-        const links = buildLinks(poolData, playerIndex);
-
-        const nodesWithPicks = enrichPicks(poolData, playerIndex, payouts);
-        nodes.push(...nodesWithPicks);
-
-        if (!isLive) {
-            document.body.insertAdjacentHTML("afterbegin",
-                '<div class="alert alert-info" role="alert">' +
-                'Pre-tournament mode — using 2026 invited field. Scores will appear once the tournament is live.' +
-                '</div>');
-        }
-
-        const header = ["name", "money"];
-        tabulate(nodes, header);
-        if (isLive) tabulatePoolPayout(nodesWithPicks);
-        drawForce(nodes, links, payouts);
-    }).catch(error => {
+        renderAll(purseData, scoresData, fieldData, poolData);
+    }).catch(function(error) {
         document.body.insertAdjacentHTML("afterbegin",
             '<div class="alert alert-danger" role="alert">' +
             '<strong>Fatal error:</strong> ' + error.message +
@@ -55,6 +31,111 @@ if (typeof document !== "undefined") document.addEventListener("DOMContentLoaded
         throw error;
     });
 });
+
+function isLiveData(scoresData) {
+    return scoresData && scoresData.results && scoresData.results.leaderboard
+        && scoresData.results.tournament
+        && scoresData.results.tournament.start_date
+        && scoresData.results.tournament.start_date.substring(0, 4) === "2026";
+}
+
+function renderAll(purseData, scoresData, fieldData, poolData) {
+    var isLive = isLiveData(scoresData);
+
+    var leaderboard;
+    if (isLive) {
+        leaderboard = scoresData.results.leaderboard;
+        lastUpdated = scoresData.results.tournament.live_details
+            ? scoresData.results.tournament.live_details.updated : null;
+    } else {
+        leaderboard = fieldData.players.map(function(p) {
+            return { first_name: p.first_name, last_name: p.last_name, country: p.country, position: 0, status: "pre-tournament" };
+        });
+    }
+
+    var players = processPlayers(leaderboard);
+    var playerIndex = buildPlayerIndex(players);
+    validateAllPicks(poolData, playerIndex);
+
+    var payouts = calcPayouts(purseData, players);
+    var nodes = buildNodes(players, payouts);
+    var links = buildLinks(poolData, playerIndex);
+
+    var nodesWithPicks = enrichPicks(poolData, playerIndex, payouts);
+    nodes.push.apply(nodes, nodesWithPicks);
+
+    // Clear any previous alert banners
+    document.querySelectorAll(".alert").forEach(function(el) { el.remove(); });
+
+    if (!isLive) {
+        document.body.insertAdjacentHTML("afterbegin",
+            '<div class="alert alert-info" role="alert">' +
+            'Pre-tournament mode — using 2026 invited field. Scores will appear once the tournament is live.' +
+            '</div>');
+    }
+
+    var header = ["name", "money"];
+    tabulate(nodes, header);
+    if (isLive) tabulatePoolPayout(nodesWithPicks);
+    drawForce(nodes, links, payouts);
+
+    if (isLive) {
+        updateLastUpdatedDisplay(lastUpdated);
+        var isCompleted = scoresData.results.tournament.live_details
+            && scoresData.results.tournament.live_details.status === "completed";
+        if (isCompleted) {
+            stopPolling();
+            updateLastUpdatedDisplay(lastUpdated, true);
+        } else if (!pollTimer) {
+            startPolling();
+        }
+    }
+}
+
+function clearRenderedContent() {
+    d3.select("table thead").selectAll("*").remove();
+    d3.select("table tbody").selectAll("*").remove();
+    d3.select("svg#forceGraph").selectAll("*").remove();
+    var card = document.querySelector(".card");
+    if (card) card.remove();
+}
+
+function startPolling() {
+    pollTimer = setInterval(function() {
+        d3.json("scores.json?_t=" + Date.now()).then(function(newData) {
+            if (!isLiveData(newData)) return;
+
+            var newTimestamp = newData.results.tournament.live_details
+                ? newData.results.tournament.live_details.updated : null;
+            if (newTimestamp && newTimestamp === lastUpdated) return;
+
+            clearRenderedContent();
+            renderAll(cachedPurseData, newData, cachedFieldData, cachedPoolData);
+        }).catch(function() {
+            // Silently ignore fetch errors during polling
+        });
+    }, POLL_INTERVAL);
+}
+
+function stopPolling() {
+    if (pollTimer) {
+        clearInterval(pollTimer);
+        pollTimer = null;
+    }
+}
+
+function updateLastUpdatedDisplay(timestamp, completed) {
+    var el = document.getElementById("lastUpdated");
+    if (!el) return;
+    if (completed) {
+        el.innerHTML = "Tournament Complete — Final Results";
+    } else if (timestamp) {
+        var date = new Date(timestamp);
+        var timeStr = date.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+        el.innerHTML = '<span class="live-dot"></span>Last updated: ' + timeStr +
+            ' (auto-refreshing every ' + Math.round(POLL_INTERVAL / 60000) + ' min)';
+    }
+}
 
 function normalizeName(name) {
     return name.trim().replace(/\s+/g, " ").toLowerCase();
