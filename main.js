@@ -3,6 +3,7 @@ var ENTRY_FEE = 40;
 var FIRST_PLACE_PCT = 0.85;
 var SECOND_PLACE_PCT = 0.15;
 var POLL_INTERVAL = 180000; // 3 minutes
+var PICKS_REVEAL = new Date("2026-04-09T00:00:00Z"); // Wed Apr 8 6pm MST = midnight UTC Apr 9
 
 var cachedPurseData = null;
 var cachedFieldData = null;
@@ -67,7 +68,14 @@ function renderAll(purseData, scoresData, fieldData, poolData) {
     // Clear any previous alert banners
     document.querySelectorAll(".alert").forEach(function(el) { el.remove(); });
 
-    if (!isLive) {
+    var picksLocked = new Date() < PICKS_REVEAL;
+
+    if (picksLocked) {
+        document.body.insertAdjacentHTML("afterbegin",
+            '<div class="alert alert-warning" role="alert">' +
+            'Picks are locked and hidden until Wednesday at 6 PM MST.' +
+            '</div>');
+    } else if (!isLive) {
         document.body.insertAdjacentHTML("afterbegin",
             '<div class="alert alert-info" role="alert">' +
             'Pre-tournament mode — using 2026 invited field. Scores will appear once the tournament is live.' +
@@ -77,7 +85,7 @@ function renderAll(purseData, scoresData, fieldData, poolData) {
     var header = ["name", "money"];
     tabulate(nodes, header);
     if (isLive) tabulatePoolPayout(nodesWithPicks);
-    drawForce(nodes, links, payouts);
+    drawForce(nodes, picksLocked ? [] : links, payouts);
 
     if (isLive) {
         updateLastUpdatedDisplay(lastUpdated);
@@ -306,9 +314,12 @@ function tabulate(data, columns) {
         .enter()
         .append('tr');
 
+    var picksLocked = new Date() < PICKS_REVEAL;
+
     // create a cell in each row for each column
     rows.selectAll('td')
         .data(d => {
+            if (picksLocked) return [d.id, "—"];
             const ret = [d.id, parseInt(d.money, 10)];
             d.picks.sort((a, b) => a.position - b.position)
                 .forEach(p => ret.push(textDisplay(p)));
@@ -323,6 +334,7 @@ function tabulate(data, columns) {
 
 function tabulatePoolPayout(entries) {
     if (entries.length < 2) return;
+    if (new Date() < PICKS_REVEAL) return;
 
     var sorted = entries.slice().sort(function(a, b) { return b.money - a.money; });
     var pot = entries.length * ENTRY_FEE;
