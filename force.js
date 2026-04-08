@@ -168,27 +168,6 @@ function simulateExpectedPayouts(entries, pot, purseData, allPlayers, remainingR
         secondCounts[e.id] = 0;
     });
 
-    // Pre-tournament: if no rounds completed, all entries equal
-    if (remainingRounds >= 4) {
-        var equal = 1 / entries.length;
-        return entries.map(function(e) {
-            var p2 = 0;
-            entries.forEach(function(other) {
-                if (other.id === e.id) return;
-                var rem = 1 - equal;
-                if (rem > 0) p2 += equal * (equal / rem);
-            });
-            return {
-                id: e.id,
-                picks: e.picks,
-                money: e.money,
-                p1: equal,
-                p2: p2,
-                expectedPayout: equal * 0.85 * pot + p2 * 0.15 * pot
-            };
-        });
-    }
-
     for (var sim = 0; sim < MC_ITERATIONS; sim++) {
         // Simulate remaining rounds for ALL active golfers in the field
         var simTotals = {};
