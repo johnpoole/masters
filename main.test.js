@@ -354,16 +354,26 @@ describe("enrichPicks", () => {
 
 describe("textDisplay", () => {
     test("shows position in parentheses for active player", () => {
-        expect(textDisplay({ Player: "Jon Rahm", position: 1 })).toBe("Jon Rahm(1)");
+        expect(textDisplay({ Player: "Jon Rahm", position: 1, status: "active" })).toBe("Jon Rahm (1)");
     });
 
-    test("strikes through player with no position", () => {
-        expect(textDisplay({ Player: "Jon Rahm", position: 0 }))
+    test("strikes through player with cut status", () => {
+        expect(textDisplay({ Player: "Jon Rahm", position: 54, status: "cut" }))
             .toBe("<strike>Jon Rahm</strike>");
     });
 
-    test("strikes through player with undefined position", () => {
-        expect(textDisplay({ Player: "Jon Rahm" }))
+    test("strikes through player with wd status", () => {
+        expect(textDisplay({ Player: "Jon Rahm", position: 0, status: "wd" }))
             .toBe("<strike>Jon Rahm</strike>");
+    });
+
+    test("strikes through player with dq status", () => {
+        expect(textDisplay({ Player: "Jon Rahm", position: 0, status: "dq" }))
+            .toBe("<strike>Jon Rahm</strike>");
+    });
+
+    test("shows name only for pre-tournament player (position 0, no cut)", () => {
+        expect(textDisplay({ Player: "Jon Rahm", position: 0, status: "pre-tournament" }))
+            .toBe("Jon Rahm");
     });
 });

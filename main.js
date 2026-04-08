@@ -130,8 +130,9 @@ function startPolling() {
 
             clearRenderedContent();
             renderAll(cachedPurseData, newData, cachedFieldData, cachedPoolData);
-        }).catch(function() {
-            // Silently ignore fetch errors during polling
+        }).catch(function(err) {
+            var el = document.getElementById("lastUpdated");
+            if (el) el.innerHTML = "Score update failed — will retry in " + Math.round(POLL_INTERVAL / 60000) + " min";
         });
     }, POLL_INTERVAL);
 }
@@ -357,12 +358,12 @@ function tabulatePoolPayout(entries) {
 
 function textDisplay(player) {
     var label = player.Player;
-    if (player.position)
-        label += "(" + player.position + ")";
-    else
+    if (player.status === "cut" || player.status === "wd" || player.status === "dq") {
         label = "<strike>" + label + "</strike>";
-    var html = label;
-    return html;
+    } else if (player.position) {
+        label += " (" + player.position + ")";
+    }
+    return label;
 }
 
 if (typeof module !== "undefined" && module.exports) {
