@@ -96,9 +96,7 @@ function renderAll(purseData, scoresData, fieldData, poolData) {
             }
         });
     }
-    if (!picksLocked) {
-        drawTreemap(nodesWithPicks, pot, purseData, players, totalRounds, roundsCompleted);
-    }
+    drawTreemap(nodesWithPicks, pot, purseData, players, totalRounds, roundsCompleted, picksLocked);
 
     if (isLive) {
         updateLastUpdatedDisplay(lastUpdated);

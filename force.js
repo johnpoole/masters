@@ -4,7 +4,7 @@ var MC_ITERATIONS = 10000;
 var AUGUSTA_MEAN = 72;
 var AUGUSTA_STDDEV = 3;
 
-function drawTreemap(entries, pot, purseData, allPlayers, totalRounds, roundsCompleted) {
+function drawTreemap(entries, pot, purseData, allPlayers, totalRounds, roundsCompleted, picksLocked) {
     var svg = d3.select("svg#forceGraph");
     var width = +svg.attr("width");
     var height = +svg.attr("height");
@@ -44,17 +44,19 @@ function drawTreemap(entries, pot, purseData, allPlayers, totalRounds, roundsCom
             d3.select(this).attr("stroke", "#333").attr("stroke-width", 2);
             var e = d.data.data;
             var html = "<strong>" + e.id + "</strong><br>" +
-                "$" + Math.round(e.money).toLocaleString() + " current earnings<br>" +
                 "EV: $" + Math.round(e.expectedPayout).toLocaleString() + "<br>" +
                 "P(1st): " + (e.p1 * 100).toFixed(1) + "%" +
                 " &nbsp; P(2nd): " + (e.p2 * 100).toFixed(1) + "%";
-            if (e.picks) {
-                html += "<br><br>";
-                e.picks.forEach(function(p) {
-                    html += p.Player;
-                    if (p.position) html += " (" + p.position + ")";
-                    html += "<br>";
-                });
+            if (!picksLocked) {
+                html += "<br>$" + Math.round(e.money).toLocaleString() + " current earnings";
+                if (e.picks) {
+                    html += "<br><br>";
+                    e.picks.forEach(function(p) {
+                        html += p.Player;
+                        if (p.position) html += " (" + p.position + ")";
+                        html += "<br>";
+                    });
+                }
             }
             div.html(html)
                 .transition().duration(100).style("opacity", 0.9);
