@@ -9,7 +9,6 @@ const {
     findPlayer,
     validateAllPicks,
     buildNodes,
-    buildLinks,
     enrichPicks,
     estimateMoney,
     calculatePurse,
@@ -326,26 +325,6 @@ describe("buildNodes", () => {
     });
 });
 
-// --- buildLinks ---
-
-describe("buildLinks", () => {
-    test("creates links from pool picks to players", () => {
-        const players = processPlayers(makeLeaderboard());
-        const index = buildPlayerIndex(players);
-        const pool = makePoolData();
-        const links = buildLinks(pool, index);
-        expect(links).toHaveLength(NUM_PICKS);
-        expect(links[0].source).toBe("Alice");
-        expect(links[0].target).toBe("Jon Rahm");
-    });
-
-    test("throws when a pick doesn't match", () => {
-        const players = processPlayers(makeLeaderboard());
-        const index = buildPlayerIndex(players);
-        const pool = makePoolEntry({ pick1: "Nobody Real" });
-        expect(() => buildLinks(pool, index)).toThrow("Unmatched pick");
-    });
-});
 
 // --- enrichPicks ---
 

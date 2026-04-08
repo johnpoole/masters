@@ -57,12 +57,24 @@ var leaderboard = competition.competitors.map(function(c) {
     var country = "";
     if (athlete.flag && athlete.flag.alt) country = athlete.flag.alt;
 
+    // Total strokes from completed rounds
+    var strokes = 0;
+    var roundsCompleted = 0;
+    (c.linescores || []).forEach(function(ls) {
+        if (ls.value) {
+            strokes += ls.value;
+            roundsCompleted++;
+        }
+    });
+
     return {
         first_name: firstName,
         last_name: lastName,
         country: country,
         position: position,
-        status: playerStatus
+        status: playerStatus,
+        strokes: strokes,
+        rounds_completed: roundsCompleted
     };
 });
 
@@ -86,6 +98,7 @@ var output = {
             live_details: {
                 status: isCompleted ? "completed" : "inprogress",
                 current_round: currentRound,
+                total_rounds: 4,
                 updated: updated,
                 players: leaderboard.length
             }

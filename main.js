@@ -60,7 +60,6 @@ function renderAll(purseData, scoresData, fieldData, poolData) {
 
     var payouts = calcPayouts(purseData, players);
     var nodes = buildNodes(players, payouts);
-    var links = buildLinks(poolData, playerIndex);
 
     var nodesWithPicks = enrichPicks(poolData, playerIndex, payouts);
     nodes.push.apply(nodes, nodesWithPicks);
@@ -85,7 +84,21 @@ function renderAll(purseData, scoresData, fieldData, poolData) {
     var header = ["name", "money"];
     tabulate(nodes, header);
     if (isLive) tabulatePoolPayout(nodesWithPicks);
-    drawForce(nodes, picksLocked ? [] : links, payouts);
+    var pot = poolData.length * ENTRY_FEE;
+    var totalRounds = 4;
+    var roundsCompleted = 0;
+    if (isLive && scoresData.results.tournament.live_details) {
+        totalRounds = scoresData.results.tournament.live_details.total_rounds || 4;
+        // Use max rounds_completed across active golfers as the tournament progress
+        players.forEach(function(p) {
+            if (p.status === "active" && p.rounds_completed > roundsCompleted) {
+                roundsCompleted = p.rounds_completed;
+            }
+        });
+    }
+    if (!picksLocked) {
+        drawTreemap(nodesWithPicks, pot, purseData, players, totalRounds, roundsCompleted);
+    }
 
     if (isLive) {
         updateLastUpdatedDisplay(lastUpdated);
@@ -224,22 +237,6 @@ function buildNodes(players, payouts) {
     });
 }
 
-function buildLinks(poolData, playerIndex) {
-    let links = [];
-    poolData.forEach(d => {
-        for (let i = 1; i <= NUM_PICKS; i++) {
-            const pickName = d["pick" + i];
-            const player = findPlayer(playerIndex, pickName, d.name, i);
-            links.push({
-                source: d.name,
-                target: player.Player,
-                value: 3,
-                label: player.Player
-            });
-        }
-    });
-    return links;
-}
 
 function enrichPicks(poolData, playerIndex, payouts) {
     return poolData.map(d => {
@@ -382,7 +379,6 @@ if (typeof module !== "undefined" && module.exports) {
         findPlayer,
         validateAllPicks,
         buildNodes,
-        buildLinks,
         enrichPicks,
         estimateMoney,
         calculatePurse,
