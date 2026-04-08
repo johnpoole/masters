@@ -72,26 +72,28 @@ function drawTreemap(entries, pot, purseData, allPlayers, totalRounds, roundsCom
             div.transition().duration(200).style("opacity", 0);
         });
 
-    // Entry name label
+    // Entry name label — centered
     cell.append("text")
-        .attr("x", 6)
-        .attr("y", 18)
+        .attr("x", function(d) { return (d.x1 - d.x0) / 2; })
+        .attr("y", function(d) { return (d.y1 - d.y0) / 2 - 10; })
+        .attr("text-anchor", "middle")
         .style("font-size", "14px")
         .style("font-weight", "bold")
         .style("fill", "#fff")
         .style("pointer-events", "none")
         .text(function(d) { return d.data.name; })
         .each(function(d) {
-            var boxWidth = d.x1 - d.x0 - 12;
+            var boxWidth = d.x1 - d.x0 - 8;
             if (this.getComputedTextLength() > boxWidth) {
                 d3.select(this).text(d.data.name.split(" ")[0]);
             }
         });
 
-    // Expected payout label
+    // Expected payout label — centered
     cell.append("text")
-        .attr("x", 6)
-        .attr("y", 34)
+        .attr("x", function(d) { return (d.x1 - d.x0) / 2; })
+        .attr("y", function(d) { return (d.y1 - d.y0) / 2 + 6; })
+        .attr("text-anchor", "middle")
         .style("font-size", "11px")
         .style("fill", "rgba(255,255,255,0.8)")
         .style("pointer-events", "none")
@@ -102,10 +104,11 @@ function drawTreemap(entries, pot, purseData, allPlayers, totalRounds, roundsCom
             return "$" + Math.round(d.data.data.expectedPayout).toLocaleString();
         });
 
-    // Win probability label
+    // Win probability label — centered
     cell.append("text")
-        .attr("x", 6)
-        .attr("y", 48)
+        .attr("x", function(d) { return (d.x1 - d.x0) / 2; })
+        .attr("y", function(d) { return (d.y1 - d.y0) / 2 + 22; })
+        .attr("text-anchor", "middle")
         .style("font-size", "11px")
         .style("fill", "rgba(255,255,255,0.7)")
         .style("pointer-events", "none")
