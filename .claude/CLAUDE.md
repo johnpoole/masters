@@ -31,7 +31,7 @@
 
 ## Gotchas
 
-- Player matching is fragile — relies on exact `"${first_name} ${last_name}"` string equality between CSV picks and JSON leaderboard
+- Player matching is fragile — relies on exact `"first_name last_name"` string equality between CSV picks and JSON leaderboard
 - Payout calculation splits prize money evenly among tied players and caps at position 50; positions beyond 50 or "cut" status get $0
 - Pool picks are read from CSV columns `pick1` through `pick8` — column names are hardcoded
 - `update.bat` still references the 2018 PGA Tour URL by default; the 2024 Masters.com URL is only in a comment
