@@ -1,9 +1,9 @@
 name: Update Scores
 
 on:
-  schedule:
-    # Every 5 minutes, Thu-Sun of Masters week (Apr 9-12, 2026)
-    - cron: '*/5 * * * *'
+  # schedule:
+  #   # Every 5 minutes, Thu-Sun of Masters week (Apr 9-12, 2026)
+  #   - cron: '*/5 * * * *'
   workflow_dispatch:
 
 jobs:
