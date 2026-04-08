@@ -1,8 +1,20 @@
-var color = d3.scaleOrdinal(d3.schemeTableau10);
-
 var MC_ITERATIONS = 10000;
 var AUGUSTA_MEAN = 72;
 var AUGUSTA_STDDEV = 3;
+
+function nameHash(str) {
+    var hash = 5381;
+    for (var i = 0; i < str.length; i++) {
+        hash = ((hash << 5) + hash) + str.charCodeAt(i);
+        hash = hash & hash; // convert to 32-bit int
+    }
+    return Math.abs(hash);
+}
+
+function nameColor(name) {
+    var h = nameHash(name) % 360;
+    return "hsl(" + h + ", 55%, 45%)";
+}
 
 function drawTreemap(entries, pot, purseData, allPlayers, totalRounds, roundsCompleted, picksLocked) {
     var svg = d3.select("svg#forceGraph");
@@ -36,7 +48,7 @@ function drawTreemap(entries, pot, purseData, allPlayers, totalRounds, roundsCom
     cell.append("rect")
         .attr("width", function(d) { return d.x1 - d.x0; })
         .attr("height", function(d) { return d.y1 - d.y0; })
-        .attr("fill", function(d, i) { return color(i % 10); })
+        .attr("fill", function(d) { return nameColor(d.data.name); })
         .attr("stroke", "#fff")
         .attr("rx", 3)
         .style("cursor", "pointer")
