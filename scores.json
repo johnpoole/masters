@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 1,
         "total_rounds": 4,
-        "updated": "2026-04-09T13:51:50.000Z",
+        "updated": "2026-04-09T13:53:06.000Z",
         "players": 91
       }
     },
@@ -40,7 +40,7 @@
         "position": 0,
         "total_to_par": 0,
         "status": "active",
-        "strokes": 20,
+        "strokes": 23,
         "rounds_completed": 1
       },
       {
@@ -154,16 +154,6 @@
         "rounds_completed": 1
       },
       {
-        "first_name": "Ángel",
-        "last_name": "Cabrera",
-        "country": "Argentina",
-        "position": 0,
-        "total_to_par": 1,
-        "status": "active",
-        "strokes": 21,
-        "rounds_completed": 1
-      },
-      {
         "first_name": "Charl",
         "last_name": "Schwartzel",
         "country": "South Africa",
@@ -194,6 +184,16 @@
         "rounds_completed": 1
       },
       {
+        "first_name": "Bubba",
+        "last_name": "Watson",
+        "country": "United States",
+        "position": 0,
+        "total_to_par": 1,
+        "status": "active",
+        "strokes": 14,
+        "rounds_completed": 1
+      },
+      {
         "first_name": "Brandon",
         "last_name": "Holtz",
         "country": "United States",
@@ -211,16 +211,6 @@
         "total_to_par": 1,
         "status": "active",
         "strokes": 14,
-        "rounds_completed": 1
-      },
-      {
-        "first_name": "Bubba",
-        "last_name": "Watson",
-        "country": "United States",
-        "position": 0,
-        "total_to_par": 1,
-        "status": "active",
-        "strokes": 10,
         "rounds_completed": 1
       },
       {
@@ -260,7 +250,17 @@
         "position": 0,
         "total_to_par": 2,
         "status": "active",
-        "strokes": 34,
+        "strokes": 38,
+        "rounds_completed": 1
+      },
+      {
+        "first_name": "Ángel",
+        "last_name": "Cabrera",
+        "country": "Argentina",
+        "position": 0,
+        "total_to_par": 2,
+        "status": "active",
+        "strokes": 25,
         "rounds_completed": 1
       },
       {
