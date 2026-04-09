@@ -50,7 +50,7 @@ function renderAll(purseData, scoresData, fieldData, poolData) {
             ? scoresData.results.tournament.live_details.updated : null;
     } else {
         leaderboard = fieldData.players.map(function(p) {
-            return { first_name: p.first_name, last_name: p.last_name, country: p.country, position: 0, status: "pre-tournament" };
+            return { first_name: p.first_name, last_name: p.last_name, country: p.country, position: 0, status: "pre-tournament", pga_id: p.pga_id || null };
         });
     }
 
@@ -230,7 +230,8 @@ function buildNodes(players, payouts) {
             group: 3,
             label: p.Player,
             money: purse,
-            golfer: true
+            golfer: true,
+            pga_id: p.pga_id || null
         };
     });
 }
@@ -358,13 +359,16 @@ function tabulatePoolPayout(entries) {
 }
 
 function textDisplay(player) {
-    var label = player.Player;
-    if (player.status === "cut" || player.status === "wd" || player.status === "dq") {
-        label = "<strike>" + label + "</strike>";
-    } else if (player.position) {
-        label += " (" + player.position + ")";
+    var name = player.Player;
+    if (player.pga_id) {
+        name = '<a href="https://www.masters.com/en_US/players/player_' + player.pga_id + '.html" target="_blank">' + name + '</a>';
     }
-    return label;
+    if (player.status === "cut" || player.status === "wd" || player.status === "dq") {
+        name = "<strike>" + name + "</strike>";
+    } else if (player.position) {
+        name += " (" + player.position + ")";
+    }
+    return name;
 }
 
 if (typeof module !== "undefined" && module.exports) {

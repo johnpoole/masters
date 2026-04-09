@@ -4,6 +4,7 @@
 var fs = require("fs");
 
 var raw = JSON.parse(fs.readFileSync(process.argv[2], "utf8"));
+var field = JSON.parse(fs.readFileSync(__dirname + "/field2026.json", "utf8"));
 
 // ESPN sometimes spells names differently than the Masters field list.
 // Map ESPN name → canonical name used in field2026.json / CSV picks.
@@ -11,6 +12,18 @@ var NAME_OVERRIDES = {
     "Si Woo Kim": "Si-woo Kim",
     "Sungjae Im": "Sung-jae Im"
 };
+
+// Strip accents for fuzzy name matching
+function stripAccents(str) {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+// Build name → pga_id lookup from field2026.json (accent-insensitive)
+var pgaIdLookup = {};
+field.players.forEach(function(p) {
+    var key = stripAccents((p.first_name + " " + p.last_name).trim().replace(/\s+/g, " ").toLowerCase());
+    if (p.pga_id) pgaIdLookup[key] = p.pga_id;
+});
 
 var competition = raw.competitions[0];
 var tournamentStatus = competition.status || {};
@@ -73,6 +86,9 @@ var leaderboard = competition.competitors.map(function(c) {
         totalToPar = parseInt(c.score, 10) || 0;
     }
 
+    var canonicalName = stripAccents((firstName + " " + lastName).trim().replace(/\s+/g, " ").toLowerCase());
+    var pgaId = pgaIdLookup[canonicalName] || null;
+
     return {
         first_name: firstName,
         last_name: lastName,
@@ -81,7 +97,8 @@ var leaderboard = competition.competitors.map(function(c) {
         total_to_par: totalToPar,
         status: playerStatus,
         strokes: strokes,
-        rounds_completed: roundsCompleted
+        rounds_completed: roundsCompleted,
+        pga_id: pgaId
     };
 });
 
