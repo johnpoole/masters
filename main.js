@@ -83,7 +83,9 @@ function renderAll(purseData, scoresData, fieldData, poolData) {
 
     var header = ["name", "money"];
     tabulate(nodes, header);
-    if (isLive) tabulatePoolPayout(nodesWithPicks);
+    var isCompleted = isLive && scoresData.results.tournament.live_details
+        && scoresData.results.tournament.live_details.status === "completed";
+    if (isCompleted) tabulatePoolPayout(nodesWithPicks);
     var pot = poolData.length * ENTRY_FEE;
     var totalRounds = 4;
     var roundsCompleted = 0;
@@ -100,8 +102,6 @@ function renderAll(purseData, scoresData, fieldData, poolData) {
 
     if (isLive) {
         updateLastUpdatedDisplay(lastUpdated);
-        var isCompleted = scoresData.results.tournament.live_details
-            && scoresData.results.tournament.live_details.status === "completed";
         if (isCompleted) {
             stopPolling();
             updateLastUpdatedDisplay(lastUpdated, true);
