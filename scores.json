@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 1,
         "total_rounds": 4,
-        "updated": "2026-04-09T19:35:02.000Z",
+        "updated": "2026-04-09T19:40:02.000Z",
         "players": 91
       }
     },
@@ -100,7 +100,7 @@
         "position": 9,
         "total_to_par": -3,
         "status": "active",
-        "strokes": 20,
+        "strokes": 24,
         "rounds_completed": 1
       },
       {
@@ -140,7 +140,7 @@
         "position": 13,
         "total_to_par": -2,
         "status": "active",
-        "strokes": 21,
+        "strokes": 25,
         "rounds_completed": 1
       },
       {
@@ -200,7 +200,7 @@
         "position": 19,
         "total_to_par": -1,
         "status": "active",
-        "strokes": 39,
+        "strokes": 43,
         "rounds_completed": 1
       },
       {
@@ -360,7 +360,7 @@
         "position": 35,
         "total_to_par": 0,
         "status": "active",
-        "strokes": 36,
+        "strokes": 40,
         "rounds_completed": 1
       },
       {
@@ -370,7 +370,7 @@
         "position": 36,
         "total_to_par": 0,
         "status": "active",
-        "strokes": 36,
+        "strokes": 40,
         "rounds_completed": 1
       },
       {
@@ -470,7 +470,7 @@
         "position": 46,
         "total_to_par": 1,
         "status": "active",
-        "strokes": 37,
+        "strokes": 41,
         "rounds_completed": 1
       },
       {
@@ -490,7 +490,7 @@
         "position": 48,
         "total_to_par": 1,
         "status": "active",
-        "strokes": 24,
+        "strokes": 28,
         "rounds_completed": 1
       },
       {
@@ -554,13 +554,13 @@
         "rounds_completed": 1
       },
       {
-        "first_name": "Michael",
-        "last_name": "Kim",
+        "first_name": "Andrew",
+        "last_name": "Novak",
         "country": "United States",
         "position": 55,
         "total_to_par": 2,
         "status": "active",
-        "strokes": 54,
+        "strokes": 63,
         "rounds_completed": 1
       },
       {
@@ -604,8 +604,8 @@
         "rounds_completed": 1
       },
       {
-        "first_name": "Andrew",
-        "last_name": "Novak",
+        "first_name": "Michael",
+        "last_name": "Kim",
         "country": "United States",
         "position": 60,
         "total_to_par": 3,
@@ -710,7 +710,7 @@
         "position": 70,
         "total_to_par": 4,
         "status": "active",
-        "strokes": 44,
+        "strokes": 48,
         "rounds_completed": 1
       },
       {
