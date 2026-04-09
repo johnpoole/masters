@@ -5,10 +5,10 @@
       "name": "Masters Tournament",
       "start_date": "2026-04-09T04:00Z",
       "live_details": {
-        "status": "inprogress",
+        "status": "completed",
         "current_round": 1,
         "total_rounds": 4,
-        "updated": "2026-04-09T23:35:03.000Z",
+        "updated": "2026-04-09T23:40:02.000Z",
         "players": 91
       }
     },
@@ -590,7 +590,7 @@
         "last_name": "Kim",
         "country": "United States",
         "position": 53,
-        "total_to_par": 3,
+        "total_to_par": 1,
         "status": "active",
         "strokes": 75,
         "rounds_completed": 1,
