@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 1,
         "total_rounds": 4,
-        "updated": "2026-04-09T22:55:02.000Z",
+        "updated": "2026-04-09T23:00:02.000Z",
         "players": 91
       }
     },
@@ -372,7 +372,7 @@
         "position": 33,
         "total_to_par": 0,
         "status": "active",
-        "strokes": 68,
+        "strokes": 72,
         "rounds_completed": 1,
         "pga_id": "33448"
       },
@@ -905,21 +905,10 @@
         "pga_id": "27644"
       },
       {
-        "first_name": "Robert",
-        "last_name": "MacIntyre",
-        "country": "Scotland",
-        "position": 82,
-        "total_to_par": 7,
-        "status": "active",
-        "strokes": 71,
-        "rounds_completed": 1,
-        "pga_id": "52215"
-      },
-      {
         "first_name": "Carlos",
         "last_name": "Ortiz",
         "country": "Mexico",
-        "position": 83,
+        "position": 82,
         "total_to_par": 8,
         "status": "active",
         "strokes": 80,
@@ -930,7 +919,7 @@
         "first_name": "Sami",
         "last_name": "Välimäki",
         "country": "Finland",
-        "position": 84,
+        "position": 83,
         "total_to_par": 8,
         "status": "active",
         "strokes": 80,
@@ -941,12 +930,23 @@
         "first_name": "Fifa",
         "last_name": "Laopakdee",
         "country": "Thailand",
-        "position": 85,
+        "position": 84,
         "total_to_par": 8,
         "status": "active",
         "strokes": 80,
         "rounds_completed": 1,
         "pga_id": "70146"
+      },
+      {
+        "first_name": "Robert",
+        "last_name": "MacIntyre",
+        "country": "Scotland",
+        "position": 85,
+        "total_to_par": 8,
+        "status": "active",
+        "strokes": 76,
+        "rounds_completed": 1,
+        "pga_id": "52215"
       },
       {
         "first_name": "Brandon",
