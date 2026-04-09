@@ -112,8 +112,8 @@ function renderAll(purseData, scoresData, fieldData, poolData) {
 }
 
 function clearRenderedContent() {
-    d3.select("table").selectAll("thead").remove();
-    d3.select("table").selectAll("tbody").remove();
+    d3.select("table thead").selectAll("*").remove();
+    d3.select("table tbody").selectAll("*").remove();
     var card = document.querySelector(".card");
     if (card) card.remove();
 }
@@ -289,8 +289,10 @@ function calcPayouts(purse, players) {
 
 function tabulate(data, columns) {
     const table = d3.select('table').attr("class", "table table-striped table-bordered ");
-    const thead = table.append('thead');
-    const tbody = table.append('tbody');
+    var thead = table.select('thead');
+    if (thead.empty()) thead = table.append('thead');
+    var tbody = table.select('tbody');
+    if (tbody.empty()) tbody = table.append('tbody');
 
     // append the header row
     thead.append('tr')
