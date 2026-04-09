@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 1,
         "total_rounds": 4,
-        "updated": "2026-04-09T15:10:03.000Z",
+        "updated": "2026-04-09T15:15:03.000Z",
         "players": 91
       }
     },
@@ -40,7 +40,7 @@
         "position": 3,
         "total_to_par": -2,
         "status": "active",
-        "strokes": 38,
+        "strokes": 42,
         "rounds_completed": 1
       },
       {
@@ -80,7 +80,7 @@
         "position": 7,
         "total_to_par": -1,
         "status": "active",
-        "strokes": 22,
+        "strokes": 26,
         "rounds_completed": 1
       },
       {
@@ -104,30 +104,10 @@
         "rounds_completed": 1
       },
       {
-        "first_name": "Xander",
-        "last_name": "Schauffele",
-        "country": "United States",
-        "position": 10,
-        "total_to_par": -1,
-        "status": "active",
-        "strokes": 12,
-        "rounds_completed": 1
-      },
-      {
-        "first_name": "Russell",
-        "last_name": "Henley",
-        "country": "United States",
-        "position": 11,
-        "total_to_par": -1,
-        "status": "active",
-        "strokes": 8,
-        "rounds_completed": 1
-      },
-      {
         "first_name": "Rory",
         "last_name": "McIlroy",
         "country": "Northern Ireland",
-        "position": 12,
+        "position": 10,
         "total_to_par": -1,
         "status": "active",
         "strokes": 8,
@@ -137,7 +117,7 @@
         "first_name": "Kristoffer",
         "last_name": "Reitan",
         "country": "Norway",
-        "position": 13,
+        "position": 11,
         "total_to_par": 0,
         "status": "active",
         "strokes": 32,
@@ -147,7 +127,7 @@
         "first_name": "Jake",
         "last_name": "Knapp",
         "country": "United States",
-        "position": 14,
+        "position": 12,
         "total_to_par": 0,
         "status": "active",
         "strokes": 27,
@@ -157,7 +137,7 @@
         "first_name": "Ryan",
         "last_name": "Gerard",
         "country": "United States",
-        "position": 15,
+        "position": 13,
         "total_to_par": 0,
         "status": "active",
         "strokes": 23,
@@ -167,7 +147,7 @@
         "first_name": "Shane",
         "last_name": "Lowry",
         "country": "Ireland",
-        "position": 16,
+        "position": 14,
         "total_to_par": 0,
         "status": "active",
         "strokes": 20,
@@ -176,6 +156,26 @@
       {
         "first_name": "Bryson",
         "last_name": "DeChambeau",
+        "country": "United States",
+        "position": 15,
+        "total_to_par": 0,
+        "status": "active",
+        "strokes": 16,
+        "rounds_completed": 1
+      },
+      {
+        "first_name": "Xander",
+        "last_name": "Schauffele",
+        "country": "United States",
+        "position": 16,
+        "total_to_par": 0,
+        "status": "active",
+        "strokes": 16,
+        "rounds_completed": 1
+      },
+      {
+        "first_name": "Russell",
+        "last_name": "Henley",
         "country": "United States",
         "position": 17,
         "total_to_par": 0,
@@ -190,7 +190,7 @@
         "position": 18,
         "total_to_par": 0,
         "status": "active",
-        "strokes": 9,
+        "strokes": 13,
         "rounds_completed": 1
       },
       {
@@ -200,7 +200,7 @@
         "position": 19,
         "total_to_par": 0,
         "status": "active",
-        "strokes": 9,
+        "strokes": 13,
         "rounds_completed": 1
       },
       {
@@ -300,7 +300,7 @@
         "position": 29,
         "total_to_par": 1,
         "status": "active",
-        "strokes": 14,
+        "strokes": 17,
         "rounds_completed": 1
       },
       {
@@ -330,7 +330,7 @@
         "position": 32,
         "total_to_par": 2,
         "status": "active",
-        "strokes": 42,
+        "strokes": 46,
         "rounds_completed": 1
       },
       {
@@ -400,7 +400,7 @@
         "position": 39,
         "total_to_par": 3,
         "status": "active",
-        "strokes": 39,
+        "strokes": 43,
         "rounds_completed": 1
       },
       {
@@ -414,20 +414,10 @@
         "rounds_completed": 1
       },
       {
-        "first_name": "Ángel",
-        "last_name": "Cabrera",
-        "country": "Argentina",
-        "position": 41,
-        "total_to_par": 4,
-        "status": "active",
-        "strokes": 40,
-        "rounds_completed": 1
-      },
-      {
         "first_name": "Bubba",
         "last_name": "Watson",
         "country": "United States",
-        "position": 42,
+        "position": 41,
         "total_to_par": 4,
         "status": "active",
         "strokes": 31,
@@ -437,7 +427,7 @@
         "first_name": "Brandon",
         "last_name": "Holtz",
         "country": "United States",
-        "position": 43,
+        "position": 42,
         "total_to_par": 4,
         "status": "active",
         "strokes": 31,
@@ -447,10 +437,20 @@
         "first_name": "Naoyuki",
         "last_name": "Kataoka",
         "country": "Japan",
-        "position": 44,
+        "position": 43,
         "total_to_par": 5,
         "status": "active",
         "strokes": 52,
+        "rounds_completed": 1
+      },
+      {
+        "first_name": "Ángel",
+        "last_name": "Cabrera",
+        "country": "Argentina",
+        "position": 44,
+        "total_to_par": 5,
+        "status": "active",
+        "strokes": 45,
         "rounds_completed": 1
       },
       {
