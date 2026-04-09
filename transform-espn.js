@@ -29,7 +29,7 @@ var leaderboard = competition.competitors.map(function(c) {
         lastName = parts.slice(1).join(" ");
     }
 
-    var position = parseInt(c.sortOrder, 10) || 0;
+    var position = parseInt(c.order, 10) || 0;
     var playerStatus = "active";
 
     // ESPN marks cut/withdrawn/disqualified players in the status object
