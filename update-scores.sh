@@ -6,6 +6,8 @@ set -e
 
 cd "$(dirname "$0")"
 
+git pull --rebase --autostash
+
 ESPN_DATE=$(curl -sf -D - -o espn-raw.json \
   "https://site.api.espn.com/apis/site/v2/sports/golf/pga/scoreboard/401811941" \
   | grep -i '^date:' | sed 's/^[Dd]ate: *//' | tr -d '\r')
