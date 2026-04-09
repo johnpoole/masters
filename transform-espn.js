@@ -67,11 +67,18 @@ var leaderboard = competition.competitors.map(function(c) {
         }
     });
 
+    // Parse score-to-par from ESPN's display string ("E", "-3", "+2")
+    var totalToPar = 0;
+    if (c.score && c.score !== "E") {
+        totalToPar = parseInt(c.score, 10) || 0;
+    }
+
     return {
         first_name: firstName,
         last_name: lastName,
         country: country,
         position: position,
+        total_to_par: totalToPar,
         status: playerStatus,
         strokes: strokes,
         rounds_completed: roundsCompleted

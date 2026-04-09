@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 1,
         "total_rounds": 4,
-        "updated": "2026-04-09T12:19:37.939Z",
+        "updated": "2026-04-09T12:26:22.281Z",
         "players": 91
       }
     },
@@ -18,6 +18,7 @@
         "last_name": "Li",
         "country": "China",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 9,
         "rounds_completed": 1
@@ -27,6 +28,7 @@
         "last_name": "Homa",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 4,
         "rounds_completed": 1
@@ -36,6 +38,7 @@
         "last_name": "Kataoka",
         "country": "Japan",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 4,
         "rounds_completed": 1
@@ -45,6 +48,7 @@
         "last_name": "Keefer",
         "country": "United States",
         "position": 0,
+        "total_to_par": 1,
         "status": "active",
         "strokes": 10,
         "rounds_completed": 1
@@ -54,6 +58,7 @@
         "last_name": "Ortiz",
         "country": "Mexico",
         "position": 0,
+        "total_to_par": 1,
         "status": "active",
         "strokes": 5,
         "rounds_completed": 1
@@ -63,6 +68,7 @@
         "last_name": "María Olazábal",
         "country": "Spain",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -72,6 +78,7 @@
         "last_name": "Neergaard-Petersen",
         "country": "Denmark",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -81,6 +88,7 @@
         "last_name": "Potgieter",
         "country": "South Africa",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -90,6 +98,7 @@
         "last_name": "Cabrera",
         "country": "Argentina",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -99,6 +108,7 @@
         "last_name": "Välimäki",
         "country": "Finland",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -108,6 +118,7 @@
         "last_name": "Herrington",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -117,6 +128,7 @@
         "last_name": "Schwartzel",
         "country": "South Africa",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -126,6 +138,7 @@
         "last_name": "Fox",
         "country": "New Zealand",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -135,6 +148,7 @@
         "last_name": "Greyserman",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -144,6 +158,7 @@
         "last_name": "Singh",
         "country": "Fiji",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -153,6 +168,7 @@
         "last_name": "Højgaard",
         "country": "Denmark",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -162,6 +178,7 @@
         "last_name": "McCarty",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -171,6 +188,7 @@
         "last_name": "Kitayama",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -180,6 +198,7 @@
         "last_name": "Reitan",
         "country": "Norway",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -189,6 +208,7 @@
         "last_name": "Jarvis",
         "country": "South Africa",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -198,6 +218,7 @@
         "last_name": "Watson",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -207,6 +228,7 @@
         "last_name": "Holtz",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -216,6 +238,7 @@
         "last_name": "Echavarria",
         "country": "Colombia",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -225,6 +248,7 @@
         "last_name": "Smith",
         "country": "Australia",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -234,6 +258,7 @@
         "last_name": "Knapp",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -243,6 +268,7 @@
         "last_name": "Burns",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -252,6 +278,7 @@
         "last_name": "Taylor",
         "country": "Canada",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -261,6 +288,7 @@
         "last_name": "Bradley",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -270,6 +298,7 @@
         "last_name": "Gerard",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -279,6 +308,7 @@
         "last_name": "Day",
         "country": "Australia",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -288,6 +318,7 @@
         "last_name": "Johnson",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -297,6 +328,7 @@
         "last_name": "Lowry",
         "country": "Ireland",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -306,6 +338,7 @@
         "last_name": "Fleetwood",
         "country": "England",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -315,6 +348,7 @@
         "last_name": "Reed",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -324,6 +358,7 @@
         "last_name": "Bhatia",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -333,6 +368,7 @@
         "last_name": "Fitzpatrick",
         "country": "England",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -342,6 +378,7 @@
         "last_name": "DeChambeau",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -351,6 +388,7 @@
         "last_name": "Schauffele",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -360,6 +398,7 @@
         "last_name": "Henley",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -369,6 +408,7 @@
         "last_name": "Matsuyama",
         "country": "Japan",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -378,6 +418,7 @@
         "last_name": "Morikawa",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -387,6 +428,7 @@
         "last_name": "McIlroy",
         "country": "Northern Ireland",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -396,6 +438,7 @@
         "last_name": "Young",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -405,6 +448,7 @@
         "last_name": "Howell",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -414,6 +458,7 @@
         "last_name": "Noren",
         "country": "Sweden",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -423,6 +468,7 @@
         "last_name": "Cantlay",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -432,6 +478,7 @@
         "last_name": "Hovland",
         "country": "Norway",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -441,6 +488,7 @@
         "last_name": "Im",
         "country": "South Korea",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -450,6 +498,7 @@
         "last_name": "Stevens",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -459,6 +508,7 @@
         "last_name": "Campbell",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -468,6 +518,7 @@
         "last_name": "Novak",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -477,6 +528,7 @@
         "last_name": "McKibbin",
         "country": "Northern Ireland",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -486,6 +538,7 @@
         "last_name": "Weir",
         "country": "Canada",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -495,6 +548,7 @@
         "last_name": "Clark",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -504,6 +558,7 @@
         "last_name": "Pulcini",
         "country": "Argentina",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -513,6 +568,7 @@
         "last_name": "Johnson",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -522,6 +578,7 @@
         "last_name": "Kim",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -531,6 +588,7 @@
         "last_name": "Højgaard",
         "country": "Denmark",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -540,6 +598,7 @@
         "last_name": "Willett",
         "country": "England",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -549,6 +608,7 @@
         "last_name": "Riley",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -558,6 +618,7 @@
         "last_name": "Fang",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -567,6 +628,7 @@
         "last_name": "Scott",
         "country": "Australia",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -576,6 +638,7 @@
         "last_name": "Harman",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -585,6 +648,7 @@
         "last_name": "Berger",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -594,6 +658,7 @@
         "last_name": "Couples",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -603,6 +668,7 @@
         "last_name": "Woo Lee",
         "country": "Australia",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -612,6 +678,7 @@
         "last_name": "Laopakdee",
         "country": "Thailand",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -621,6 +688,7 @@
         "last_name": "García",
         "country": "Spain",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -630,6 +698,7 @@
         "last_name": "Rai",
         "country": "England",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -639,6 +708,7 @@
         "last_name": "Bridgeman",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -648,6 +718,7 @@
         "last_name": "Conners",
         "country": "Canada",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -657,6 +728,7 @@
         "last_name": "Hall",
         "country": "England",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -666,6 +738,7 @@
         "last_name": "Brennan",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -675,6 +748,7 @@
         "last_name": "Hatton",
         "country": "England",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -684,6 +758,7 @@
         "last_name": "McNealy",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -693,6 +768,7 @@
         "last_name": "Spaun",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -702,6 +778,7 @@
         "last_name": "Rahm",
         "country": "Spain",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -711,6 +788,7 @@
         "last_name": "Åberg",
         "country": "Sweden",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -720,6 +798,7 @@
         "last_name": "Gotterup",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -729,6 +808,7 @@
         "last_name": "Rose",
         "country": "England",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -738,6 +818,7 @@
         "last_name": "Spieth",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -747,6 +828,7 @@
         "last_name": "Koepka",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -756,6 +838,7 @@
         "last_name": "Thomas",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -765,6 +848,7 @@
         "last_name": "Straka",
         "country": "Austria",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -774,6 +858,7 @@
         "last_name": "Griffin",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -783,6 +868,7 @@
         "last_name": "Woodland",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -792,6 +878,7 @@
         "last_name": "Scheffler",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -801,6 +888,7 @@
         "last_name": "MacIntyre",
         "country": "Scotland",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -810,6 +898,7 @@
         "last_name": "English",
         "country": "United States",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -819,6 +908,7 @@
         "last_name": "Kim",
         "country": "South Korea",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
@@ -828,6 +918,7 @@
         "last_name": "Penge",
         "country": "England",
         "position": 0,
+        "total_to_par": 0,
         "status": "active",
         "strokes": 0,
         "rounds_completed": 0
