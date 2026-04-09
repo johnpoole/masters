@@ -25,7 +25,7 @@ function drawTreemap(entries, pot, purseData, allPlayers, totalRounds, roundsCom
     if (!entries || entries.length === 0) return;
 
     var remainingRounds = totalRounds - roundsCompleted;
-    var entryData = simulateExpectedPayouts(entries, pot, purseData, allPlayers, remainingRounds);
+    var entryData = simulateExpectedPayouts(entries, pot, purseData, allPlayers, remainingRounds, totalRounds);
 
     // Build treemap hierarchy
     var root = d3.hierarchy({
@@ -173,7 +173,7 @@ function randNormal(mean, stddev) {
     return mean + stddev * Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v);
 }
 
-function simulateExpectedPayouts(entries, pot, purseData, allPlayers, remainingRounds) {
+function simulateExpectedPayouts(entries, pot, purseData, allPlayers, remainingRounds, totalRounds) {
     // Build purse lookup: position (1-based) -> amount
     var purseLookup = {};
     purseData.forEach(function(row, i) {
