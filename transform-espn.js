@@ -110,7 +110,9 @@ leaderboard.sort(function(a, b) {
     return a.position - b.position;
 });
 
-var isCompleted = statusType.completed === true;
+// ESPN sets completed=true when a round's play finishes, not just the tournament.
+// The tournament is only complete when the final round is done.
+var isCompleted = statusType.completed === true && currentRound >= 4;
 var espnDate = process.argv[3];
 var updated = espnDate ? new Date(espnDate).toISOString() : new Date().toISOString();
 

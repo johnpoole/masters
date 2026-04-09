@@ -5,10 +5,10 @@
       "name": "Masters Tournament",
       "start_date": "2026-04-09T04:00Z",
       "live_details": {
-        "status": "completed",
+        "status": "inprogress",
         "current_round": 1,
         "total_rounds": 4,
-        "updated": "2026-04-09T23:40:02.000Z",
+        "updated": "2026-04-09T23:44:39.587Z",
         "players": 91
       }
     },
