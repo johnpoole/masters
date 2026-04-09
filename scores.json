@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 1,
         "total_rounds": 4,
-        "updated": "2026-04-09T21:40:02.000Z",
+        "updated": "2026-04-09T21:45:02.000Z",
         "players": 91
       }
     },
@@ -94,40 +94,30 @@
         "rounds_completed": 1
       },
       {
-        "first_name": "Aaron",
-        "last_name": "Rai",
-        "country": "England",
-        "position": 9,
-        "total_to_par": -2,
-        "status": "active",
-        "strokes": 62,
-        "rounds_completed": 1
-      },
-      {
         "first_name": "Gary",
         "last_name": "Woodland",
         "country": "United States",
-        "position": 10,
+        "position": 9,
         "total_to_par": -2,
         "status": "active",
-        "strokes": 45,
+        "strokes": 50,
         "rounds_completed": 1
       },
       {
         "first_name": "Scottie",
         "last_name": "Scheffler",
         "country": "United States",
-        "position": 11,
+        "position": 10,
         "total_to_par": -2,
         "status": "active",
-        "strokes": 45,
+        "strokes": 50,
         "rounds_completed": 1
       },
       {
         "first_name": "Haotong",
         "last_name": "Li",
         "country": "China",
-        "position": 12,
+        "position": 11,
         "total_to_par": -1,
         "status": "active",
         "strokes": 71,
@@ -137,7 +127,7 @@
         "first_name": "Nick",
         "last_name": "Taylor",
         "country": "Canada",
-        "position": 13,
+        "position": 12,
         "total_to_par": -1,
         "status": "active",
         "strokes": 71,
@@ -147,7 +137,7 @@
         "first_name": "Tommy",
         "last_name": "Fleetwood",
         "country": "England",
-        "position": 14,
+        "position": 13,
         "total_to_par": -1,
         "status": "active",
         "strokes": 71,
@@ -157,10 +147,20 @@
         "first_name": "Brian",
         "last_name": "Campbell",
         "country": "United States",
-        "position": 15,
+        "position": 14,
         "total_to_par": -1,
         "status": "active",
         "strokes": 71,
+        "rounds_completed": 1
+      },
+      {
+        "first_name": "Aaron",
+        "last_name": "Rai",
+        "country": "England",
+        "position": 15,
+        "total_to_par": -1,
+        "status": "active",
+        "strokes": 67,
         "rounds_completed": 1
       },
       {
@@ -274,9 +274,9 @@
         "rounds_completed": 1
       },
       {
-        "first_name": "Jacob",
-        "last_name": "Bridgeman",
-        "country": "United States",
+        "first_name": "Sergio",
+        "last_name": "García",
+        "country": "Spain",
         "position": 27,
         "total_to_par": 0,
         "status": "active",
@@ -284,13 +284,13 @@
         "rounds_completed": 1
       },
       {
-        "first_name": "Sergio",
-        "last_name": "García",
-        "country": "Spain",
+        "first_name": "Jacob",
+        "last_name": "Bridgeman",
+        "country": "United States",
         "position": 28,
         "total_to_par": 0,
         "status": "active",
-        "strokes": 64,
+        "strokes": 68,
         "rounds_completed": 1
       },
       {
@@ -300,7 +300,7 @@
         "position": 29,
         "total_to_par": 0,
         "status": "active",
-        "strokes": 52,
+        "strokes": 56,
         "rounds_completed": 1
       },
       {
@@ -410,7 +410,7 @@
         "position": 40,
         "total_to_par": 1,
         "status": "active",
-        "strokes": 53,
+        "strokes": 57,
         "rounds_completed": 1
       },
       {
@@ -570,7 +570,7 @@
         "position": 56,
         "total_to_par": 3,
         "status": "active",
-        "strokes": 50,
+        "strokes": 55,
         "rounds_completed": 1
       },
       {
@@ -770,7 +770,7 @@
         "position": 76,
         "total_to_par": 6,
         "status": "active",
-        "strokes": 74,
+        "strokes": 78,
         "rounds_completed": 1
       },
       {
@@ -834,20 +834,10 @@
         "rounds_completed": 1
       },
       {
-        "first_name": "Fifa",
-        "last_name": "Laopakdee",
-        "country": "Thailand",
-        "position": 83,
-        "total_to_par": 7,
-        "status": "active",
-        "strokes": 75,
-        "rounds_completed": 1
-      },
-      {
         "first_name": "Carlos",
         "last_name": "Ortiz",
         "country": "Mexico",
-        "position": 84,
+        "position": 83,
         "total_to_par": 8,
         "status": "active",
         "strokes": 80,
@@ -857,6 +847,16 @@
         "first_name": "Sami",
         "last_name": "Välimäki",
         "country": "Finland",
+        "position": 84,
+        "total_to_par": 8,
+        "status": "active",
+        "strokes": 80,
+        "rounds_completed": 1
+      },
+      {
+        "first_name": "Fifa",
+        "last_name": "Laopakdee",
+        "country": "Thailand",
         "position": 85,
         "total_to_par": 8,
         "status": "active",
