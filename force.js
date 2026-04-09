@@ -194,14 +194,20 @@ function simulateExpectedPayouts(entries, pot, purseData, allPlayers, remainingR
         });
     });
 
-    // Pre-compute current strokes for all players in the field
-    // For players with no rounds completed, use par * rounds as baseline
+    // Pre-compute current standing for all players using total_to_par.
+    // total_to_par reflects live in-progress data, not just completed rounds.
+    // We express each player's current state as an effective stroke total
+    // relative to par so the sim can add remaining rounds on top.
     var golferStrokes = {};
     allPlayers.forEach(function(p) {
         if (p.status === "cut" || p.status === "wd" || p.status === "dq") {
             golferStrokes[p.Player] = { current: 0, active: false };
         } else {
-            var current = p.strokes || 0;
+            // Use total_to_par as the baseline — it includes in-progress round data.
+            // Express as cumulative strokes: par * totalRounds + total_to_par
+            // so the sim can compare players on the same scale.
+            var toPar = p.total_to_par || 0;
+            var current = AUGUSTA_MEAN * totalRounds + toPar;
             golferStrokes[p.Player] = { current: current, active: true };
         }
     });
@@ -225,7 +231,8 @@ function simulateExpectedPayouts(entries, pot, purseData, allPlayers, remainingR
             }
             var total = gs.current;
             for (var r = 0; r < remainingRounds; r++) {
-                total += Math.round(randNormal(AUGUSTA_MEAN, AUGUSTA_STDDEV));
+                // Add only the deviation from par for each remaining round
+                total += Math.round(randNormal(0, AUGUSTA_STDDEV));
             }
             simTotals[p.Player] = total;
         });
