@@ -152,7 +152,7 @@ function updateLastUpdatedDisplay(timestamp, completed) {
         var date = new Date(timestamp);
         var timeStr = date.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
         el.innerHTML = '<span class="live-dot"></span>Last updated: ' + timeStr +
-            ' (auto-refreshing every ' + Math.round(POLL_INTERVAL / 60000) + ' min)';
+            ' (auto-refreshing every 5 min)';
     }
 }
 
