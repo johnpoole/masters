@@ -114,7 +114,6 @@ function renderAll(purseData, scoresData, fieldData, poolData) {
 function clearRenderedContent() {
     d3.select("table thead").selectAll("*").remove();
     d3.select("table tbody").selectAll("*").remove();
-    d3.select("svg#forceGraph").selectAll("*").remove();
     var card = document.querySelector(".card");
     if (card) card.remove();
 }

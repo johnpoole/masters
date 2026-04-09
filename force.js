@@ -40,18 +40,61 @@ function drawTreemap(entries, pot, purseData, allPlayers, totalRounds, roundsCom
         .padding(2)
         .round(true)(root);
 
-    var cell = svg.selectAll("g")
-        .data(root.leaves())
-        .enter().append("g")
+    var isUpdate = svg.selectAll("g.cell").size() > 0;
+    var T = isUpdate ? 2000 : 0;
+
+    // Data join keyed by entry name
+    var cell = svg.selectAll("g.cell")
+        .data(root.leaves(), function(d) { return d.data.name; });
+
+    // EXIT
+    cell.exit().remove();
+
+    // ENTER
+    var cellEnter = cell.enter().append("g")
+        .attr("class", "cell")
         .attr("transform", function(d) { return "translate(" + d.x0 + "," + d.y0 + ")"; });
 
-    cell.append("rect")
+    cellEnter.append("rect")
         .attr("width", function(d) { return d.x1 - d.x0; })
         .attr("height", function(d) { return d.y1 - d.y0; })
         .attr("fill", function(d) { return nameColor(d.data.name); })
         .attr("stroke", "#fff")
         .attr("rx", 3)
-        .style("cursor", "pointer")
+        .style("cursor", "pointer");
+
+    cellEnter.append("text").attr("class", "label-name")
+        .attr("text-anchor", "middle")
+        .style("font-size", "14px")
+        .style("font-weight", "bold")
+        .style("fill", "#fff")
+        .style("pointer-events", "none");
+
+    cellEnter.append("text").attr("class", "label-ev")
+        .attr("text-anchor", "middle")
+        .style("font-size", "11px")
+        .style("fill", "rgba(255,255,255,0.8)")
+        .style("pointer-events", "none");
+
+    cellEnter.append("text").attr("class", "label-prob")
+        .attr("text-anchor", "middle")
+        .style("font-size", "11px")
+        .style("fill", "rgba(255,255,255,0.7)")
+        .style("pointer-events", "none");
+
+    // ENTER + UPDATE (merge)
+    var cellMerge = cellEnter.merge(cell);
+
+    cellMerge.transition().duration(T)
+        .attr("transform", function(d) { return "translate(" + d.x0 + "," + d.y0 + ")"; });
+
+    cellMerge.select("rect")
+        .transition().duration(T)
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .attr("height", function(d) { return d.y1 - d.y0; });
+
+    // Hover events (re-bindnecessary since data reference changes)
+    cellMerge.select("rect")
         .on("mouseover", function(event, d) {
             d3.select(this).attr("stroke", "#333").attr("stroke-width", 2);
             var e = d.data.data;
@@ -84,15 +127,12 @@ function drawTreemap(entries, pot, purseData, allPlayers, totalRounds, roundsCom
             div.transition().duration(200).style("opacity", 0);
         });
 
-    // Entry name label — centered
-    cell.append("text")
+    // Update text positions and content
+    cellMerge.select(".label-name")
+        .transition().duration(T)
         .attr("x", function(d) { return (d.x1 - d.x0) / 2; })
-        .attr("y", function(d) { return (d.y1 - d.y0) / 2 - 10; })
-        .attr("text-anchor", "middle")
-        .style("font-size", "14px")
-        .style("font-weight", "bold")
-        .style("fill", "#fff")
-        .style("pointer-events", "none")
+        .attr("y", function(d) { return (d.y1 - d.y0) / 2 - 10; });
+    cellMerge.select(".label-name")
         .text(function(d) { return d.data.name; })
         .each(function(d) {
             var boxWidth = d.x1 - d.x0 - 8;
@@ -101,14 +141,11 @@ function drawTreemap(entries, pot, purseData, allPlayers, totalRounds, roundsCom
             }
         });
 
-    // Expected payout label — centered
-    cell.append("text")
+    cellMerge.select(".label-ev")
+        .transition().duration(T)
         .attr("x", function(d) { return (d.x1 - d.x0) / 2; })
-        .attr("y", function(d) { return (d.y1 - d.y0) / 2 + 6; })
-        .attr("text-anchor", "middle")
-        .style("font-size", "11px")
-        .style("fill", "rgba(255,255,255,0.8)")
-        .style("pointer-events", "none")
+        .attr("y", function(d) { return (d.y1 - d.y0) / 2 + 6; });
+    cellMerge.select(".label-ev")
         .text(function(d) {
             var boxWidth = d.x1 - d.x0;
             var boxHeight = d.y1 - d.y0;
@@ -116,14 +153,11 @@ function drawTreemap(entries, pot, purseData, allPlayers, totalRounds, roundsCom
             return "$" + Math.round(d.data.data.expectedPayout).toLocaleString();
         });
 
-    // Win probability label — centered
-    cell.append("text")
+    cellMerge.select(".label-prob")
+        .transition().duration(T)
         .attr("x", function(d) { return (d.x1 - d.x0) / 2; })
-        .attr("y", function(d) { return (d.y1 - d.y0) / 2 + 22; })
-        .attr("text-anchor", "middle")
-        .style("font-size", "11px")
-        .style("fill", "rgba(255,255,255,0.7)")
-        .style("pointer-events", "none")
+        .attr("y", function(d) { return (d.y1 - d.y0) / 2 + 22; });
+    cellMerge.select(".label-prob")
         .text(function(d) {
             var boxWidth = d.x1 - d.x0;
             var boxHeight = d.y1 - d.y0;
