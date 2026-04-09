@@ -26,11 +26,13 @@ jobs:
 
       - name: Fetch ESPN scores
         run: |
-          curl -sf -o espn-raw.json \
-            "https://site.api.espn.com/apis/site/v2/sports/golf/pga/scoreboard/401811941"
+          ESPN_DATE=$(curl -sf -D - -o espn-raw.json \
+            "https://site.api.espn.com/apis/site/v2/sports/golf/pga/scoreboard/401811941" \
+            | grep -i '^date:' | sed 's/^[Dd]ate: *//' | tr -d '\r')
+          echo "ESPN_DATE=$ESPN_DATE" >> "$GITHUB_ENV"
 
       - name: Transform to scores.json
-        run: node transform-espn.js espn-raw.json > scores.json
+        run: node transform-espn.js espn-raw.json "$ESPN_DATE" > scores.json
 
       - name: Commit if changed
         run: |

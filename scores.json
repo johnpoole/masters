@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 1,
         "total_rounds": 4,
-        "updated": "2026-04-09T13:10:40.478Z",
+        "updated": "2026-04-09T13:12:13.000Z",
         "players": 91
       }
     },
@@ -144,16 +144,6 @@
         "rounds_completed": 1
       },
       {
-        "first_name": "Naoyuki",
-        "last_name": "Kataoka",
-        "country": "Japan",
-        "position": 0,
-        "total_to_par": 1,
-        "status": "active",
-        "strokes": 17,
-        "rounds_completed": 1
-      },
-      {
         "first_name": "Rasmus",
         "last_name": "Neergaard-Petersen",
         "country": "Denmark",
@@ -181,6 +171,16 @@
         "total_to_par": 2,
         "status": "active",
         "strokes": 25,
+        "rounds_completed": 1
+      },
+      {
+        "first_name": "Naoyuki",
+        "last_name": "Kataoka",
+        "country": "Japan",
+        "position": 0,
+        "total_to_par": 2,
+        "status": "active",
+        "strokes": 22,
         "rounds_completed": 1
       },
       {

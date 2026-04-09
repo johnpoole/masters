@@ -94,7 +94,8 @@ leaderboard.sort(function(a, b) {
 });
 
 var isCompleted = statusType.completed === true;
-var updated = new Date().toISOString();
+var espnDate = process.argv[3];
+var updated = espnDate ? new Date(espnDate).toISOString() : new Date().toISOString();
 
 var output = {
     results: {
