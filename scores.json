@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 1,
         "total_rounds": 4,
-        "updated": "2026-04-09T12:48:12.887Z",
+        "updated": "2026-04-09T13:06:21.686Z",
         "players": 91
       }
     },
@@ -18,19 +18,19 @@
         "last_name": "María Olazábal",
         "country": "Spain",
         "position": 0,
-        "total_to_par": -1,
+        "total_to_par": -2,
         "status": "active",
-        "strokes": 8,
+        "strokes": 11,
         "rounds_completed": 1
       },
       {
-        "first_name": "Haotong",
-        "last_name": "Li",
-        "country": "China",
+        "first_name": "Ángel",
+        "last_name": "Cabrera",
+        "country": "Argentina",
         "position": 0,
-        "total_to_par": 0,
+        "total_to_par": -1,
         "status": "active",
-        "strokes": 16,
+        "strokes": 12,
         "rounds_completed": 1
       },
       {
@@ -40,17 +40,7 @@
         "position": 0,
         "total_to_par": 0,
         "status": "active",
-        "strokes": 13,
-        "rounds_completed": 1
-      },
-      {
-        "first_name": "Ángel",
-        "last_name": "Cabrera",
-        "country": "Argentina",
-        "position": 0,
-        "total_to_par": 0,
-        "status": "active",
-        "strokes": 4,
+        "strokes": 16,
         "rounds_completed": 1
       },
       {
@@ -60,7 +50,17 @@
         "position": 0,
         "total_to_par": 0,
         "status": "active",
-        "strokes": 4,
+        "strokes": 9,
+        "rounds_completed": 1
+      },
+      {
+        "first_name": "Jackson",
+        "last_name": "Herrington",
+        "country": "United States",
+        "position": 0,
+        "total_to_par": 0,
+        "status": "active",
+        "strokes": 9,
         "rounds_completed": 1
       },
       {
@@ -70,17 +70,77 @@
         "position": 0,
         "total_to_par": 0,
         "status": "active",
+        "strokes": 9,
+        "rounds_completed": 1
+      },
+      {
+        "first_name": "Vijay",
+        "last_name": "Singh",
+        "country": "Fiji",
+        "position": 0,
+        "total_to_par": 0,
+        "status": "active",
         "strokes": 4,
         "rounds_completed": 1
       },
       {
-        "first_name": "Johnny",
-        "last_name": "Keefer",
+        "first_name": "Rasmus",
+        "last_name": "Højgaard",
+        "country": "Denmark",
+        "position": 0,
+        "total_to_par": 0,
+        "status": "active",
+        "strokes": 4,
+        "rounds_completed": 1
+      },
+      {
+        "first_name": "Matt",
+        "last_name": "McCarty",
         "country": "United States",
+        "position": 0,
+        "total_to_par": 0,
+        "status": "active",
+        "strokes": 4,
+        "rounds_completed": 1
+      },
+      {
+        "first_name": "Kurt",
+        "last_name": "Kitayama",
+        "country": "United States",
+        "position": 0,
+        "total_to_par": 0,
+        "status": "active",
+        "strokes": 4,
+        "rounds_completed": 1
+      },
+      {
+        "first_name": "Kristoffer",
+        "last_name": "Reitan",
+        "country": "Norway",
+        "position": 0,
+        "total_to_par": 0,
+        "status": "active",
+        "strokes": 4,
+        "rounds_completed": 1
+      },
+      {
+        "first_name": "Casey",
+        "last_name": "Jarvis",
+        "country": "South Africa",
+        "position": 0,
+        "total_to_par": 0,
+        "status": "active",
+        "strokes": 4,
+        "rounds_completed": 1
+      },
+      {
+        "first_name": "Haotong",
+        "last_name": "Li",
+        "country": "China",
         "position": 0,
         "total_to_par": 1,
         "status": "active",
-        "strokes": 17,
+        "strokes": 24,
         "rounds_completed": 1
       },
       {
@@ -90,7 +150,7 @@
         "position": 0,
         "total_to_par": 1,
         "status": "active",
-        "strokes": 14,
+        "strokes": 17,
         "rounds_completed": 1
       },
       {
@@ -100,17 +160,7 @@
         "position": 0,
         "total_to_par": 1,
         "status": "active",
-        "strokes": 10,
-        "rounds_completed": 1
-      },
-      {
-        "first_name": "Jackson",
-        "last_name": "Herrington",
-        "country": "United States",
-        "position": 0,
-        "total_to_par": 1,
-        "status": "active",
-        "strokes": 5,
+        "strokes": 14,
         "rounds_completed": 1
       },
       {
@@ -120,23 +170,33 @@
         "position": 0,
         "total_to_par": 1,
         "status": "active",
-        "strokes": 5,
+        "strokes": 10,
         "rounds_completed": 1
       },
       {
-        "first_name": "Ryan",
-        "last_name": "Fox",
-        "country": "New Zealand",
+        "first_name": "Johnny",
+        "last_name": "Keefer",
+        "country": "United States",
         "position": 0,
-        "total_to_par": 1,
+        "total_to_par": 2,
         "status": "active",
-        "strokes": 5,
+        "strokes": 25,
         "rounds_completed": 1
       },
       {
         "first_name": "Aldrich",
         "last_name": "Potgieter",
         "country": "South Africa",
+        "position": 0,
+        "total_to_par": 2,
+        "status": "active",
+        "strokes": 15,
+        "rounds_completed": 1
+      },
+      {
+        "first_name": "Ryan",
+        "last_name": "Fox",
+        "country": "New Zealand",
         "position": 0,
         "total_to_par": 2,
         "status": "active",
@@ -148,70 +208,10 @@
         "last_name": "Ortiz",
         "country": "Mexico",
         "position": 0,
-        "total_to_par": 4,
+        "total_to_par": 5,
         "status": "active",
-        "strokes": 17,
+        "strokes": 21,
         "rounds_completed": 1
-      },
-      {
-        "first_name": "Vijay",
-        "last_name": "Singh",
-        "country": "Fiji",
-        "position": 0,
-        "total_to_par": 0,
-        "status": "active",
-        "strokes": 0,
-        "rounds_completed": 0
-      },
-      {
-        "first_name": "Rasmus",
-        "last_name": "Højgaard",
-        "country": "Denmark",
-        "position": 0,
-        "total_to_par": 0,
-        "status": "active",
-        "strokes": 0,
-        "rounds_completed": 0
-      },
-      {
-        "first_name": "Matt",
-        "last_name": "McCarty",
-        "country": "United States",
-        "position": 0,
-        "total_to_par": 0,
-        "status": "active",
-        "strokes": 0,
-        "rounds_completed": 0
-      },
-      {
-        "first_name": "Kurt",
-        "last_name": "Kitayama",
-        "country": "United States",
-        "position": 0,
-        "total_to_par": 0,
-        "status": "active",
-        "strokes": 0,
-        "rounds_completed": 0
-      },
-      {
-        "first_name": "Kristoffer",
-        "last_name": "Reitan",
-        "country": "Norway",
-        "position": 0,
-        "total_to_par": 0,
-        "status": "active",
-        "strokes": 0,
-        "rounds_completed": 0
-      },
-      {
-        "first_name": "Casey",
-        "last_name": "Jarvis",
-        "country": "South Africa",
-        "position": 0,
-        "total_to_par": 0,
-        "status": "active",
-        "strokes": 0,
-        "rounds_completed": 0
       },
       {
         "first_name": "Bubba",
