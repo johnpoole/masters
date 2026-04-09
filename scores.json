@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 1,
         "total_rounds": 4,
-        "updated": "2026-04-09T21:00:02.000Z",
+        "updated": "2026-04-09T21:05:02.000Z",
         "players": 91
       }
     },
@@ -490,7 +490,7 @@
         "position": 48,
         "total_to_par": 2,
         "status": "active",
-        "strokes": 70,
+        "strokes": 74,
         "rounds_completed": 1
       },
       {
@@ -580,7 +580,7 @@
         "position": 57,
         "total_to_par": 3,
         "status": "active",
-        "strokes": 67,
+        "strokes": 71,
         "rounds_completed": 1
       },
       {
@@ -600,7 +600,7 @@
         "position": 59,
         "total_to_par": 3,
         "status": "active",
-        "strokes": 43,
+        "strokes": 47,
         "rounds_completed": 1
       },
       {
@@ -670,7 +670,7 @@
         "position": 66,
         "total_to_par": 4,
         "status": "active",
-        "strokes": 72,
+        "strokes": 76,
         "rounds_completed": 1
       },
       {
@@ -774,31 +774,21 @@
         "rounds_completed": 1
       },
       {
-        "first_name": "Fifa",
-        "last_name": "Laopakdee",
-        "country": "Thailand",
-        "position": 77,
-        "total_to_par": 5,
-        "status": "active",
-        "strokes": 66,
-        "rounds_completed": 1
-      },
-      {
         "first_name": "Rasmus",
         "last_name": "Højgaard",
         "country": "Denmark",
-        "position": 78,
+        "position": 77,
         "total_to_par": 6,
         "status": "active",
         "strokes": 78,
         "rounds_completed": 1
       },
       {
-        "first_name": "Brian",
-        "last_name": "Harman",
-        "country": "United States",
-        "position": 79,
-        "total_to_par": 7,
+        "first_name": "Fifa",
+        "last_name": "Laopakdee",
+        "country": "Thailand",
+        "position": 78,
+        "total_to_par": 6,
         "status": "active",
         "strokes": 70,
         "rounds_completed": 1
@@ -807,7 +797,7 @@
         "first_name": "Ángel",
         "last_name": "Cabrera",
         "country": "Argentina",
-        "position": 80,
+        "position": 79,
         "total_to_par": 7,
         "status": "active",
         "strokes": 79,
@@ -817,7 +807,7 @@
         "first_name": "Max",
         "last_name": "Greyserman",
         "country": "United States",
-        "position": 81,
+        "position": 80,
         "total_to_par": 7,
         "status": "active",
         "strokes": 79,
@@ -827,7 +817,7 @@
         "first_name": "Vijay",
         "last_name": "Singh",
         "country": "Fiji",
-        "position": 82,
+        "position": 81,
         "total_to_par": 7,
         "status": "active",
         "strokes": 79,
@@ -837,10 +827,20 @@
         "first_name": "Nico",
         "last_name": "Echavarria",
         "country": "Colombia",
-        "position": 83,
+        "position": 82,
         "total_to_par": 7,
         "status": "active",
         "strokes": 79,
+        "rounds_completed": 1
+      },
+      {
+        "first_name": "Brian",
+        "last_name": "Harman",
+        "country": "United States",
+        "position": 83,
+        "total_to_par": 7,
+        "status": "active",
+        "strokes": 75,
         "rounds_completed": 1
       },
       {
@@ -864,20 +864,10 @@
         "rounds_completed": 1
       },
       {
-        "first_name": "Davis",
-        "last_name": "Riley",
-        "country": "United States",
-        "position": 86,
-        "total_to_par": 8,
-        "status": "active",
-        "strokes": 76,
-        "rounds_completed": 1
-      },
-      {
         "first_name": "Brandon",
         "last_name": "Holtz",
         "country": "United States",
-        "position": 87,
+        "position": 86,
         "total_to_par": 9,
         "status": "active",
         "strokes": 81,
@@ -887,7 +877,7 @@
         "first_name": "Mike",
         "last_name": "Weir",
         "country": "Canada",
-        "position": 88,
+        "position": 87,
         "total_to_par": 9,
         "status": "active",
         "strokes": 81,
@@ -897,10 +887,20 @@
         "first_name": "Mateo",
         "last_name": "Pulcini",
         "country": "Argentina",
-        "position": 89,
+        "position": 88,
         "total_to_par": 9,
         "status": "active",
         "strokes": 81,
+        "rounds_completed": 1
+      },
+      {
+        "first_name": "Davis",
+        "last_name": "Riley",
+        "country": "United States",
+        "position": 89,
+        "total_to_par": 10,
+        "status": "active",
+        "strokes": 82,
         "rounds_completed": 1
       },
       {
