@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 1,
         "total_rounds": 4,
-        "updated": "2026-04-09T16:35:02.000Z",
+        "updated": "2026-04-09T16:40:02.000Z",
         "players": 91
       }
     },
@@ -320,7 +320,7 @@
         "position": 31,
         "total_to_par": 0,
         "status": "active",
-        "strokes": 9,
+        "strokes": 13,
         "rounds_completed": 1
       },
       {
@@ -380,7 +380,7 @@
         "position": 37,
         "total_to_par": 1,
         "status": "active",
-        "strokes": 24,
+        "strokes": 28,
         "rounds_completed": 1
       },
       {
@@ -470,7 +470,7 @@
         "position": 46,
         "total_to_par": 2,
         "status": "active",
-        "strokes": 25,
+        "strokes": 29,
         "rounds_completed": 1
       },
       {
@@ -480,7 +480,7 @@
         "position": 47,
         "total_to_par": 3,
         "status": "active",
-        "strokes": 59,
+        "strokes": 64,
         "rounds_completed": 1
       },
       {
@@ -500,7 +500,7 @@
         "position": 49,
         "total_to_par": 3,
         "status": "active",
-        "strokes": 26,
+        "strokes": 30,
         "rounds_completed": 1
       },
       {
