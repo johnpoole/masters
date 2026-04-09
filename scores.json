@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 1,
         "total_rounds": 4,
-        "updated": "2026-04-09T15:01:16.000Z",
+        "updated": "2026-04-09T15:05:04.000Z",
         "players": 91
       }
     },
@@ -104,20 +104,10 @@
         "rounds_completed": 1
       },
       {
-        "first_name": "Ryan",
-        "last_name": "Gerard",
-        "country": "United States",
-        "position": 10,
-        "total_to_par": -1,
-        "status": "active",
-        "strokes": 19,
-        "rounds_completed": 1
-      },
-      {
         "first_name": "Dustin",
         "last_name": "Johnson",
         "country": "United States",
-        "position": 11,
+        "position": 10,
         "total_to_par": -1,
         "status": "active",
         "strokes": 15,
@@ -127,17 +117,17 @@
         "first_name": "Xander",
         "last_name": "Schauffele",
         "country": "United States",
-        "position": 12,
+        "position": 11,
         "total_to_par": -1,
         "status": "active",
-        "strokes": 8,
+        "strokes": 12,
         "rounds_completed": 1
       },
       {
         "first_name": "Russell",
         "last_name": "Henley",
         "country": "United States",
-        "position": 13,
+        "position": 12,
         "total_to_par": -1,
         "status": "active",
         "strokes": 8,
@@ -147,7 +137,7 @@
         "first_name": "Charl",
         "last_name": "Schwartzel",
         "country": "South Africa",
-        "position": 14,
+        "position": 13,
         "total_to_par": 0,
         "status": "active",
         "strokes": 32,
@@ -157,7 +147,7 @@
         "first_name": "Max",
         "last_name": "Greyserman",
         "country": "United States",
-        "position": 15,
+        "position": 14,
         "total_to_par": 0,
         "status": "active",
         "strokes": 32,
@@ -166,6 +156,16 @@
       {
         "first_name": "Jake",
         "last_name": "Knapp",
+        "country": "United States",
+        "position": 15,
+        "total_to_par": 0,
+        "status": "active",
+        "strokes": 23,
+        "rounds_completed": 1
+      },
+      {
+        "first_name": "Ryan",
+        "last_name": "Gerard",
         "country": "United States",
         "position": 16,
         "total_to_par": 0,
@@ -180,7 +180,7 @@
         "position": 17,
         "total_to_par": 0,
         "status": "active",
-        "strokes": 16,
+        "strokes": 20,
         "rounds_completed": 1
       },
       {
@@ -410,7 +410,7 @@
         "position": 40,
         "total_to_par": 3,
         "status": "active",
-        "strokes": 23,
+        "strokes": 26,
         "rounds_completed": 1
       },
       {
