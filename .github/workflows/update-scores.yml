@@ -1,8 +1,9 @@
 name: Update Scores
 
 on:
-  schedule:
-    - cron: '*/5 * * * *'
+  # schedule disabled — local Windows task handles updates
+  # schedule:
+  #   - cron: '*/5 * * * *'
   workflow_dispatch:
 
 permissions:
