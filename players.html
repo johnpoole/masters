@@ -25,6 +25,7 @@
         <th>Score</th>
         <th>Strokes</th>
         <th>Status</th>
+        <th>Purse</th>
       </tr>
     </thead>
     <tbody></tbody>
@@ -34,6 +35,7 @@
     var POLL_INTERVAL = 180000;
     var lastUpdated = null;
     var pollTimer = null;
+    var cachedPurseData = null;
 
     function isLiveData(data) {
         return data && data.results && data.results.leaderboard
@@ -43,9 +45,14 @@
     }
 
     // Initial load
-    d3.json("scores.json").then(function(data) {
+    Promise.all([
+        d3.json("scores.json"),
+        d3.csv("purse.csv")
+    ]).then(function(results) {
+        var data = results[0];
+        cachedPurseData = results[1];
         if (isLiveData(data)) {
-            renderLive(data);
+            renderLive(data, cachedPurseData);
         } else {
             return loadField();
         }
@@ -95,7 +102,41 @@
         rows.append("td").style("display", "none");
     }
 
-    function renderLive(data) {
+    function calcPayouts(purseData, players) {
+        var active = players
+            .filter(function(p) { return p.status === "active" && p.position > 0; })
+            .slice()
+            .sort(function(a, b) { return a.position - b.position; });
+
+        var payouts = {};
+        var i = 0;
+        while (i < active.length) {
+            var score = active[i].total_to_par;
+            var j = i;
+            while (j < active.length && active[j].total_to_par === score) { j++; }
+            var count = j - i;
+            var shared = 0;
+            for (var k = 0; k < count; k++) {
+                var slot = active[i + k].position;
+                if (slot <= 50) {
+                    shared += parseInt(purseData[slot - 1].amount, 10);
+                }
+            }
+            var each = shared / count;
+            for (var k = 0; k < count; k++) {
+                payouts[active[i + k].position] = each;
+            }
+            i = j;
+        }
+        return payouts;
+    }
+
+    function formatPurse(amount) {
+        if (!amount) return "—";
+        return "$" + Math.round(amount).toLocaleString();
+    }
+
+    function renderLive(data, purseData) {
         // Clear previous rows
         d3.select("#playerTable tbody").selectAll("tr").remove();
         // Ensure score columns visible
@@ -112,6 +153,8 @@
             if (a.status !== "cut" && b.status === "cut") return -1;
             return a.position - b.position;
         });
+
+        var payouts = purseData ? calcPayouts(purseData, players) : {};
 
         var tbody = d3.select("#playerTable tbody");
         var rows = tbody.selectAll("tr")
@@ -131,6 +174,10 @@
         });
         rows.append("td").text(function(d) { return d.strokes || "--"; });
         rows.append("td").text(function(d) { return d.status; });
+        rows.append("td").text(function(d) {
+            if (d.status === "cut") return "—";
+            return formatPurse(payouts[d.position]);
+        });
 
         // Update status
         lastUpdated = tournament.live_details ? tournament.live_details.updated : null;
@@ -154,7 +201,7 @@
                         var newTimestamp = newData.results.tournament.live_details
                             ? newData.results.tournament.live_details.updated : null;
                         if (newTimestamp && newTimestamp === lastUpdated) return;
-                        renderLive(newData);
+                        renderLive(newData, cachedPurseData);
                     }).catch(function() {});
                 }, POLL_INTERVAL);
             }
