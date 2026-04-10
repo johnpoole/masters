@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 2,
         "total_rounds": 4,
-        "updated": "2026-04-10T12:05:03.000Z",
+        "updated": "2026-04-10T12:10:03.000Z",
         "players": 91
       }
     },
@@ -113,10 +113,21 @@
         "pga_id": "46046"
       },
       {
+        "first_name": "Brian",
+        "last_name": "Campbell",
+        "country": "United States",
+        "position": 10,
+        "total_to_par": -1,
+        "status": "active",
+        "strokes": 75,
+        "rounds_completed": 2,
+        "pga_id": "46443"
+      },
+      {
         "first_name": "Haotong",
         "last_name": "Li",
         "country": "China",
-        "position": 10,
+        "position": 11,
         "total_to_par": -1,
         "status": "active",
         "strokes": 71,
@@ -127,7 +138,7 @@
         "first_name": "Nick",
         "last_name": "Taylor",
         "country": "Canada",
-        "position": 11,
+        "position": 12,
         "total_to_par": -1,
         "status": "active",
         "strokes": 71,
@@ -138,23 +149,12 @@
         "first_name": "Tommy",
         "last_name": "Fleetwood",
         "country": "England",
-        "position": 12,
-        "total_to_par": -1,
-        "status": "active",
-        "strokes": 71,
-        "rounds_completed": 1,
-        "pga_id": "30911"
-      },
-      {
-        "first_name": "Brian",
-        "last_name": "Campbell",
-        "country": "United States",
         "position": 13,
         "total_to_par": -1,
         "status": "active",
         "strokes": 71,
         "rounds_completed": 1,
-        "pga_id": "46443"
+        "pga_id": "30911"
       },
       {
         "first_name": "Aaron",
@@ -196,7 +196,7 @@
         "position": 17,
         "total_to_par": 0,
         "status": "active",
-        "strokes": 76,
+        "strokes": 81,
         "rounds_completed": 2,
         "pga_id": "55893"
       },
@@ -553,32 +553,10 @@
         "pga_id": "46717"
       },
       {
-        "first_name": "Andrew",
-        "last_name": "Novak",
-        "country": "United States",
-        "position": 50,
-        "total_to_par": 3,
-        "status": "active",
-        "strokes": 75,
-        "rounds_completed": 1,
-        "pga_id": "51997"
-      },
-      {
-        "first_name": "Tom",
-        "last_name": "McKibbin",
-        "country": "Northern Ireland",
-        "position": 51,
-        "total_to_par": 3,
-        "status": "active",
-        "strokes": 75,
-        "rounds_completed": 1,
-        "pga_id": "50823"
-      },
-      {
         "first_name": "Zach",
         "last_name": "Johnson",
         "country": "United States",
-        "position": 52,
+        "position": 50,
         "total_to_par": 3,
         "status": "active",
         "strokes": 75,
@@ -589,7 +567,7 @@
         "first_name": "Michael",
         "last_name": "Kim",
         "country": "United States",
-        "position": 53,
+        "position": 51,
         "total_to_par": 3,
         "status": "active",
         "strokes": 75,
@@ -600,7 +578,7 @@
         "first_name": "Corey",
         "last_name": "Conners",
         "country": "Canada",
-        "position": 54,
+        "position": 52,
         "total_to_par": 3,
         "status": "active",
         "strokes": 75,
@@ -611,7 +589,7 @@
         "first_name": "Si-woo",
         "last_name": "Kim",
         "country": "South Korea",
-        "position": 55,
+        "position": 53,
         "total_to_par": 3,
         "status": "active",
         "strokes": 75,
@@ -622,12 +600,34 @@
         "first_name": "Sung-jae",
         "last_name": "Im",
         "country": "South Korea",
+        "position": 54,
+        "total_to_par": 4,
+        "status": "active",
+        "strokes": 85,
+        "rounds_completed": 2,
+        "pga_id": "39971"
+      },
+      {
+        "first_name": "Andrew",
+        "last_name": "Novak",
+        "country": "United States",
+        "position": 55,
+        "total_to_par": 4,
+        "status": "active",
+        "strokes": 80,
+        "rounds_completed": 2,
+        "pga_id": "51997"
+      },
+      {
+        "first_name": "Tom",
+        "last_name": "McKibbin",
+        "country": "Northern Ireland",
         "position": 56,
         "total_to_par": 4,
         "status": "active",
         "strokes": 80,
         "rounds_completed": 2,
-        "pga_id": "39971"
+        "pga_id": "50823"
       },
       {
         "first_name": "Johnny",
