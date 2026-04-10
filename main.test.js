@@ -356,8 +356,14 @@ describe("enrichPicks", () => {
 // --- textDisplay ---
 
 describe("textDisplay", () => {
-    test("shows position in parentheses for active player", () => {
-        expect(textDisplay({ Player: "Jon Rahm", position: 1, status: "active" })).toBe("Jon Rahm (1)");
+    test("shows purse share in parentheses for active player with purseShare", () => {
+        expect(textDisplay({ Player: "Jon Rahm", position: 1, status: "active", purseShare: 4200000 }))
+            .toBe("Jon Rahm ($4,200,000)");
+    });
+
+    test("falls back to position when purseShare is 0", () => {
+        expect(textDisplay({ Player: "Jon Rahm", position: 1, status: "active", purseShare: 0 }))
+            .toBe("Jon Rahm (1)");
     });
 
     test("strikes through player with cut status", () => {

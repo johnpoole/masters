@@ -59,6 +59,7 @@ function renderAll(purseData, scoresData, fieldData, poolData) {
     validateAllPicks(poolData, playerIndex);
 
     var payouts = calcPayouts(purseData, players);
+    players.forEach(function(p) { p.purseShare = payouts[p.position] || 0; });
     var nodes = buildNodes(players, payouts);
 
     var nodesWithPicks = enrichPicks(poolData, playerIndex, payouts);
@@ -379,6 +380,8 @@ function textDisplay(player) {
     }
     if (player.status === "cut" || player.status === "wd" || player.status === "dq") {
         name = "<strike>" + name + "</strike>";
+    } else if (player.purseShare) {
+        name += " ($" + Math.round(player.purseShare).toLocaleString() + ")";
     } else if (player.position) {
         name += " (" + player.position + ")";
     }
