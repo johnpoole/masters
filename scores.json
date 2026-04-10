@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 2,
         "total_rounds": 4,
-        "updated": "2026-04-10T22:15:03.000Z",
+        "updated": "2026-04-10T22:20:03.000Z",
         "players": 91
       }
     },
@@ -18,9 +18,9 @@
         "last_name": "McIlroy",
         "country": "Northern Ireland",
         "position": 1,
-        "total_to_par": -9,
+        "total_to_par": -10,
         "status": "active",
-        "strokes": 124,
+        "strokes": 126,
         "rounds_completed": 2,
         "pga_id": "28237"
       },
@@ -141,7 +141,7 @@
         "position": 12,
         "total_to_par": -4,
         "status": "active",
-        "strokes": 129,
+        "strokes": 132,
         "rounds_completed": 2,
         "pga_id": "57366"
       },
@@ -817,21 +817,10 @@
         "pga_id": "68932"
       },
       {
-        "first_name": "Mason",
-        "last_name": "Howell",
-        "country": "United States",
-        "position": 74,
-        "total_to_par": 8,
-        "status": "active",
-        "strokes": 141,
-        "rounds_completed": 2,
-        "pga_id": "68607"
-      },
-      {
         "first_name": "Fred",
         "last_name": "Couples",
         "country": "United States",
-        "position": 75,
+        "position": 74,
         "total_to_par": 9,
         "status": "active",
         "strokes": 153,
@@ -842,12 +831,23 @@
         "first_name": "José",
         "last_name": "María Olazábal",
         "country": "Spain",
-        "position": 76,
+        "position": 75,
         "total_to_par": 9,
         "status": "active",
         "strokes": 153,
         "rounds_completed": 2,
         "pga_id": "06373"
+      },
+      {
+        "first_name": "Mason",
+        "last_name": "Howell",
+        "country": "United States",
+        "position": 76,
+        "total_to_par": 9,
+        "status": "active",
+        "strokes": 145,
+        "rounds_completed": 2,
+        "pga_id": "68607"
       },
       {
         "first_name": "Mike",
