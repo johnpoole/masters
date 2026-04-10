@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 2,
         "total_rounds": 4,
-        "updated": "2026-04-10T20:20:03.000Z",
+        "updated": "2026-04-10T20:25:03.000Z",
         "players": 91
       }
     },
@@ -163,7 +163,7 @@
         "position": 14,
         "total_to_par": -3,
         "status": "active",
-        "strokes": 121,
+        "strokes": 125,
         "rounds_completed": 2,
         "pga_id": "47504"
       },
@@ -196,7 +196,7 @@
         "position": 17,
         "total_to_par": -2,
         "status": "active",
-        "strokes": 106,
+        "strokes": 110,
         "rounds_completed": 2,
         "pga_id": "32839"
       },
@@ -212,10 +212,21 @@
         "pga_id": "61522"
       },
       {
+        "first_name": "Jake",
+        "last_name": "Knapp",
+        "country": "United States",
+        "position": 19,
+        "total_to_par": -1,
+        "status": "active",
+        "strokes": 127,
+        "rounds_completed": 2,
+        "pga_id": "47420"
+      },
+      {
         "first_name": "Nick",
         "last_name": "Taylor",
         "country": "Canada",
-        "position": 19,
+        "position": 20,
         "total_to_par": -1,
         "status": "active",
         "strokes": 123,
@@ -226,23 +237,12 @@
         "first_name": "Dustin",
         "last_name": "Johnson",
         "country": "United States",
-        "position": 20,
+        "position": 21,
         "total_to_par": -1,
         "status": "active",
         "strokes": 118,
         "rounds_completed": 2,
         "pga_id": "30925"
-      },
-      {
-        "first_name": "Russell",
-        "last_name": "Henley",
-        "country": "United States",
-        "position": 21,
-        "total_to_par": -1,
-        "status": "active",
-        "strokes": 107,
-        "rounds_completed": 2,
-        "pga_id": "34098"
       },
       {
         "first_name": "Cameron",
@@ -311,26 +311,26 @@
         "pga_id": "59141"
       },
       {
-        "first_name": "Jake",
-        "last_name": "Knapp",
+        "first_name": "Collin",
+        "last_name": "Morikawa",
         "country": "United States",
         "position": 28,
         "total_to_par": 0,
         "status": "active",
-        "strokes": 124,
+        "strokes": 112,
         "rounds_completed": 2,
-        "pga_id": "47420"
+        "pga_id": "50525"
       },
       {
-        "first_name": "Collin",
-        "last_name": "Morikawa",
+        "first_name": "Russell",
+        "last_name": "Henley",
         "country": "United States",
         "position": 29,
         "total_to_par": 0,
         "status": "active",
-        "strokes": 108,
+        "strokes": 112,
         "rounds_completed": 2,
-        "pga_id": "50525"
+        "pga_id": "34098"
       },
       {
         "first_name": "Sung-jae",
@@ -515,7 +515,7 @@
         "position": 46,
         "total_to_par": 3,
         "status": "active",
-        "strokes": 139,
+        "strokes": 144,
         "rounds_completed": 2,
         "pga_id": "26331"
       },
@@ -597,21 +597,10 @@
         "pga_id": "52686"
       },
       {
-        "first_name": "Cameron",
-        "last_name": "Smith",
-        "country": "Australia",
-        "position": 54,
-        "total_to_par": 4,
-        "status": "active",
-        "strokes": 128,
-        "rounds_completed": 2,
-        "pga_id": "35891"
-      },
-      {
         "first_name": "Patrick",
         "last_name": "Cantlay",
         "country": "United States",
-        "position": 55,
+        "position": 54,
         "total_to_par": 4,
         "status": "active",
         "strokes": 108,
@@ -622,7 +611,7 @@
         "first_name": "Viktor",
         "last_name": "Hovland",
         "country": "Norway",
-        "position": 56,
+        "position": 55,
         "total_to_par": 4,
         "status": "active",
         "strokes": 108,
@@ -633,7 +622,7 @@
         "first_name": "Harry",
         "last_name": "Hall",
         "country": "England",
-        "position": 57,
+        "position": 56,
         "total_to_par": 5,
         "status": "active",
         "strokes": 149,
@@ -644,7 +633,7 @@
         "first_name": "Danny",
         "last_name": "Willett",
         "country": "England",
-        "position": 58,
+        "position": 57,
         "total_to_par": 5,
         "status": "active",
         "strokes": 149,
@@ -655,7 +644,7 @@
         "first_name": "J.J.",
         "last_name": "Spaun",
         "country": "United States",
-        "position": 59,
+        "position": 58,
         "total_to_par": 5,
         "status": "active",
         "strokes": 149,
@@ -666,7 +655,7 @@
         "first_name": "Ryan",
         "last_name": "Fox",
         "country": "New Zealand",
-        "position": 60,
+        "position": 59,
         "total_to_par": 5,
         "status": "active",
         "strokes": 145,
@@ -677,12 +666,23 @@
         "first_name": "Bubba",
         "last_name": "Watson",
         "country": "United States",
-        "position": 61,
+        "position": 60,
         "total_to_par": 5,
         "status": "active",
         "strokes": 133,
         "rounds_completed": 2,
         "pga_id": "25804"
+      },
+      {
+        "first_name": "Cameron",
+        "last_name": "Smith",
+        "country": "Australia",
+        "position": 61,
+        "total_to_par": 5,
+        "status": "active",
+        "strokes": 133,
+        "rounds_completed": 2,
+        "pga_id": "35891"
       },
       {
         "first_name": "Nicolai",
@@ -845,7 +845,7 @@
         "position": 76,
         "total_to_par": 9,
         "status": "active",
-        "strokes": 142,
+        "strokes": 145,
         "rounds_completed": 2,
         "pga_id": "06567"
       },
@@ -856,7 +856,7 @@
         "position": 77,
         "total_to_par": 9,
         "status": "active",
-        "strokes": 113,
+        "strokes": 117,
         "rounds_completed": 2,
         "pga_id": "68607"
       },
@@ -878,7 +878,7 @@
         "position": 79,
         "total_to_par": 10,
         "status": "active",
-        "strokes": 146,
+        "strokes": 150,
         "rounds_completed": 2,
         "pga_id": "51977"
       },
