@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>2026 Masters Purse Distribution</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
+  <style>
+    body { font: 14px sans-serif; margin: 20px; }
+    #chartContainer { max-width: 900px; }
+  </style>
+</head>
+<body>
+  <h2>2026 Masters Tournament — Purse Distribution</h2>
+  <p><a href="index.html">&larr; Back to Pool</a></p>
+  <div id="chartContainer">
+    <canvas id="purseChart"></canvas>
+  </div>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  <script>
+    d3.csv("purse.csv").then(function(rows) {
+      var labels = rows.map(function(r) { return r.pos; });
+      var amounts = rows.map(function(r) { return +r.amount; });
+
+      new Chart(document.getElementById("purseChart"), {
+        type: "bar",
+        data: {
+          labels: labels,
+          datasets: [{
+            label: "Prize Money",
+            data: amounts,
+            backgroundColor: "rgba(0, 86, 63, 0.8)",
+            borderColor: "rgba(0, 86, 63, 1)",
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: function(ctx) {
+                  return "$" + ctx.parsed.y.toLocaleString();
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              title: { display: true, text: "Finishing Position" },
+              ticks: { maxRotation: 90, minRotation: 45 }
+            },
+            y: {
+              title: { display: true, text: "Prize Money (USD)" },
+              ticks: {
+                callback: function(value) {
+                  if (value >= 1000000) return "$" + (value / 1000000).toFixed(1) + "M";
+                  if (value >= 1000) return "$" + (value / 1000).toFixed(0) + "K";
+                  return "$" + value;
+                }
+              }
+            }
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
