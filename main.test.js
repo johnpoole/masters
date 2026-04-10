@@ -19,13 +19,14 @@ const {
 // --- Test fixtures ---
 
 function makeLeaderboard() {
+    // Positions are sequential (ESPN style). Scheffler and McIlroy share total_to_par: -5.
     return [
-        { position: 1, first_name: "Jon", last_name: "Rahm", status: "active" },
-        { position: 2, first_name: "Scottie", last_name: "Scheffler", status: "active" },
-        { position: 2, first_name: "Rory", last_name: "McIlroy", status: "active" },
-        { position: 4, first_name: "Jordan", last_name: "Spieth", status: "active" },
-        { position: 55, first_name: "Tiger", last_name: "Woods", status: "active" },
-        { position: 10, first_name: "Dustin", last_name: "Johnson", status: "cut" }
+        { position: 1,  first_name: "Jon",     last_name: "Rahm",      status: "active", total_to_par: -8 },
+        { position: 2,  first_name: "Scottie", last_name: "Scheffler", status: "active", total_to_par: -5 },
+        { position: 3,  first_name: "Rory",    last_name: "McIlroy",   status: "active", total_to_par: -5 },
+        { position: 4,  first_name: "Jordan",  last_name: "Spieth",    status: "active", total_to_par: -3 },
+        { position: 55, first_name: "Tiger",   last_name: "Woods",     status: "active", total_to_par:  5 },
+        { position: 0,  first_name: "Dustin",  last_name: "Johnson",   status: "cut",    total_to_par:  2 }
     ];
 }
 
@@ -215,7 +216,7 @@ describe("validateAllPicks", () => {
 describe("calcPayouts", () => {
     test("assigns full purse for solo positions", () => {
         const players = processPlayers([
-            { position: 1, first_name: "Jon", last_name: "Rahm", status: "active" }
+            { position: 1, first_name: "Jon", last_name: "Rahm", status: "active", total_to_par: -8 }
         ]);
         const purse = makePurse();
         const payouts = calcPayouts(purse, players);
@@ -224,36 +225,40 @@ describe("calcPayouts", () => {
 
     test("includes position 50 in payouts", () => {
         const players = processPlayers([
-            { position: 50, first_name: "Tiger", last_name: "Woods", status: "active" }
+            { position: 50, first_name: "Tiger", last_name: "Woods", status: "active", total_to_par: 5 }
         ]);
         const purse = makePurse();
         const payouts = calcPayouts(purse, players);
         expect(payouts[50]).toBe(10000); // (50-49)*10000
     });
 
-    test("tie at position 49 splits positions 49 and 50 only", () => {
+    test("3-way tie spanning 49th-51st splits only positions 49 and 50", () => {
+        // ESPN sequential positions 49, 50, 51 all share the same score.
+        // Only slots 49 and 50 have purse money (20000 + 10000 = 30000); slot 51 has $0.
+        // Each of the 3 players receives 30000 / 3 = 10000.
         const players = processPlayers([
-            { position: 49, first_name: "A", last_name: "Player", status: "active" },
-            { position: 49, first_name: "B", last_name: "Player2", status: "active" },
-            { position: 49, first_name: "C", last_name: "Player3", status: "active" }
+            { position: 49, first_name: "A", last_name: "Player",  status: "active", total_to_par: 2 },
+            { position: 50, first_name: "B", last_name: "Player2", status: "active", total_to_par: 2 },
+            { position: 51, first_name: "C", last_name: "Player3", status: "active", total_to_par: 2 }
         ]);
         const purse = makePurse();
         const payouts = calcPayouts(purse, players);
-        // 3-way tie at 49: only positions 49 and 50 have purse values (20000 + 10000)
-        // Split 30000 across 3 = 10000 each
         expect(payouts[49]).toBe(10000);
+        expect(payouts[50]).toBe(10000);
+        expect(payouts[51]).toBe(10000);
     });
 
     test("splits purse evenly for tied positions", () => {
+        // ESPN gives sequential positions 2 and 3 to players tied at the same score.
+        // They occupy slots 2 and 3: purse[1]=490000, purse[2]=480000 → avg 485000 each.
         const players = processPlayers([
-            { position: 2, first_name: "Scottie", last_name: "Scheffler", status: "active" },
-            { position: 2, first_name: "Rory", last_name: "McIlroy", status: "active" }
+            { position: 2, first_name: "Scottie", last_name: "Scheffler", status: "active", total_to_par: -5 },
+            { position: 3, first_name: "Rory",    last_name: "McIlroy",   status: "active", total_to_par: -5 }
         ]);
         const purse = makePurse();
         const payouts = calcPayouts(purse, players);
-        // Position 2: purse[1]=490000, Position 3: purse[2]=480000
-        // Split: (490000 + 480000) / 2 = 485000
         expect(payouts[2]).toBe(485000);
+        expect(payouts[3]).toBe(485000);
     });
 });
 
@@ -278,10 +283,8 @@ describe("calculatePurse", () => {
         expect(calculatePurse({ position: 50, status: "active" }, payouts)).toBe(59000);
     });
 
-    test("returns 0 for position > 50", () => {
-        const payouts = [];
-        payouts[51] = 10000;
-        expect(calculatePurse({ position: 51, status: "active" }, payouts)).toBe(0);
+    test("returns 0 for active player with no payout entry", () => {
+        expect(calculatePurse({ position: 51, status: "active" }, {})).toBe(0);
     });
 
     test("returns 0 when no payout exists for position", () => {

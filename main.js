@@ -261,29 +261,43 @@ function estimateMoney(picks, payouts) {
 }
 
 function calculatePurse(player, payouts) {
-    if (player.status === "cut" || player.position > 50 || !payouts[player.position]) {
+    if (player.status === "cut") {
         return 0;
     }
-    return payouts[player.position];
+    return payouts[player.position] || 0;
 }
 
 function calcPayouts(purse, players) {
-    const payouts = [];
-    const ranks = players.reduce((acc, player) => {
-        const rank = player.position;
-        acc[rank] = (acc[rank] || 0) + 1;
-        return acc;
-    }, {});
+    // ESPN assigns sequential positions (1, 2, 3, ...) even for tied golfers.
+    // Detect ties by grouping consecutive active players with the same total_to_par,
+    // then split the combined purse for those slots equally.
+    var active = players
+        .filter(function(p) { return p.status === "active" && p.position > 0; })
+        .slice()
+        .sort(function(a, b) { return a.position - b.position; });
 
-    let shared = 0;
-    for (let i = 1; i <= 50; i++) {
-        if (ranks[i]) {
-            shared = 0;
-            for (let j = 0; j < ranks[i] && i + j <= 50; j++) {
-                shared += parseInt(purse[i + j - 1].amount, 10);
-            }
-            payouts[i] = shared / ranks[i];
+    var payouts = {};
+    var i = 0;
+    while (i < active.length) {
+        var score = active[i].total_to_par;
+        var j = i;
+        while (j < active.length && active[j].total_to_par === score) {
+            j++;
         }
+        // Players i..j-1 occupy slots (i+1)..(j) in the standings.
+        var count = j - i;
+        var shared = 0;
+        for (var k = 0; k < count; k++) {
+            var slot = active[i + k].position; // ESPN position IS the purse slot
+            if (slot <= 50) {
+                shared += parseInt(purse[slot - 1].amount, 10);
+            }
+        }
+        var each = shared / count;
+        for (var k = 0; k < count; k++) {
+            payouts[active[i + k].position] = each;
+        }
+        i = j;
     }
     return payouts;
 }
