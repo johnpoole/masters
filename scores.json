@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 2,
         "total_rounds": 4,
-        "updated": "2026-04-10T21:40:03.000Z",
+        "updated": "2026-04-10T21:45:03.000Z",
         "players": 91
       }
     },
@@ -20,7 +20,7 @@
         "position": 1,
         "total_to_par": -8,
         "status": "active",
-        "strokes": 116,
+        "strokes": 120,
         "rounds_completed": 2,
         "pga_id": "28237"
       },
@@ -218,7 +218,7 @@
         "position": 19,
         "total_to_par": -2,
         "status": "active",
-        "strokes": 122,
+        "strokes": 125,
         "rounds_completed": 2,
         "pga_id": "57366"
       },
@@ -476,26 +476,26 @@
         "pga_id": "33141"
       },
       {
-        "first_name": "Patrick",
-        "last_name": "Cantlay",
-        "country": "United States",
-        "position": 43,
-        "total_to_par": 2,
-        "status": "active",
-        "strokes": 121,
-        "rounds_completed": 2,
-        "pga_id": "35450"
-      },
-      {
         "first_name": "Viktor",
         "last_name": "Hovland",
         "country": "Norway",
+        "position": 43,
+        "total_to_par": 2,
+        "status": "active",
+        "strokes": 126,
+        "rounds_completed": 2,
+        "pga_id": "46717"
+      },
+      {
+        "first_name": "Patrick",
+        "last_name": "Cantlay",
+        "country": "United States",
         "position": 44,
         "total_to_par": 2,
         "status": "active",
         "strokes": 121,
         "rounds_completed": 2,
-        "pga_id": "46717"
+        "pga_id": "35450"
       },
       {
         "first_name": "Maverick",
@@ -678,7 +678,7 @@
         "last_name": "Noren",
         "country": "Sweden",
         "position": 61,
-        "total_to_par": 5,
+        "total_to_par": 4,
         "status": "active",
         "strokes": 124,
         "rounds_completed": 2,
@@ -845,7 +845,7 @@
         "position": 76,
         "total_to_par": 9,
         "status": "active",
-        "strokes": 133,
+        "strokes": 137,
         "rounds_completed": 2,
         "pga_id": "68607"
       },
