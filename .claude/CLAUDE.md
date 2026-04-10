@@ -39,3 +39,33 @@
 - `chordBubble.js` contains vestiges from a political donations project (PAC/candidate/contributor references)
 - `scores.json` expects path `scoresData.results.leaderboard` — structure mismatch can silently produce empty results
 - Requires internet for CDN-hosted libraries (D3, Bootstrap)
+
+## Advisor Pattern
+
+This project uses the Claude advisor pattern. When building agents or API integrations, pair a Sonnet/Haiku executor with an Opus advisor.
+
+### Tool Definition
+```json
+{
+    "type": "advisor_20260301",
+    "name": "advisor",
+    "model": "claude-opus-4-6"
+}
+```
+
+### Executor System Prompt
+```
+You have access to an `advisor` tool backed by a stronger reviewer model. It takes NO parameters — when you call advisor(), your entire conversation history is automatically forwarded.
+
+Call advisor BEFORE substantive work — before writing, before committing to an interpretation, before building on an assumption. If the task requires orientation first (finding files, fetching a source, seeing what's there), do that, then call advisor.
+
+Also call advisor:
+- When you believe the task is complete. BEFORE this call, make your deliverable durable.
+- When stuck — errors recurring, approach not converging, results that don't fit.
+- When considering a change of approach.
+```
+
+### Cost Control
+- Use `max_uses` to cap advisor calls per request
+- Enable `caching: {"type": "ephemeral", "ttl": "5m"}` for 3+ advisor calls
+- Beta header required: `advisor-tool-2026-03-01`
