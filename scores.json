@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 2,
         "total_rounds": 4,
-        "updated": "2026-04-10T20:30:03.000Z",
+        "updated": "2026-04-10T20:35:03.000Z",
         "players": 91
       }
     },
@@ -91,26 +91,26 @@
         "pga_id": "35296"
       },
       {
-        "first_name": "Tommy",
-        "last_name": "Fleetwood",
-        "country": "England",
-        "position": 8,
-        "total_to_par": -4,
-        "status": "active",
-        "strokes": 115,
-        "rounds_completed": 2,
-        "pga_id": "30911"
-      },
-      {
         "first_name": "Jason",
         "last_name": "Day",
         "country": "Australia",
+        "position": 8,
+        "total_to_par": -4,
+        "status": "active",
+        "strokes": 120,
+        "rounds_completed": 2,
+        "pga_id": "28089"
+      },
+      {
+        "first_name": "Tommy",
+        "last_name": "Fleetwood",
+        "country": "England",
         "position": 9,
         "total_to_par": -4,
         "status": "active",
         "strokes": 115,
         "rounds_completed": 2,
-        "pga_id": "28089"
+        "pga_id": "30911"
       },
       {
         "first_name": "Chris",
@@ -163,7 +163,7 @@
         "position": 14,
         "total_to_par": -3,
         "status": "active",
-        "strokes": 116,
+        "strokes": 121,
         "rounds_completed": 2,
         "pga_id": "33204"
       },
@@ -229,7 +229,7 @@
         "position": 20,
         "total_to_par": -1,
         "status": "active",
-        "strokes": 123,
+        "strokes": 127,
         "rounds_completed": 2,
         "pga_id": "25493"
       },
@@ -240,7 +240,7 @@
         "position": 21,
         "total_to_par": -1,
         "status": "active",
-        "strokes": 118,
+        "strokes": 123,
         "rounds_completed": 2,
         "pga_id": "30925"
       },
@@ -531,10 +531,21 @@
         "pga_id": "47959"
       },
       {
+        "first_name": "Patrick",
+        "last_name": "Cantlay",
+        "country": "United States",
+        "position": 48,
+        "total_to_par": 3,
+        "status": "active",
+        "strokes": 111,
+        "rounds_completed": 2,
+        "pga_id": "35450"
+      },
+      {
         "first_name": "Viktor",
         "last_name": "Hovland",
         "country": "Norway",
-        "position": 48,
+        "position": 49,
         "total_to_par": 3,
         "status": "active",
         "strokes": 111,
@@ -545,7 +556,7 @@
         "first_name": "Brian",
         "last_name": "Harman",
         "country": "United States",
-        "position": 49,
+        "position": 50,
         "total_to_par": 4,
         "status": "active",
         "strokes": 148,
@@ -556,7 +567,7 @@
         "first_name": "Jon",
         "last_name": "Rahm",
         "country": "Spain",
-        "position": 50,
+        "position": 51,
         "total_to_par": 4,
         "status": "active",
         "strokes": 148,
@@ -567,7 +578,7 @@
         "first_name": "Corey",
         "last_name": "Conners",
         "country": "Canada",
-        "position": 51,
+        "position": 52,
         "total_to_par": 4,
         "status": "active",
         "strokes": 148,
@@ -578,7 +589,7 @@
         "first_name": "Si-woo",
         "last_name": "Kim",
         "country": "South Korea",
-        "position": 52,
+        "position": 53,
         "total_to_par": 4,
         "status": "active",
         "strokes": 148,
@@ -589,23 +600,12 @@
         "first_name": "Charl",
         "last_name": "Schwartzel",
         "country": "South Africa",
-        "position": 53,
+        "position": 54,
         "total_to_par": 4,
         "status": "active",
         "strokes": 144,
         "rounds_completed": 2,
         "pga_id": "26331"
-      },
-      {
-        "first_name": "Patrick",
-        "last_name": "Cantlay",
-        "country": "United States",
-        "position": 54,
-        "total_to_par": 4,
-        "status": "active",
-        "strokes": 108,
-        "rounds_completed": 2,
-        "pga_id": "35450"
       },
       {
         "first_name": "Harry",
