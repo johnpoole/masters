@@ -332,7 +332,7 @@ function tabulate(data, columns) {
     rows.selectAll('td')
         .data(d => {
             if (picksLocked) return [d.id, "—"];
-            const ret = [d.id, parseInt(d.money, 10)];
+            const ret = [d.id, "$" + parseInt(d.money, 10).toLocaleString()];
             d.picks.sort((a, b) => a.position - b.position)
                 .forEach(p => ret.push(textDisplay(p)));
             return ret;
