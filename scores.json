@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 2,
         "total_rounds": 4,
-        "updated": "2026-04-10T12:20:03.000Z",
+        "updated": "2026-04-10T12:25:03.000Z",
         "players": 91
       }
     },
@@ -196,7 +196,7 @@
         "position": 17,
         "total_to_par": 0,
         "status": "active",
-        "strokes": 81,
+        "strokes": 85,
         "rounds_completed": 2,
         "pga_id": "55893"
       },
@@ -603,7 +603,7 @@
         "position": 54,
         "total_to_par": 4,
         "status": "active",
-        "strokes": 85,
+        "strokes": 89,
         "rounds_completed": 2,
         "pga_id": "39971"
       },
