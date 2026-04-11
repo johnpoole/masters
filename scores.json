@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 3,
         "total_rounds": 4,
-        "updated": "2026-04-11T14:05:04.000Z",
+        "updated": "2026-04-11T14:10:04.000Z",
         "players": 91
       }
     },
@@ -537,15 +537,26 @@
         "position": 48,
         "total_to_par": 4,
         "status": "active",
-        "strokes": 157,
+        "strokes": 161,
         "rounds_completed": 3,
         "pga_id": "27349"
+      },
+      {
+        "first_name": "Charl",
+        "last_name": "Schwartzel",
+        "country": "South Africa",
+        "position": 49,
+        "total_to_par": 4,
+        "status": "active",
+        "strokes": 157,
+        "rounds_completed": 3,
+        "pga_id": "26331"
       },
       {
         "first_name": "Si-woo",
         "last_name": "Kim",
         "country": "South Korea",
-        "position": 49,
+        "position": 50,
         "total_to_par": 4,
         "status": "active",
         "strokes": 152,
@@ -556,7 +567,7 @@
         "first_name": "Brian",
         "last_name": "Harman",
         "country": "United States",
-        "position": 50,
+        "position": 51,
         "total_to_par": 4,
         "status": "active",
         "strokes": 148,
@@ -567,23 +578,12 @@
         "first_name": "Corey",
         "last_name": "Conners",
         "country": "Canada",
-        "position": 51,
+        "position": 52,
         "total_to_par": 4,
         "status": "active",
         "strokes": 148,
         "rounds_completed": 2,
         "pga_id": "39997"
-      },
-      {
-        "first_name": "Kurt",
-        "last_name": "Kitayama",
-        "country": "United States",
-        "position": 52,
-        "total_to_par": 5,
-        "status": "active",
-        "strokes": 158,
-        "rounds_completed": 3,
-        "pga_id": "48117"
       },
       {
         "first_name": "Rasmus",
@@ -597,15 +597,15 @@
         "pga_id": "52686"
       },
       {
-        "first_name": "Charl",
-        "last_name": "Schwartzel",
-        "country": "South Africa",
+        "first_name": "Kurt",
+        "last_name": "Kitayama",
+        "country": "United States",
         "position": 54,
-        "total_to_par": 5,
+        "total_to_par": 6,
         "status": "active",
-        "strokes": 153,
+        "strokes": 163,
         "rounds_completed": 3,
-        "pga_id": "26331"
+        "pga_id": "48117"
       },
       {
         "first_name": "Harry",
