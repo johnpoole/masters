@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 3,
         "total_rounds": 4,
-        "updated": "2026-04-11T14:30:03.000Z",
+        "updated": "2026-04-11T14:35:03.000Z",
         "players": 91
       }
     },
@@ -515,7 +515,7 @@
         "position": 46,
         "total_to_par": 3,
         "status": "active",
-        "strokes": 163,
+        "strokes": 167,
         "rounds_completed": 3,
         "pga_id": "27349"
       },
@@ -531,10 +531,21 @@
         "pga_id": "37455"
       },
       {
+        "first_name": "Brian",
+        "last_name": "Harman",
+        "country": "United States",
+        "position": 48,
+        "total_to_par": 3,
+        "status": "active",
+        "strokes": 156,
+        "rounds_completed": 3,
+        "pga_id": "27644"
+      },
+      {
         "first_name": "Sergio",
         "last_name": "García",
         "country": "Spain",
-        "position": 48,
+        "position": 49,
         "total_to_par": 3,
         "status": "active",
         "strokes": 151,
@@ -542,43 +553,10 @@
         "pga_id": "21209"
       },
       {
-        "first_name": "Rasmus",
-        "last_name": "Højgaard",
-        "country": "Denmark",
-        "position": 49,
-        "total_to_par": 4,
-        "status": "active",
-        "strokes": 161,
-        "rounds_completed": 3,
-        "pga_id": "52686"
-      },
-      {
-        "first_name": "Brian",
-        "last_name": "Harman",
-        "country": "United States",
-        "position": 50,
-        "total_to_par": 4,
-        "status": "active",
-        "strokes": 152,
-        "rounds_completed": 3,
-        "pga_id": "27644"
-      },
-      {
-        "first_name": "Corey",
-        "last_name": "Conners",
-        "country": "Canada",
-        "position": 51,
-        "total_to_par": 4,
-        "status": "active",
-        "strokes": 152,
-        "rounds_completed": 3,
-        "pga_id": "39997"
-      },
-      {
         "first_name": "Maverick",
         "last_name": "McNealy",
         "country": "United States",
-        "position": 52,
+        "position": 50,
         "total_to_par": 4,
         "status": "active",
         "strokes": 152,
@@ -586,26 +564,48 @@
         "pga_id": "46442"
       },
       {
-        "first_name": "Charl",
-        "last_name": "Schwartzel",
-        "country": "South Africa",
-        "position": 53,
+        "first_name": "Rasmus",
+        "last_name": "Højgaard",
+        "country": "Denmark",
+        "position": 51,
         "total_to_par": 5,
         "status": "active",
-        "strokes": 162,
+        "strokes": 165,
         "rounds_completed": 3,
-        "pga_id": "26331"
+        "pga_id": "52686"
+      },
+      {
+        "first_name": "Corey",
+        "last_name": "Conners",
+        "country": "Canada",
+        "position": 52,
+        "total_to_par": 5,
+        "status": "active",
+        "strokes": 158,
+        "rounds_completed": 3,
+        "pga_id": "39997"
       },
       {
         "first_name": "Kurt",
         "last_name": "Kitayama",
         "country": "United States",
-        "position": 54,
+        "position": 53,
         "total_to_par": 6,
         "status": "active",
         "strokes": 170,
         "rounds_completed": 3,
         "pga_id": "48117"
+      },
+      {
+        "first_name": "Charl",
+        "last_name": "Schwartzel",
+        "country": "South Africa",
+        "position": 54,
+        "total_to_par": 6,
+        "status": "active",
+        "strokes": 166,
+        "rounds_completed": 3,
+        "pga_id": "26331"
       },
       {
         "first_name": "Harry",
