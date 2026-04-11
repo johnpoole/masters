@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 3,
         "total_rounds": 4,
-        "updated": "2026-04-11T21:50:02.000Z",
+        "updated": "2026-04-11T21:55:02.000Z",
         "players": 91
       }
     },
@@ -20,7 +20,7 @@
         "position": 1,
         "total_to_par": -11,
         "status": "active",
-        "strokes": 197,
+        "strokes": 201,
         "rounds_completed": 3,
         "pga_id": "57366"
       },
@@ -58,26 +58,26 @@
         "pga_id": "47504"
       },
       {
-        "first_name": "Haotong",
-        "last_name": "Li",
-        "country": "China",
-        "position": 5,
-        "total_to_par": -8,
-        "status": "active",
-        "strokes": 200,
-        "rounds_completed": 3,
-        "pga_id": "35296"
-      },
-      {
         "first_name": "Jason",
         "last_name": "Day",
         "country": "Australia",
+        "position": 5,
+        "total_to_par": -8,
+        "status": "active",
+        "strokes": 204,
+        "rounds_completed": 3,
+        "pga_id": "28089"
+      },
+      {
+        "first_name": "Haotong",
+        "last_name": "Li",
+        "country": "China",
         "position": 6,
         "total_to_par": -8,
         "status": "active",
         "strokes": 200,
         "rounds_completed": 3,
-        "pga_id": "28089"
+        "pga_id": "35296"
       },
       {
         "first_name": "Justin",
@@ -218,7 +218,7 @@
         "position": 19,
         "total_to_par": -4,
         "status": "active",
-        "strokes": 196,
+        "strokes": 201,
         "rounds_completed": 3,
         "pga_id": "34363"
       },
