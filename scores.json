@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 3,
         "total_rounds": 4,
-        "updated": "2026-04-11T22:05:02.000Z",
+        "updated": "2026-04-11T22:10:02.000Z",
         "players": 91
       }
     },
@@ -20,31 +20,31 @@
         "position": 1,
         "total_to_par": -11,
         "status": "active",
-        "strokes": 201,
+        "strokes": 205,
         "rounds_completed": 3,
         "pga_id": "57366"
-      },
-      {
-        "first_name": "Sam",
-        "last_name": "Burns",
-        "country": "United States",
-        "position": 2,
-        "total_to_par": -10,
-        "status": "active",
-        "strokes": 186,
-        "rounds_completed": 3,
-        "pga_id": "47504"
       },
       {
         "first_name": "Rory",
         "last_name": "McIlroy",
         "country": "Northern Ireland",
+        "position": 2,
+        "total_to_par": -11,
+        "status": "active",
+        "strokes": 189,
+        "rounds_completed": 3,
+        "pga_id": "28237"
+      },
+      {
+        "first_name": "Sam",
+        "last_name": "Burns",
+        "country": "United States",
         "position": 3,
         "total_to_par": -10,
         "status": "active",
         "strokes": 186,
         "rounds_completed": 3,
-        "pga_id": "28237"
+        "pga_id": "47504"
       },
       {
         "first_name": "Shane",
@@ -58,26 +58,26 @@
         "pga_id": "33204"
       },
       {
-        "first_name": "Haotong",
-        "last_name": "Li",
-        "country": "China",
-        "position": 5,
-        "total_to_par": -8,
-        "status": "active",
-        "strokes": 204,
-        "rounds_completed": 3,
-        "pga_id": "35296"
-      },
-      {
         "first_name": "Jason",
         "last_name": "Day",
         "country": "Australia",
+        "position": 5,
+        "total_to_par": -8,
+        "status": "active",
+        "strokes": 208,
+        "rounds_completed": 3,
+        "pga_id": "28089"
+      },
+      {
+        "first_name": "Haotong",
+        "last_name": "Li",
+        "country": "China",
         "position": 6,
         "total_to_par": -8,
         "status": "active",
         "strokes": 204,
         "rounds_completed": 3,
-        "pga_id": "28089"
+        "pga_id": "35296"
       },
       {
         "first_name": "Justin",
