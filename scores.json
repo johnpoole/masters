@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 3,
         "total_rounds": 4,
-        "updated": "2026-04-11T13:40:03.000Z",
+        "updated": "2026-04-11T13:45:06.000Z",
         "players": 91
       }
     },
@@ -520,10 +520,21 @@
         "pga_id": "21209"
       },
       {
+        "first_name": "Kurt",
+        "last_name": "Kitayama",
+        "country": "United States",
+        "position": 47,
+        "total_to_par": 4,
+        "status": "active",
+        "strokes": 152,
+        "rounds_completed": 3,
+        "pga_id": "48117"
+      },
+      {
         "first_name": "Brian",
         "last_name": "Harman",
         "country": "United States",
-        "position": 47,
+        "position": 48,
         "total_to_par": 4,
         "status": "active",
         "strokes": 148,
@@ -534,7 +545,7 @@
         "first_name": "Jon",
         "last_name": "Rahm",
         "country": "Spain",
-        "position": 48,
+        "position": 49,
         "total_to_par": 4,
         "status": "active",
         "strokes": 148,
@@ -545,23 +556,12 @@
         "first_name": "Rasmus",
         "last_name": "Højgaard",
         "country": "Denmark",
-        "position": 49,
-        "total_to_par": 4,
-        "status": "active",
-        "strokes": 148,
-        "rounds_completed": 2,
-        "pga_id": "52686"
-      },
-      {
-        "first_name": "Alex",
-        "last_name": "Noren",
-        "country": "Sweden",
         "position": 50,
         "total_to_par": 4,
         "status": "active",
         "strokes": 148,
         "rounds_completed": 2,
-        "pga_id": "27349"
+        "pga_id": "52686"
       },
       {
         "first_name": "Corey",
@@ -597,15 +597,15 @@
         "pga_id": "26331"
       },
       {
-        "first_name": "Kurt",
-        "last_name": "Kitayama",
-        "country": "United States",
+        "first_name": "Alex",
+        "last_name": "Noren",
+        "country": "Sweden",
         "position": 54,
-        "total_to_par": 4,
+        "total_to_par": 5,
         "status": "active",
-        "strokes": 148,
-        "rounds_completed": 2,
-        "pga_id": "48117"
+        "strokes": 153,
+        "rounds_completed": 3,
+        "pga_id": "27349"
       },
       {
         "first_name": "Harry",
