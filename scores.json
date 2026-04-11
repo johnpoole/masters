@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 3,
         "total_rounds": 4,
-        "updated": "2026-04-11T21:55:02.000Z",
+        "updated": "2026-04-11T22:00:02.000Z",
         "players": 91
       }
     },
@@ -25,13 +25,24 @@
         "pga_id": "57366"
       },
       {
-        "first_name": "Rory",
-        "last_name": "McIlroy",
-        "country": "Northern Ireland",
+        "first_name": "Sam",
+        "last_name": "Burns",
+        "country": "United States",
         "position": 2,
         "total_to_par": -10,
         "status": "active",
-        "strokes": 181,
+        "strokes": 186,
+        "rounds_completed": 3,
+        "pga_id": "47504"
+      },
+      {
+        "first_name": "Rory",
+        "last_name": "McIlroy",
+        "country": "Northern Ireland",
+        "position": 3,
+        "total_to_par": -10,
+        "status": "active",
+        "strokes": 186,
         "rounds_completed": 3,
         "pga_id": "28237"
       },
@@ -39,7 +50,7 @@
         "first_name": "Shane",
         "last_name": "Lowry",
         "country": "Ireland",
-        "position": 3,
+        "position": 4,
         "total_to_par": -9,
         "status": "active",
         "strokes": 191,
@@ -47,37 +58,26 @@
         "pga_id": "33204"
       },
       {
-        "first_name": "Sam",
-        "last_name": "Burns",
-        "country": "United States",
-        "position": 4,
-        "total_to_par": -9,
-        "status": "active",
-        "strokes": 182,
-        "rounds_completed": 3,
-        "pga_id": "47504"
-      },
-      {
-        "first_name": "Jason",
-        "last_name": "Day",
-        "country": "Australia",
+        "first_name": "Haotong",
+        "last_name": "Li",
+        "country": "China",
         "position": 5,
         "total_to_par": -8,
         "status": "active",
         "strokes": 204,
         "rounds_completed": 3,
-        "pga_id": "28089"
+        "pga_id": "35296"
       },
       {
-        "first_name": "Haotong",
-        "last_name": "Li",
-        "country": "China",
+        "first_name": "Jason",
+        "last_name": "Day",
+        "country": "Australia",
         "position": 6,
         "total_to_par": -8,
         "status": "active",
-        "strokes": 200,
+        "strokes": 204,
         "rounds_completed": 3,
-        "pga_id": "35296"
+        "pga_id": "28089"
       },
       {
         "first_name": "Justin",
@@ -86,7 +86,7 @@
         "position": 7,
         "total_to_par": -8,
         "status": "active",
-        "strokes": 188,
+        "strokes": 192,
         "rounds_completed": 3,
         "pga_id": "22405"
       },
@@ -108,7 +108,7 @@
         "position": 9,
         "total_to_par": -7,
         "status": "active",
-        "strokes": 189,
+        "strokes": 193,
         "rounds_completed": 3,
         "pga_id": "34360"
       },
@@ -141,7 +141,7 @@
         "position": 12,
         "total_to_par": -6,
         "status": "active",
-        "strokes": 199,
+        "strokes": 202,
         "rounds_completed": 3,
         "pga_id": "51766"
       },
@@ -311,10 +311,21 @@
         "pga_id": "59095"
       },
       {
+        "first_name": "Kristoffer",
+        "last_name": "Reitan",
+        "country": "Norway",
+        "position": 28,
+        "total_to_par": -3,
+        "status": "active",
+        "strokes": 209,
+        "rounds_completed": 3,
+        "pga_id": "49855"
+      },
+      {
         "first_name": "Sung-jae",
         "last_name": "Im",
         "country": "South Korea",
-        "position": 28,
+        "position": 29,
         "total_to_par": -2,
         "status": "active",
         "strokes": 214,
@@ -325,7 +336,7 @@
         "first_name": "Sepp",
         "last_name": "Straka",
         "country": "Austria",
-        "position": 29,
+        "position": 30,
         "total_to_par": -2,
         "status": "active",
         "strokes": 214,
@@ -336,7 +347,7 @@
         "first_name": "Jacob",
         "last_name": "Bridgeman",
         "country": "United States",
-        "position": 30,
+        "position": 31,
         "total_to_par": -2,
         "status": "active",
         "strokes": 214,
@@ -347,23 +358,12 @@
         "first_name": "Hideki",
         "last_name": "Matsuyama",
         "country": "Japan",
-        "position": 31,
+        "position": 32,
         "total_to_par": -2,
         "status": "active",
         "strokes": 214,
         "rounds_completed": 3,
         "pga_id": "32839"
-      },
-      {
-        "first_name": "Kristoffer",
-        "last_name": "Reitan",
-        "country": "Norway",
-        "position": 32,
-        "total_to_par": -2,
-        "status": "active",
-        "strokes": 206,
-        "rounds_completed": 3,
-        "pga_id": "49855"
       },
       {
         "first_name": "Brian",
