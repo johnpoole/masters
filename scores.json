@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 3,
         "total_rounds": 4,
-        "updated": "2026-04-11T13:50:04.000Z",
+        "updated": "2026-04-11T13:55:04.000Z",
         "players": 91
       }
     },
@@ -586,26 +586,26 @@
         "pga_id": "37455"
       },
       {
-        "first_name": "Charl",
-        "last_name": "Schwartzel",
-        "country": "South Africa",
-        "position": 53,
-        "total_to_par": 4,
-        "status": "active",
-        "strokes": 148,
-        "rounds_completed": 2,
-        "pga_id": "26331"
-      },
-      {
         "first_name": "Alex",
         "last_name": "Noren",
         "country": "Sweden",
-        "position": 54,
+        "position": 53,
         "total_to_par": 5,
         "status": "active",
         "strokes": 153,
         "rounds_completed": 3,
         "pga_id": "27349"
+      },
+      {
+        "first_name": "Charl",
+        "last_name": "Schwartzel",
+        "country": "South Africa",
+        "position": 54,
+        "total_to_par": 5,
+        "status": "active",
+        "strokes": 153,
+        "rounds_completed": 3,
+        "pga_id": "26331"
       },
       {
         "first_name": "Harry",
