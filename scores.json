@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 3,
         "total_rounds": 4,
-        "updated": "2026-04-11T14:50:05.000Z",
+        "updated": "2026-04-11T14:55:05.000Z",
         "players": 91
       }
     },
@@ -432,15 +432,15 @@
         "pga_id": "60004"
       },
       {
-        "first_name": "Jon",
-        "last_name": "Rahm",
-        "country": "Spain",
+        "first_name": "Brian",
+        "last_name": "Harman",
+        "country": "United States",
         "position": 39,
         "total_to_par": 2,
         "status": "active",
         "strokes": 162,
         "rounds_completed": 3,
-        "pga_id": "46970"
+        "pga_id": "27644"
       },
       {
         "first_name": "Viktor",
@@ -504,15 +504,26 @@
         "position": 45,
         "total_to_par": 3,
         "status": "active",
-        "strokes": 170,
+        "strokes": 174,
         "rounds_completed": 3,
         "pga_id": "27349"
+      },
+      {
+        "first_name": "Jon",
+        "last_name": "Rahm",
+        "country": "Spain",
+        "position": 46,
+        "total_to_par": 3,
+        "status": "active",
+        "strokes": 167,
+        "rounds_completed": 3,
+        "pga_id": "46970"
       },
       {
         "first_name": "Si-woo",
         "last_name": "Kim",
         "country": "South Korea",
-        "position": 46,
+        "position": 47,
         "total_to_par": 3,
         "status": "active",
         "strokes": 163,
@@ -520,37 +531,26 @@
         "pga_id": "37455"
       },
       {
-        "first_name": "Brian",
-        "last_name": "Harman",
-        "country": "United States",
-        "position": 47,
+        "first_name": "Sergio",
+        "last_name": "García",
+        "country": "Spain",
+        "position": 48,
         "total_to_par": 3,
         "status": "active",
         "strokes": 160,
         "rounds_completed": 3,
-        "pga_id": "27644"
+        "pga_id": "21209"
       },
       {
         "first_name": "Maverick",
         "last_name": "McNealy",
         "country": "United States",
-        "position": 48,
-        "total_to_par": 3,
-        "status": "active",
-        "strokes": 156,
-        "rounds_completed": 3,
-        "pga_id": "46442"
-      },
-      {
-        "first_name": "Sergio",
-        "last_name": "García",
-        "country": "Spain",
         "position": 49,
         "total_to_par": 3,
         "status": "active",
         "strokes": 156,
         "rounds_completed": 3,
-        "pga_id": "21209"
+        "pga_id": "46442"
       },
       {
         "first_name": "Keegan",
@@ -581,7 +581,7 @@
         "position": 52,
         "total_to_par": 4,
         "status": "active",
-        "strokes": 161,
+        "strokes": 164,
         "rounds_completed": 3,
         "pga_id": "39997"
       },
@@ -592,7 +592,7 @@
         "position": 53,
         "total_to_par": 6,
         "status": "active",
-        "strokes": 173,
+        "strokes": 177,
         "rounds_completed": 3,
         "pga_id": "48117"
       },
@@ -603,7 +603,7 @@
         "position": 54,
         "total_to_par": 6,
         "status": "active",
-        "strokes": 170,
+        "strokes": 173,
         "rounds_completed": 3,
         "pga_id": "26331"
       },
