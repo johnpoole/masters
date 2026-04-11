@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 3,
         "total_rounds": 4,
-        "updated": "2026-04-11T15:00:04.000Z",
+        "updated": "2026-04-11T15:05:04.000Z",
         "players": 91
       }
     },
@@ -438,7 +438,7 @@
         "position": 39,
         "total_to_par": 2,
         "status": "active",
-        "strokes": 162,
+        "strokes": 166,
         "rounds_completed": 3,
         "pga_id": "27644"
       },
@@ -454,37 +454,37 @@
         "pga_id": "33448"
       },
       {
-        "first_name": "Gary",
-        "last_name": "Woodland",
+        "first_name": "Sam",
+        "last_name": "Stevens",
         "country": "United States",
         "position": 41,
         "total_to_par": 2,
         "status": "active",
         "strokes": 150,
         "rounds_completed": 3,
-        "pga_id": "31323"
-      },
-      {
-        "first_name": "Sam",
-        "last_name": "Stevens",
-        "country": "United States",
-        "position": 42,
-        "total_to_par": 2,
-        "status": "active",
-        "strokes": 146,
-        "rounds_completed": 2,
         "pga_id": "55893"
       },
       {
         "first_name": "Adam",
         "last_name": "Scott",
         "country": "Australia",
+        "position": 42,
+        "total_to_par": 2,
+        "status": "active",
+        "strokes": 150,
+        "rounds_completed": 3,
+        "pga_id": "24502"
+      },
+      {
+        "first_name": "Gary",
+        "last_name": "Woodland",
+        "country": "United States",
         "position": 43,
         "total_to_par": 2,
         "status": "active",
-        "strokes": 146,
-        "rounds_completed": 2,
-        "pga_id": "24502"
+        "strokes": 150,
+        "rounds_completed": 3,
+        "pga_id": "31323"
       },
       {
         "first_name": "Alex",
@@ -504,7 +504,7 @@
         "position": 45,
         "total_to_par": 3,
         "status": "active",
-        "strokes": 167,
+        "strokes": 170,
         "rounds_completed": 3,
         "pga_id": "46970"
       },
@@ -570,7 +570,7 @@
         "position": 51,
         "total_to_par": 4,
         "status": "active",
-        "strokes": 168,
+        "strokes": 171,
         "rounds_completed": 3,
         "pga_id": "37455"
       },
