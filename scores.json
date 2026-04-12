@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 4,
         "total_rounds": 4,
-        "updated": "2026-04-12T22:50:05.000Z",
+        "updated": "2026-04-12T22:55:03.000Z",
         "players": 91
       }
     },
@@ -18,15 +18,15 @@
         "last_name": "McIlroy",
         "country": "Northern Ireland",
         "position": 1,
-        "total_to_par": -13,
+        "total_to_par": -12,
         "status": "active",
-        "strokes": 271,
+        "strokes": 276,
         "rounds_completed": 4,
         "round_scores": [
           67,
           65,
           73,
-          66
+          71
         ],
         "pga_id": "28237"
       },
@@ -105,13 +105,13 @@
         "position": 6,
         "total_to_par": -10,
         "status": "active",
-        "strokes": 274,
+        "strokes": 278,
         "rounds_completed": 4,
         "round_scores": [
           73,
           67,
           65,
-          69
+          73
         ],
         "pga_id": "57366"
       },
