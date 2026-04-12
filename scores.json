@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 4,
         "total_rounds": 4,
-        "updated": "2026-04-12T20:55:03.000Z",
+        "updated": "2026-04-12T21:00:03.000Z",
         "players": 91
       }
     },
@@ -134,13 +134,13 @@
         "position": 8,
         "total_to_par": -8,
         "status": "active",
-        "strokes": 272,
+        "strokes": 276,
         "rounds_completed": 4,
         "round_scores": [
           70,
           72,
           70,
-          60
+          64
         ],
         "pga_id": "48081"
       },
@@ -250,13 +250,13 @@
         "position": 15,
         "total_to_par": -5,
         "status": "active",
-        "strokes": 279,
+        "strokes": 283,
         "rounds_completed": 4,
         "round_scores": [
           72,
           69,
           71,
-          67
+          71
         ],
         "pga_id": "36689"
       },
@@ -417,13 +417,13 @@
         "position": 25,
         "total_to_par": -3,
         "status": "active",
-        "strokes": 281,
+        "strokes": 285,
         "rounds_completed": 4,
         "round_scores": [
           72,
           68,
           72,
-          69
+          73
         ],
         "pga_id": "51766"
       },
