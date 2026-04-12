@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 4,
         "total_rounds": 4,
-        "updated": "2026-04-12T22:25:04.000Z",
+        "updated": "2026-04-12T22:30:03.000Z",
         "players": 91
       }
     },
@@ -99,27 +99,10 @@
         "pga_id": "22405"
       },
       {
-        "first_name": "Sam",
-        "last_name": "Burns",
-        "country": "United States",
-        "position": 6,
-        "total_to_par": -10,
-        "status": "active",
-        "strokes": 270,
-        "rounds_completed": 4,
-        "round_scores": [
-          67,
-          71,
-          68,
-          64
-        ],
-        "pga_id": "47504"
-      },
-      {
         "first_name": "Cameron",
         "last_name": "Young",
         "country": "United States",
-        "position": 7,
+        "position": 6,
         "total_to_par": -10,
         "status": "active",
         "strokes": 270,
@@ -136,7 +119,7 @@
         "first_name": "Collin",
         "last_name": "Morikawa",
         "country": "United States",
-        "position": 8,
+        "position": 7,
         "total_to_par": -9,
         "status": "active",
         "strokes": 279,
@@ -148,6 +131,23 @@
           68
         ],
         "pga_id": "50525"
+      },
+      {
+        "first_name": "Sam",
+        "last_name": "Burns",
+        "country": "United States",
+        "position": 8,
+        "total_to_par": -9,
+        "status": "active",
+        "strokes": 275,
+        "rounds_completed": 4,
+        "round_scores": [
+          67,
+          71,
+          68,
+          69
+        ],
+        "pga_id": "47504"
       },
       {
         "first_name": "Max",
@@ -513,13 +513,13 @@
         "position": 30,
         "total_to_par": -2,
         "status": "active",
-        "strokes": 278,
+        "strokes": 282,
         "rounds_completed": 4,
         "round_scores": [
           70,
           69,
           68,
-          71
+          75
         ],
         "pga_id": "33204"
       },
