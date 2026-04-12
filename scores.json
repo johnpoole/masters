@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 4,
         "total_rounds": 4,
-        "updated": "2026-04-12T14:15:02.000Z",
+        "updated": "2026-04-12T14:20:03.000Z",
         "players": 91
       }
     },
@@ -504,7 +504,7 @@
         "position": 45,
         "total_to_par": 3,
         "status": "active",
-        "strokes": 232,
+        "strokes": 235,
         "rounds_completed": 4,
         "pga_id": "46970"
       },
@@ -515,7 +515,7 @@
         "position": 46,
         "total_to_par": 3,
         "status": "active",
-        "strokes": 223,
+        "strokes": 228,
         "rounds_completed": 4,
         "pga_id": "33141"
       },
@@ -564,26 +564,26 @@
         "pga_id": "48117"
       },
       {
-        "first_name": "Sergio",
-        "last_name": "García",
-        "country": "Spain",
-        "position": 51,
-        "total_to_par": 7,
-        "status": "active",
-        "strokes": 236,
-        "rounds_completed": 4,
-        "pga_id": "21209"
-      },
-      {
         "first_name": "Aaron",
         "last_name": "Rai",
         "country": "England",
+        "position": 51,
+        "total_to_par": 8,
+        "status": "active",
+        "strokes": 247,
+        "rounds_completed": 4,
+        "pga_id": "46414"
+      },
+      {
+        "first_name": "Sergio",
+        "last_name": "García",
+        "country": "Spain",
         "position": 52,
         "total_to_par": 8,
         "status": "active",
-        "strokes": 244,
+        "strokes": 240,
         "rounds_completed": 4,
-        "pga_id": "46414"
+        "pga_id": "21209"
       },
       {
         "first_name": "Rasmus",
@@ -601,9 +601,9 @@
         "last_name": "Schwartzel",
         "country": "South Africa",
         "position": 54,
-        "total_to_par": 13,
+        "total_to_par": 12,
         "status": "active",
-        "strokes": 249,
+        "strokes": 251,
         "rounds_completed": 4,
         "pga_id": "26331"
       },
