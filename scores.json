@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 4,
         "total_rounds": 4,
-        "updated": "2026-04-12T13:35:03.000Z",
+        "updated": "2026-04-12T13:40:04.000Z",
         "players": 91
       }
     },
@@ -531,26 +531,26 @@
         "pga_id": "37455"
       },
       {
-        "first_name": "Rasmus",
-        "last_name": "Højgaard",
-        "country": "Denmark",
-        "position": 48,
-        "total_to_par": 5,
-        "status": "active",
-        "strokes": 221,
-        "rounds_completed": 3,
-        "pga_id": "52686"
-      },
-      {
         "first_name": "Jon",
         "last_name": "Rahm",
         "country": "Spain",
+        "position": 48,
+        "total_to_par": 5,
+        "status": "active",
+        "strokes": 225,
+        "rounds_completed": 4,
+        "pga_id": "46970"
+      },
+      {
+        "first_name": "Rasmus",
+        "last_name": "Højgaard",
+        "country": "Denmark",
         "position": 49,
         "total_to_par": 5,
         "status": "active",
         "strokes": 221,
         "rounds_completed": 3,
-        "pga_id": "46970"
+        "pga_id": "52686"
       },
       {
         "first_name": "Sergio",
@@ -601,9 +601,9 @@
         "last_name": "Schwartzel",
         "country": "South Africa",
         "position": 54,
-        "total_to_par": 9,
+        "total_to_par": 10,
         "status": "active",
-        "strokes": 229,
+        "strokes": 235,
         "rounds_completed": 4,
         "pga_id": "26331"
       },
