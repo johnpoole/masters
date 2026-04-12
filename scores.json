@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 4,
         "total_rounds": 4,
-        "updated": "2026-04-12T14:00:03.000Z",
+        "updated": "2026-04-12T14:05:02.000Z",
         "players": 91
       }
     },
@@ -498,37 +498,37 @@
         "pga_id": "37455"
       },
       {
-        "first_name": "Corey",
-        "last_name": "Conners",
-        "country": "Canada",
-        "position": 45,
-        "total_to_par": 3,
-        "status": "active",
-        "strokes": 219,
-        "rounds_completed": 3,
-        "pga_id": "39997"
-      },
-      {
         "first_name": "Keegan",
         "last_name": "Bradley",
         "country": "United States",
-        "position": 46,
+        "position": 45,
         "total_to_par": 3,
         "status": "active",
-        "strokes": 219,
-        "rounds_completed": 3,
+        "strokes": 223,
+        "rounds_completed": 4,
         "pga_id": "33141"
       },
       {
         "first_name": "Dustin",
         "last_name": "Johnson",
         "country": "United States",
+        "position": 46,
+        "total_to_par": 3,
+        "status": "active",
+        "strokes": 223,
+        "rounds_completed": 4,
+        "pga_id": "30925"
+      },
+      {
+        "first_name": "Corey",
+        "last_name": "Conners",
+        "country": "Canada",
         "position": 47,
         "total_to_par": 3,
         "status": "active",
         "strokes": 219,
         "rounds_completed": 3,
-        "pga_id": "30925"
+        "pga_id": "39997"
       },
       {
         "first_name": "Jon",
