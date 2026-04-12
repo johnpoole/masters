@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 4,
         "total_rounds": 4,
-        "updated": "2026-04-12T14:25:02.000Z",
+        "updated": "2026-04-12T14:30:03.000Z",
         "players": 91
       }
     },
@@ -493,7 +493,7 @@
         "position": 44,
         "total_to_par": 2,
         "status": "active",
-        "strokes": 231,
+        "strokes": 234,
         "rounds_completed": 4,
         "pga_id": "37455"
       },
@@ -553,10 +553,21 @@
         "pga_id": "31323"
       },
       {
+        "first_name": "Aaron",
+        "last_name": "Rai",
+        "country": "England",
+        "position": 50,
+        "total_to_par": 6,
+        "status": "active",
+        "strokes": 249,
+        "rounds_completed": 4,
+        "pga_id": "46414"
+      },
+      {
         "first_name": "Kurt",
         "last_name": "Kitayama",
         "country": "United States",
-        "position": 50,
+        "position": 51,
         "total_to_par": 7,
         "status": "active",
         "strokes": 243,
@@ -564,37 +575,26 @@
         "pga_id": "48117"
       },
       {
-        "first_name": "Aaron",
-        "last_name": "Rai",
-        "country": "England",
-        "position": 51,
-        "total_to_par": 8,
-        "status": "active",
-        "strokes": 247,
-        "rounds_completed": 4,
-        "pga_id": "46414"
-      },
-      {
-        "first_name": "Sergio",
-        "last_name": "García",
-        "country": "Spain",
+        "first_name": "Rasmus",
+        "last_name": "Højgaard",
+        "country": "Denmark",
         "position": 52,
         "total_to_par": 8,
         "status": "active",
         "strokes": 240,
         "rounds_completed": 4,
-        "pga_id": "21209"
+        "pga_id": "52686"
       },
       {
-        "first_name": "Rasmus",
-        "last_name": "Højgaard",
-        "country": "Denmark",
+        "first_name": "Sergio",
+        "last_name": "García",
+        "country": "Spain",
         "position": 53,
         "total_to_par": 8,
         "status": "active",
-        "strokes": 237,
+        "strokes": 240,
         "rounds_completed": 4,
-        "pga_id": "52686"
+        "pga_id": "21209"
       },
       {
         "first_name": "Charl",
@@ -603,7 +603,7 @@
         "position": 54,
         "total_to_par": 12,
         "status": "active",
-        "strokes": 251,
+        "strokes": 255,
         "rounds_completed": 4,
         "pga_id": "26331"
       },
