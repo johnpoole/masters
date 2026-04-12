@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 4,
         "total_rounds": 4,
-        "updated": "2026-04-12T22:05:03.000Z",
+        "updated": "2026-04-12T22:10:03.000Z",
         "players": 91
       }
     },
@@ -291,13 +291,13 @@
         "position": 17,
         "total_to_par": -5,
         "status": "active",
-        "strokes": 272,
+        "strokes": 275,
         "rounds_completed": 4,
         "round_scores": [
           69,
           71,
           68,
-          64
+          67
         ],
         "pga_id": "28089"
       },
@@ -642,27 +642,10 @@
         "pga_id": "49771"
       },
       {
-        "first_name": "Haotong",
-        "last_name": "Li",
-        "country": "China",
-        "position": 38,
-        "total_to_par": 0,
-        "status": "active",
-        "strokes": 280,
-        "rounds_completed": 4,
-        "round_scores": [
-          71,
-          69,
-          69,
-          71
-        ],
-        "pga_id": "35296"
-      },
-      {
         "first_name": "Jon",
         "last_name": "Rahm",
         "country": "Spain",
-        "position": 39,
+        "position": 38,
         "total_to_par": 1,
         "status": "active",
         "strokes": 289,
@@ -679,7 +662,7 @@
         "first_name": "Ryan",
         "last_name": "Gerard",
         "country": "United States",
-        "position": 40,
+        "position": 39,
         "total_to_par": 1,
         "status": "active",
         "strokes": 289,
@@ -691,6 +674,23 @@
           77
         ],
         "pga_id": "59018"
+      },
+      {
+        "first_name": "Haotong",
+        "last_name": "Li",
+        "country": "China",
+        "position": 40,
+        "total_to_par": 1,
+        "status": "active",
+        "strokes": 285,
+        "rounds_completed": 4,
+        "round_scores": [
+          71,
+          69,
+          69,
+          76
+        ],
+        "pga_id": "35296"
       },
       {
         "first_name": "Justin",
