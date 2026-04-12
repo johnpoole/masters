@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 4,
         "total_rounds": 4,
-        "updated": "2026-04-12T13:45:03.000Z",
+        "updated": "2026-04-12T13:50:02.000Z",
         "players": 91
       }
     },
@@ -570,7 +570,7 @@
         "position": 51,
         "total_to_par": 6,
         "status": "active",
-        "strokes": 226,
+        "strokes": 231,
         "rounds_completed": 4,
         "pga_id": "48117"
       },
@@ -592,7 +592,7 @@
         "position": 53,
         "total_to_par": 7,
         "status": "active",
-        "strokes": 232,
+        "strokes": 236,
         "rounds_completed": 4,
         "pga_id": "46414"
       },
@@ -601,9 +601,9 @@
         "last_name": "Schwartzel",
         "country": "South Africa",
         "position": 54,
-        "total_to_par": 10,
+        "total_to_par": 12,
         "status": "active",
-        "strokes": 235,
+        "strokes": 241,
         "rounds_completed": 4,
         "pga_id": "26331"
       },
