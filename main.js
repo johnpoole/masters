@@ -91,13 +91,16 @@ function renderAll(purseData, scoresData, fieldData, poolData) {
     var totalRounds = 4;
     var roundsCompleted = 0;
     if (isLive && scoresData.results.tournament.live_details) {
-        totalRounds = scoresData.results.tournament.live_details.total_rounds || 4;
-        // Use max rounds_completed across active golfers as the tournament progress
-        players.forEach(function(p) {
-            if (p.status === "active" && p.rounds_completed > roundsCompleted) {
-                roundsCompleted = p.rounds_completed;
-            }
-        });
+        var details = scoresData.results.tournament.live_details;
+        totalRounds = details.total_rounds || 4;
+        // current_round is the round in progress; completed rounds is one less.
+        // Using max player rounds_completed is wrong because ESPN updates
+        // linescore values mid-round, inflating rounds_completed for players
+        // who have teed off but not finished.
+        roundsCompleted = (details.current_round || 1) - 1;
+        if (details.status === "completed") {
+            roundsCompleted = totalRounds;
+        }
     }
     drawTreemap(nodesWithPicks, pot, purseData, players, totalRounds, roundsCompleted, picksLocked);
 
