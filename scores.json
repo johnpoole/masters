@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 4,
         "total_rounds": 4,
-        "updated": "2026-04-12T17:20:03.000Z",
+        "updated": "2026-04-12T17:22:25.261Z",
         "players": 91
       }
     },
@@ -22,6 +22,11 @@
         "status": "active",
         "strokes": 205,
         "rounds_completed": 3,
+        "round_scores": [
+          73,
+          67,
+          65
+        ],
         "pga_id": "57366"
       },
       {
@@ -33,6 +38,11 @@
         "status": "active",
         "strokes": 205,
         "rounds_completed": 3,
+        "round_scores": [
+          67,
+          65,
+          73
+        ],
         "pga_id": "28237"
       },
       {
@@ -44,6 +54,11 @@
         "status": "active",
         "strokes": 206,
         "rounds_completed": 3,
+        "round_scores": [
+          67,
+          71,
+          68
+        ],
         "pga_id": "47504"
       },
       {
@@ -55,6 +70,11 @@
         "status": "active",
         "strokes": 207,
         "rounds_completed": 3,
+        "round_scores": [
+          70,
+          69,
+          68
+        ],
         "pga_id": "33204"
       },
       {
@@ -66,6 +86,11 @@
         "status": "active",
         "strokes": 208,
         "rounds_completed": 3,
+        "round_scores": [
+          69,
+          71,
+          68
+        ],
         "pga_id": "28089"
       },
       {
@@ -77,6 +102,11 @@
         "status": "active",
         "strokes": 208,
         "rounds_completed": 3,
+        "round_scores": [
+          70,
+          69,
+          69
+        ],
         "pga_id": "22405"
       },
       {
@@ -88,6 +118,11 @@
         "status": "active",
         "strokes": 209,
         "rounds_completed": 3,
+        "round_scores": [
+          70,
+          74,
+          65
+        ],
         "pga_id": "46046"
       },
       {
@@ -99,6 +134,11 @@
         "status": "active",
         "strokes": 209,
         "rounds_completed": 3,
+        "round_scores": [
+          71,
+          69,
+          69
+        ],
         "pga_id": "35296"
       },
       {
@@ -110,6 +150,11 @@
         "status": "active",
         "strokes": 262,
         "rounds_completed": 4,
+        "round_scores": [
+          75,
+          71,
+          71
+        ],
         "pga_id": "46717"
       },
       {
@@ -121,6 +166,11 @@
         "status": "active",
         "strokes": 226,
         "rounds_completed": 4,
+        "round_scores": [
+          74,
+          70,
+          69
+        ],
         "pga_id": "52955"
       },
       {
@@ -132,6 +182,11 @@
         "status": "active",
         "strokes": 214,
         "rounds_completed": 4,
+        "round_scores": [
+          73,
+          69,
+          69
+        ],
         "pga_id": "47420"
       },
       {
@@ -143,6 +198,11 @@
         "status": "active",
         "strokes": 210,
         "rounds_completed": 3,
+        "round_scores": [
+          77,
+          67,
+          66
+        ],
         "pga_id": "35450"
       },
       {
@@ -154,6 +214,11 @@
         "status": "active",
         "strokes": 210,
         "rounds_completed": 3,
+        "round_scores": [
+          73,
+          71,
+          66
+        ],
         "pga_id": "34098"
       },
       {
@@ -165,6 +230,11 @@
         "status": "active",
         "strokes": 210,
         "rounds_completed": 3,
+        "round_scores": [
+          69,
+          69,
+          72
+        ],
         "pga_id": "34360"
       },
       {
@@ -176,6 +246,11 @@
         "status": "active",
         "strokes": 224,
         "rounds_completed": 4,
+        "round_scores": [
+          74,
+          66,
+          72
+        ],
         "pga_id": "34363"
       },
       {
@@ -187,6 +262,11 @@
         "status": "active",
         "strokes": 215,
         "rounds_completed": 4,
+        "round_scores": [
+          72,
+          72,
+          68
+        ],
         "pga_id": "59018"
       },
       {
@@ -198,6 +278,11 @@
         "status": "active",
         "strokes": 211,
         "rounds_completed": 3,
+        "round_scores": [
+          72,
+          69,
+          70
+        ],
         "pga_id": "49771"
       },
       {
@@ -209,6 +294,11 @@
         "status": "active",
         "strokes": 211,
         "rounds_completed": 3,
+        "round_scores": [
+          74,
+          69,
+          68
+        ],
         "pga_id": "50525"
       },
       {
@@ -220,6 +310,11 @@
         "status": "active",
         "strokes": 235,
         "rounds_completed": 4,
+        "round_scores": [
+          72,
+          70,
+          71
+        ],
         "pga_id": "39977"
       },
       {
@@ -231,6 +326,11 @@
         "status": "active",
         "strokes": 221,
         "rounds_completed": 4,
+        "round_scores": [
+          72,
+          69,
+          71
+        ],
         "pga_id": "36689"
       },
       {
@@ -242,6 +342,11 @@
         "status": "active",
         "strokes": 221,
         "rounds_completed": 4,
+        "round_scores": [
+          72,
+          68,
+          72
+        ],
         "pga_id": "51766"
       },
       {
@@ -253,6 +358,11 @@
         "status": "active",
         "strokes": 216,
         "rounds_completed": 4,
+        "round_scores": [
+          70,
+          72,
+          70
+        ],
         "pga_id": "48081"
       },
       {
@@ -264,6 +374,11 @@
         "status": "active",
         "strokes": 245,
         "rounds_completed": 4,
+        "round_scores": [
+          72,
+          70,
+          72
+        ],
         "pga_id": "32839"
       },
       {
@@ -275,6 +390,11 @@
         "status": "active",
         "strokes": 240,
         "rounds_completed": 4,
+        "round_scores": [
+          72,
+          69,
+          72
+        ],
         "pga_id": "59095"
       },
       {
@@ -286,6 +406,11 @@
         "status": "active",
         "strokes": 229,
         "rounds_completed": 4,
+        "round_scores": [
+          71,
+          72,
+          70
+        ],
         "pga_id": "25493"
       },
       {
@@ -297,6 +422,11 @@
         "status": "active",
         "strokes": 226,
         "rounds_completed": 4,
+        "round_scores": [
+          71,
+          68,
+          73
+        ],
         "pga_id": "30911"
       },
       {
@@ -308,6 +438,11 @@
         "status": "active",
         "strokes": 261,
         "rounds_completed": 4,
+        "round_scores": [
+          77,
+          70,
+          70
+        ],
         "pga_id": "46442"
       },
       {
@@ -319,6 +454,11 @@
         "status": "active",
         "strokes": 258,
         "rounds_completed": 4,
+        "round_scores": [
+          72,
+          74,
+          70
+        ],
         "pga_id": "24502"
       },
       {
@@ -330,6 +470,11 @@
         "status": "active",
         "strokes": 250,
         "rounds_completed": 4,
+        "round_scores": [
+          72,
+          73,
+          70
+        ],
         "pga_id": "34046"
       },
       {
@@ -341,6 +486,11 @@
         "status": "active",
         "strokes": 237,
         "rounds_completed": 4,
+        "round_scores": [
+          72,
+          71,
+          70
+        ],
         "pga_id": "61522"
       },
       {
@@ -352,6 +502,11 @@
         "status": "active",
         "strokes": 230,
         "rounds_completed": 4,
+        "round_scores": [
+          71,
+          73,
+          69
+        ],
         "pga_id": "46443"
       },
       {
@@ -363,6 +518,11 @@
         "status": "active",
         "strokes": 230,
         "rounds_completed": 4,
+        "round_scores": [
+          74,
+          69,
+          70
+        ],
         "pga_id": "40098"
       },
       {
@@ -374,6 +534,12 @@
         "status": "active",
         "strokes": 276,
         "rounds_completed": 4,
+        "round_scores": [
+          72,
+          74,
+          73,
+          57
+        ],
         "pga_id": "33141"
       },
       {
@@ -385,6 +551,11 @@
         "status": "active",
         "strokes": 242,
         "rounds_completed": 4,
+        "round_scores": [
+          73,
+          72,
+          69
+        ],
         "pga_id": "49960"
       },
       {
@@ -396,6 +567,11 @@
         "status": "active",
         "strokes": 242,
         "rounds_completed": 4,
+        "round_scores": [
+          72,
+          68,
+          73
+        ],
         "pga_id": "49855"
       },
       {
@@ -407,6 +583,12 @@
         "status": "active",
         "strokes": 288,
         "rounds_completed": 4,
+        "round_scores": [
+          71,
+          75,
+          76,
+          66
+        ],
         "pga_id": "31323"
       },
       {
@@ -418,6 +600,12 @@
         "status": "active",
         "strokes": 284,
         "rounds_completed": 4,
+        "round_scores": [
+          78,
+          70,
+          73,
+          63
+        ],
         "pga_id": "46970"
       },
       {
@@ -429,6 +617,12 @@
         "status": "active",
         "strokes": 277,
         "rounds_completed": 4,
+        "round_scores": [
+          73,
+          71,
+          75,
+          58
+        ],
         "pga_id": "30925"
       },
       {
@@ -440,6 +634,12 @@
         "status": "active",
         "strokes": 272,
         "rounds_completed": 4,
+        "round_scores": [
+          72,
+          73,
+          72,
+          55
+        ],
         "pga_id": "59141"
       },
       {
@@ -451,6 +651,11 @@
         "status": "active",
         "strokes": 256,
         "rounds_completed": 4,
+        "round_scores": [
+          72,
+          74,
+          70
+        ],
         "pga_id": "55893"
       },
       {
@@ -462,6 +667,11 @@
         "status": "active",
         "strokes": 248,
         "rounds_completed": 4,
+        "round_scores": [
+          76,
+          69,
+          69
+        ],
         "pga_id": "39971"
       },
       {
@@ -473,6 +683,11 @@
         "status": "active",
         "strokes": 264,
         "rounds_completed": 4,
+        "round_scores": [
+          77,
+          71,
+          69
+        ],
         "pga_id": "27349"
       },
       {
@@ -484,6 +699,11 @@
         "status": "active",
         "strokes": 257,
         "rounds_completed": 4,
+        "round_scores": [
+          73,
+          71,
+          71
+        ],
         "pga_id": "34099"
       },
       {
@@ -495,6 +715,11 @@
         "status": "active",
         "strokes": 253,
         "rounds_completed": 4,
+        "round_scores": [
+          79,
+          69,
+          67
+        ],
         "pga_id": "27644"
       },
       {
@@ -506,6 +731,11 @@
         "status": "active",
         "strokes": 244,
         "rounds_completed": 4,
+        "round_scores": [
+          71,
+          74,
+          69
+        ],
         "pga_id": "60004"
       },
       {
@@ -517,6 +747,11 @@
         "status": "active",
         "strokes": 259,
         "rounds_completed": 4,
+        "round_scores": [
+          76,
+          69,
+          71
+        ],
         "pga_id": "51003"
       },
       {
@@ -528,6 +763,12 @@
         "status": "active",
         "strokes": 284,
         "rounds_completed": 4,
+        "round_scores": [
+          75,
+          73,
+          72,
+          64
+        ],
         "pga_id": "37455"
       },
       {
@@ -539,6 +780,12 @@
         "status": "active",
         "strokes": 276,
         "rounds_completed": 4,
+        "round_scores": [
+          75,
+          73,
+          71,
+          57
+        ],
         "pga_id": "39997"
       },
       {
@@ -550,6 +797,12 @@
         "status": "active",
         "strokes": 272,
         "rounds_completed": 4,
+        "round_scores": [
+          72,
+          74,
+          71,
+          55
+        ],
         "pga_id": "33448"
       },
       {
@@ -561,6 +814,12 @@
         "status": "active",
         "strokes": 293,
         "rounds_completed": 4,
+        "round_scores": [
+          71,
+          74,
+          78,
+          70
+        ],
         "pga_id": "46414"
       },
       {
@@ -572,6 +831,12 @@
         "status": "active",
         "strokes": 295,
         "rounds_completed": 4,
+        "round_scores": [
+          69,
+          79,
+          75,
+          72
+        ],
         "pga_id": "48117"
       },
       {
@@ -583,6 +848,12 @@
         "status": "active",
         "strokes": 292,
         "rounds_completed": 4,
+        "round_scores": [
+          72,
+          75,
+          74,
+          71
+        ],
         "pga_id": "21209"
       },
       {
@@ -594,6 +865,12 @@
         "status": "active",
         "strokes": 290,
         "rounds_completed": 4,
+        "round_scores": [
+          78,
+          70,
+          73,
+          69
+        ],
         "pga_id": "52686"
       },
       {
@@ -605,6 +882,12 @@
         "status": "active",
         "strokes": 300,
         "rounds_completed": 4,
+        "round_scores": [
+          75,
+          73,
+          77,
+          75
+        ],
         "pga_id": "26331"
       },
       {
@@ -616,6 +899,10 @@
         "status": "cut",
         "strokes": 149,
         "rounds_completed": 2,
+        "round_scores": [
+          77,
+          72
+        ],
         "pga_id": "57975"
       },
       {
@@ -627,6 +914,10 @@
         "status": "cut",
         "strokes": 149,
         "rounds_completed": 2,
+        "round_scores": [
+          77,
+          72
+        ],
         "pga_id": "29936"
       },
       {
@@ -638,6 +929,10 @@
         "status": "cut",
         "strokes": 149,
         "rounds_completed": 2,
+        "round_scores": [
+          76,
+          73
+        ],
         "pga_id": "32139"
       },
       {
@@ -649,6 +944,10 @@
         "status": "cut",
         "strokes": 149,
         "rounds_completed": 2,
+        "round_scores": [
+          76,
+          73
+        ],
         "pga_id": "25804"
       },
       {
@@ -660,6 +959,10 @@
         "status": "cut",
         "strokes": 149,
         "rounds_completed": 2,
+        "round_scores": [
+          74,
+          75
+        ],
         "pga_id": "39324"
       },
       {
@@ -671,6 +974,10 @@
         "status": "cut",
         "strokes": 150,
         "rounds_completed": 2,
+        "round_scores": [
+          76,
+          74
+        ],
         "pga_id": "52453"
       },
       {
@@ -682,6 +989,10 @@
         "status": "cut",
         "strokes": 150,
         "rounds_completed": 2,
+        "round_scores": [
+          76,
+          74
+        ],
         "pga_id": "47959"
       },
       {
@@ -693,6 +1004,10 @@
         "status": "cut",
         "strokes": 150,
         "rounds_completed": 2,
+        "round_scores": [
+          75,
+          75
+        ],
         "pga_id": "24024"
       },
       {
@@ -704,6 +1019,10 @@
         "status": "cut",
         "strokes": 150,
         "rounds_completed": 2,
+        "round_scores": [
+          73,
+          77
+        ],
         "pga_id": "56630"
       },
       {
@@ -715,6 +1034,10 @@
         "status": "cut",
         "strokes": 151,
         "rounds_completed": 2,
+        "round_scores": [
+          80,
+          71
+        ],
         "pga_id": "52215"
       },
       {
@@ -726,6 +1049,10 @@
         "status": "cut",
         "strokes": 151,
         "rounds_completed": 2,
+        "round_scores": [
+          77,
+          74
+        ],
         "pga_id": "52689"
       },
       {
@@ -737,6 +1064,10 @@
         "status": "cut",
         "strokes": 151,
         "rounds_completed": 2,
+        "round_scores": [
+          75,
+          76
+        ],
         "pga_id": "51997"
       },
       {
@@ -748,6 +1079,10 @@
         "status": "cut",
         "strokes": 151,
         "rounds_completed": 2,
+        "round_scores": [
+          75,
+          76
+        ],
         "pga_id": "50823"
       },
       {
@@ -759,6 +1094,10 @@
         "status": "cut",
         "strokes": 151,
         "rounds_completed": 2,
+        "round_scores": [
+          74,
+          77
+        ],
         "pga_id": "35891"
       },
       {
@@ -770,6 +1109,10 @@
         "status": "cut",
         "strokes": 152,
         "rounds_completed": 2,
+        "round_scores": [
+          77,
+          75
+        ],
         "pga_id": "57688"
       },
       {
@@ -781,6 +1124,10 @@
         "status": "cut",
         "strokes": 152,
         "rounds_completed": 2,
+        "round_scores": [
+          76,
+          76
+        ],
         "pga_id": "40026"
       },
       {
@@ -792,6 +1139,10 @@
         "status": "cut",
         "strokes": 152,
         "rounds_completed": 2,
+        "round_scores": [
+          76,
+          76
+        ],
         "pga_id": "70148"
       },
       {
@@ -803,6 +1154,10 @@
         "status": "cut",
         "strokes": 152,
         "rounds_completed": 2,
+        "round_scores": [
+          75,
+          77
+        ],
         "pga_id": "39975"
       },
       {
@@ -814,6 +1169,10 @@
         "status": "cut",
         "strokes": 152,
         "rounds_completed": 2,
+        "round_scores": [
+          74,
+          78
+        ],
         "pga_id": "68932"
       },
       {
@@ -825,6 +1184,10 @@
         "status": "cut",
         "strokes": 153,
         "rounds_completed": 2,
+        "round_scores": [
+          78,
+          75
+        ],
         "pga_id": "01226"
       },
       {
@@ -836,6 +1199,10 @@
         "status": "cut",
         "strokes": 153,
         "rounds_completed": 2,
+        "round_scores": [
+          77,
+          76
+        ],
         "pga_id": "68607"
       },
       {
@@ -847,6 +1214,10 @@
         "status": "cut",
         "strokes": 153,
         "rounds_completed": 2,
+        "round_scores": [
+          74,
+          79
+        ],
         "pga_id": "06373"
       },
       {
@@ -858,6 +1229,10 @@
         "status": "cut",
         "strokes": 154,
         "rounds_completed": 2,
+        "round_scores": [
+          81,
+          73
+        ],
         "pga_id": "10423"
       },
       {
@@ -869,6 +1244,10 @@
         "status": "cut",
         "strokes": 154,
         "rounds_completed": 2,
+        "round_scores": [
+          79,
+          75
+        ],
         "pga_id": "06567"
       },
       {
@@ -880,6 +1259,10 @@
         "status": "cut",
         "strokes": 155,
         "rounds_completed": 2,
+        "round_scores": [
+          80,
+          75
+        ],
         "pga_id": "70146"
       },
       {
@@ -891,6 +1274,10 @@
         "status": "cut",
         "strokes": 155,
         "rounds_completed": 2,
+        "round_scores": [
+          80,
+          75
+        ],
         "pga_id": "33667"
       },
       {
@@ -902,6 +1289,10 @@
         "status": "cut",
         "strokes": 155,
         "rounds_completed": 2,
+        "round_scores": [
+          80,
+          75
+        ],
         "pga_id": "52666"
       },
       {
@@ -913,6 +1304,10 @@
         "status": "cut",
         "strokes": 155,
         "rounds_completed": 2,
+        "round_scores": [
+          78,
+          77
+        ],
         "pga_id": "37378"
       },
       {
@@ -924,6 +1319,10 @@
         "status": "cut",
         "strokes": 155,
         "rounds_completed": 2,
+        "round_scores": [
+          76,
+          79
+        ],
         "pga_id": "63454"
       },
       {
@@ -935,6 +1334,10 @@
         "status": "cut",
         "strokes": 156,
         "rounds_completed": 2,
+        "round_scores": [
+          79,
+          77
+        ],
         "pga_id": "51977"
       },
       {
@@ -946,6 +1349,10 @@
         "status": "cut",
         "strokes": 157,
         "rounds_completed": 2,
+        "round_scores": [
+          79,
+          78
+        ],
         "pga_id": "51349"
       },
       {
@@ -957,6 +1364,10 @@
         "status": "cut",
         "strokes": 159,
         "rounds_completed": 2,
+        "round_scores": [
+          84,
+          75
+        ],
         "pga_id": "46879"
       },
       {
@@ -968,6 +1379,10 @@
         "status": "cut",
         "strokes": 159,
         "rounds_completed": 2,
+        "round_scores": [
+          84,
+          75
+        ],
         "pga_id": "63343"
       },
       {
@@ -979,6 +1394,10 @@
         "status": "cut",
         "strokes": 159,
         "rounds_completed": 2,
+        "round_scores": [
+          81,
+          78
+        ],
         "pga_id": "70145"
       },
       {
@@ -990,6 +1409,10 @@
         "status": "cut",
         "strokes": 159,
         "rounds_completed": 2,
+        "round_scores": [
+          81,
+          78
+        ],
         "pga_id": "70147"
       },
       {
@@ -1001,6 +1424,10 @@
         "status": "cut",
         "strokes": 160,
         "rounds_completed": 2,
+        "round_scores": [
+          79,
+          81
+        ],
         "pga_id": "20848"
       },
       {
@@ -1012,6 +1439,10 @@
         "status": "cut",
         "strokes": 162,
         "rounds_completed": 2,
+        "round_scores": [
+          82,
+          80
+        ],
         "pga_id": "47995"
       }
     ]

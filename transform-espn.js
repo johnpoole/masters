@@ -70,13 +70,19 @@ var leaderboard = competition.competitors.map(function(c) {
     var country = "";
     if (athlete.flag && athlete.flag.alt) country = athlete.flag.alt;
 
-    // Total strokes from completed rounds
+    // Total strokes and per-round scores from completed rounds.
+    // ESPN updates linescore values mid-round (e.g. value=21 after 6 holes),
+    // so filter to >= 55 to include only fully completed rounds.
     var strokes = 0;
     var roundsCompleted = 0;
+    var roundScores = [];
     (c.linescores || []).forEach(function(ls) {
         if (ls.value) {
             strokes += ls.value;
             roundsCompleted++;
+            if (ls.value >= 55) {
+                roundScores.push(ls.value);
+            }
         }
     });
 
@@ -98,6 +104,7 @@ var leaderboard = competition.competitors.map(function(c) {
         status: playerStatus,
         strokes: strokes,
         rounds_completed: roundsCompleted,
+        round_scores: roundScores,
         pga_id: pgaId
     };
 });

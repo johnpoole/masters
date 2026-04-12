@@ -1,6 +1,8 @@
 var MC_ITERATIONS = 10000;
 var AUGUSTA_MEAN = 72;
 var AUGUSTA_STDDEV = 3;
+var SHRINKAGE_K = 4;           // Prior rounds for mean/variance shrinkage
+var ROUND_EFFECT_STDDEV = 1.5; // Shared conditions effect per simulated round
 
 function nameHash(str) {
     var hash = 5381;
@@ -93,7 +95,7 @@ function drawTreemap(entries, pot, purseData, allPlayers, totalRounds, roundsCom
         .attr("width", function(d) { return d.x1 - d.x0; })
         .attr("height", function(d) { return d.y1 - d.y0; });
 
-    // Hover events (re-bindnecessary since data reference changes)
+    // Hover events (re-bind necessary since data reference changes)
     cellMerge.select("rect")
         .on("mouseover", function(event, d) {
             d3.select(this).attr("stroke", "#333").attr("stroke-width", 2);
@@ -180,39 +182,67 @@ function simulateExpectedPayouts(entries, pot, purseData, allPlayers, remainingR
         purseLookup[i + 1] = parseInt(row.amount, 10);
     });
 
-    // Index all players by name for quick lookup
-    var playersByName = {};
+    // Collect completed round scores from active players for field-wide stats
+    var allRoundScores = [];
     allPlayers.forEach(function(p) {
-        playersByName[p.Player] = p;
-    });
-
-    // Collect the set of all golfers picked by any entry
-    var pickedGolferNames = {};
-    entries.forEach(function(e) {
-        e.picks.forEach(function(p) {
-            pickedGolferNames[p.Player] = true;
+        if (p.status !== "active") return;
+        (p.round_scores || []).forEach(function(s) {
+            allRoundScores.push(s);
         });
     });
 
-    // Pre-compute current standing for all players using total_to_par.
-    // total_to_par reflects live in-progress data, not just completed rounds.
-    // We express each player's current state as an effective stroke total
-    // relative to par so the sim can add remaining rounds on top.
-    var golferStrokes = {};
+    // Field-wide mean and variance (fallback to Augusta par if no data)
+    var fieldMean = AUGUSTA_MEAN;
+    var fieldVariance = AUGUSTA_STDDEV * AUGUSTA_STDDEV;
+    if (allRoundScores.length > 1) {
+        fieldMean = allRoundScores.reduce(function(a, b) { return a + b; }, 0) / allRoundScores.length;
+        var fv = 0;
+        allRoundScores.forEach(function(s) { fv += (s - fieldMean) * (s - fieldMean); });
+        fieldVariance = fv / (allRoundScores.length - 1);
+    }
+
+    // Build per-player model: shrunk mean and variance from round_scores
+    var completedRounds = totalRounds - remainingRounds;
+    var golferModels = {};
+
     allPlayers.forEach(function(p) {
         if (p.status === "cut" || p.status === "wd" || p.status === "dq") {
-            golferStrokes[p.Player] = { current: 0, active: false };
-        } else {
-            // Use total_to_par as the baseline — it includes in-progress round data.
-            // Express as cumulative strokes: par * totalRounds + total_to_par
-            // so the sim can compare players on the same scale.
-            var toPar = p.total_to_par || 0;
-            var current = AUGUSTA_MEAN * totalRounds + toPar;
-            golferStrokes[p.Player] = { current: current, active: true };
+            golferModels[p.Player] = { active: false };
+            return;
         }
+
+        var scores = p.round_scores || [];
+        var n = scores.length;
+
+        // Player's raw per-round mean
+        var playerMean = n > 0
+            ? scores.reduce(function(a, b) { return a + b; }, 0) / n
+            : fieldMean;
+
+        // Shrink mean toward field: w = n / (n + K)
+        var wMean = n / (n + SHRINKAGE_K);
+        var mu = wMean * playerMean + (1 - wMean) * fieldMean;
+
+        // Player's raw variance (need >= 2 rounds)
+        var playerVar = fieldVariance;
+        if (n > 1) {
+            playerVar = 0;
+            scores.forEach(function(s) { playerVar += (s - playerMean) * (s - playerMean); });
+            playerVar /= (n - 1);
+        }
+
+        // Shrink variance toward field: weight by (n-1) degrees of freedom
+        var wVar = Math.max(0, n - 1) / (Math.max(0, n - 1) + SHRINKAGE_K);
+        var sigma = Math.sqrt(wVar * playerVar + (1 - wVar) * fieldVariance);
+
+        // Baseline: actual strokes through completed rounds
+        var toPar = p.total_to_par || 0;
+        var current = AUGUSTA_MEAN * completedRounds + toPar;
+
+        golferModels[p.Player] = { active: true, current: current, mu: mu, sigma: sigma };
     });
 
-    // Run Monte Carlo
+    // Monte Carlo simulation
     var winCounts = {};
     var secondCounts = {};
     entries.forEach(function(e) {
@@ -221,24 +251,30 @@ function simulateExpectedPayouts(entries, pot, purseData, allPlayers, remainingR
     });
 
     for (var sim = 0; sim < MC_ITERATIONS; sim++) {
-        // Simulate remaining rounds for ALL active golfers in the field
+        // Shared round effects: weather/conditions move all scores together
+        var roundEffects = [];
+        for (var r = 0; r < remainingRounds; r++) {
+            roundEffects.push(randNormal(0, ROUND_EFFECT_STDDEV));
+        }
+
+        // Simulate remaining rounds for every active golfer
         var simTotals = {};
         allPlayers.forEach(function(p) {
-            var gs = golferStrokes[p.Player];
-            if (!gs.active) {
+            var model = golferModels[p.Player];
+            if (!model.active) {
                 simTotals[p.Player] = Infinity;
                 return;
             }
-            var total = gs.current;
+            var total = model.current;
             for (var r = 0; r < remainingRounds; r++) {
-                // Add only the deviation from par for each remaining round
-                total += Math.round(randNormal(0, AUGUSTA_STDDEV));
+                // S_ir = mu_i + alpha_r + epsilon_ir
+                total += Math.round(model.mu + roundEffects[r] + randNormal(0, model.sigma));
             }
             simTotals[p.Player] = total;
         });
 
-        // Determine positions from simulated totals (lower is better)
-        var sorted = allPlayers.filter(function(p) { return golferStrokes[p.Player].active; })
+        // Rank by total strokes (lower is better)
+        var sorted = allPlayers.filter(function(p) { return golferModels[p.Player].active; })
             .map(function(p) { return { name: p.Player, strokes: simTotals[p.Player] }; })
             .sort(function(a, b) { return a.strokes - b.strokes; });
 
@@ -255,7 +291,7 @@ function simulateExpectedPayouts(entries, pot, purseData, allPlayers, remainingR
             i = j;
         }
 
-        // Calculate simulated payouts (split ties like calcPayouts)
+        // Calculate simulated payouts (split ties)
         var simPayouts = {};
         i = 0;
         while (i < sorted.length && i < 50) {
@@ -272,7 +308,7 @@ function simulateExpectedPayouts(entries, pot, purseData, allPlayers, remainingR
             i = j2;
         }
 
-        // Calculate each entry's total earnings in this simulation
+        // Each entry's total earnings in this simulation
         var entryTotals = entries.map(function(e) {
             var total = 0;
             e.picks.forEach(function(p) {
