@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 4,
         "total_rounds": 4,
-        "updated": "2026-04-12T13:40:04.000Z",
+        "updated": "2026-04-12T13:45:03.000Z",
         "players": 91
       }
     },
@@ -531,10 +531,21 @@
         "pga_id": "37455"
       },
       {
+        "first_name": "Gary",
+        "last_name": "Woodland",
+        "country": "United States",
+        "position": 48,
+        "total_to_par": 5,
+        "status": "active",
+        "strokes": 230,
+        "rounds_completed": 4,
+        "pga_id": "31323"
+      },
+      {
         "first_name": "Jon",
         "last_name": "Rahm",
         "country": "Spain",
-        "position": 48,
+        "position": 49,
         "total_to_par": 5,
         "status": "active",
         "strokes": 225,
@@ -545,23 +556,12 @@
         "first_name": "Rasmus",
         "last_name": "Højgaard",
         "country": "Denmark",
-        "position": 49,
-        "total_to_par": 5,
-        "status": "active",
-        "strokes": 221,
-        "rounds_completed": 3,
-        "pga_id": "52686"
-      },
-      {
-        "first_name": "Sergio",
-        "last_name": "García",
-        "country": "Spain",
         "position": 50,
         "total_to_par": 5,
         "status": "active",
         "strokes": 221,
         "rounds_completed": 3,
-        "pga_id": "21209"
+        "pga_id": "52686"
       },
       {
         "first_name": "Kurt",
@@ -575,15 +575,15 @@
         "pga_id": "48117"
       },
       {
-        "first_name": "Gary",
-        "last_name": "Woodland",
-        "country": "United States",
+        "first_name": "Sergio",
+        "last_name": "García",
+        "country": "Spain",
         "position": 52,
         "total_to_par": 6,
         "status": "active",
         "strokes": 226,
         "rounds_completed": 4,
-        "pga_id": "31323"
+        "pga_id": "21209"
       },
       {
         "first_name": "Aaron",
