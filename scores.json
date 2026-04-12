@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 4,
         "total_rounds": 4,
-        "updated": "2026-04-12T20:35:03.000Z",
+        "updated": "2026-04-12T20:40:03.000Z",
         "players": 91
       }
     },
@@ -68,13 +68,13 @@
         "position": 4,
         "total_to_par": -10,
         "status": "active",
-        "strokes": 270,
+        "strokes": 274,
         "rounds_completed": 4,
         "round_scores": [
           74,
           66,
           72,
-          58
+          62
         ],
         "pga_id": "34363"
       },
@@ -547,27 +547,10 @@
         "pga_id": "46443"
       },
       {
-        "first_name": "Tommy",
-        "last_name": "Fleetwood",
-        "country": "England",
-        "position": 33,
-        "total_to_par": -2,
-        "status": "active",
-        "strokes": 278,
-        "rounds_completed": 4,
-        "round_scores": [
-          71,
-          68,
-          73,
-          66
-        ],
-        "pga_id": "30911"
-      },
-      {
         "first_name": "Alex",
         "last_name": "Noren",
         "country": "Sweden",
-        "position": 34,
+        "position": 33,
         "total_to_par": -1,
         "status": "active",
         "strokes": 287,
@@ -584,7 +567,7 @@
         "first_name": "Harris",
         "last_name": "English",
         "country": "United States",
-        "position": 35,
+        "position": 34,
         "total_to_par": -1,
         "status": "active",
         "strokes": 287,
@@ -601,7 +584,7 @@
         "first_name": "Gary",
         "last_name": "Woodland",
         "country": "United States",
-        "position": 36,
+        "position": 35,
         "total_to_par": 0,
         "status": "active",
         "strokes": 288,
@@ -618,7 +601,7 @@
         "first_name": "Dustin",
         "last_name": "Johnson",
         "country": "United States",
-        "position": 37,
+        "position": 36,
         "total_to_par": 0,
         "status": "active",
         "strokes": 288,
@@ -635,7 +618,7 @@
         "first_name": "Brian",
         "last_name": "Harman",
         "country": "United States",
-        "position": 38,
+        "position": 37,
         "total_to_par": 0,
         "status": "active",
         "strokes": 288,
@@ -647,6 +630,23 @@
           73
         ],
         "pga_id": "27644"
+      },
+      {
+        "first_name": "Tommy",
+        "last_name": "Fleetwood",
+        "country": "England",
+        "position": 38,
+        "total_to_par": 0,
+        "status": "active",
+        "strokes": 284,
+        "rounds_completed": 4,
+        "round_scores": [
+          71,
+          68,
+          73,
+          72
+        ],
+        "pga_id": "30911"
       },
       {
         "first_name": "Ryan",
