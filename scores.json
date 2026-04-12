@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 4,
         "total_rounds": 4,
-        "updated": "2026-04-12T22:20:03.000Z",
+        "updated": "2026-04-12T22:25:04.000Z",
         "players": 91
       }
     },
@@ -20,13 +20,13 @@
         "position": 1,
         "total_to_par": -13,
         "status": "active",
-        "strokes": 264,
+        "strokes": 267,
         "rounds_completed": 4,
         "round_scores": [
           67,
           65,
           73,
-          59
+          62
         ],
         "pga_id": "28237"
       },
@@ -48,27 +48,10 @@
         "pga_id": "46046"
       },
       {
-        "first_name": "Justin",
-        "last_name": "Rose",
-        "country": "England",
-        "position": 3,
-        "total_to_par": -11,
-        "status": "active",
-        "strokes": 269,
-        "rounds_completed": 4,
-        "round_scores": [
-          70,
-          69,
-          69,
-          61
-        ],
-        "pga_id": "22405"
-      },
-      {
         "first_name": "Tyrrell",
         "last_name": "Hatton",
         "country": "England",
-        "position": 4,
+        "position": 3,
         "total_to_par": -10,
         "status": "active",
         "strokes": 278,
@@ -85,7 +68,7 @@
         "first_name": "Russell",
         "last_name": "Henley",
         "country": "United States",
-        "position": 5,
+        "position": 4,
         "total_to_par": -10,
         "status": "active",
         "strokes": 278,
@@ -97,6 +80,23 @@
           68
         ],
         "pga_id": "34098"
+      },
+      {
+        "first_name": "Justin",
+        "last_name": "Rose",
+        "country": "England",
+        "position": 5,
+        "total_to_par": -10,
+        "status": "active",
+        "strokes": 274,
+        "rounds_completed": 4,
+        "round_scores": [
+          70,
+          69,
+          69,
+          66
+        ],
+        "pga_id": "22405"
       },
       {
         "first_name": "Sam",
@@ -122,13 +122,13 @@
         "position": 7,
         "total_to_par": -10,
         "status": "active",
-        "strokes": 267,
+        "strokes": 270,
         "rounds_completed": 4,
         "round_scores": [
           73,
           67,
           65,
-          62
+          65
         ],
         "pga_id": "57366"
       },
