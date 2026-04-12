@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 4,
         "total_rounds": 4,
-        "updated": "2026-04-12T15:10:04.000Z",
+        "updated": "2026-04-12T15:15:02.000Z",
         "players": 91
       }
     },
@@ -366,26 +366,26 @@
         "pga_id": "32839"
       },
       {
-        "first_name": "Viktor",
-        "last_name": "Hovland",
-        "country": "Norway",
+        "first_name": "Maverick",
+        "last_name": "McNealy",
+        "country": "United States",
         "position": 33,
         "total_to_par": -1,
         "status": "active",
         "strokes": 231,
         "rounds_completed": 4,
-        "pga_id": "46717"
+        "pga_id": "46442"
       },
       {
-        "first_name": "Maverick",
-        "last_name": "McNealy",
-        "country": "United States",
+        "first_name": "Viktor",
+        "last_name": "Hovland",
+        "country": "Norway",
         "position": 34,
         "total_to_par": -1,
         "status": "active",
-        "strokes": 228,
+        "strokes": 231,
         "rounds_completed": 4,
-        "pga_id": "46442"
+        "pga_id": "46717"
       },
       {
         "first_name": "Brian",
@@ -421,10 +421,21 @@
         "pga_id": "59141"
       },
       {
+        "first_name": "Alex",
+        "last_name": "Noren",
+        "country": "Sweden",
+        "position": 38,
+        "total_to_par": 0,
+        "status": "active",
+        "strokes": 232,
+        "rounds_completed": 4,
+        "pga_id": "27349"
+      },
+      {
         "first_name": "Justin",
         "last_name": "Thomas",
         "country": "United States",
-        "position": 38,
+        "position": 39,
         "total_to_par": 0,
         "status": "active",
         "strokes": 232,
@@ -435,7 +446,7 @@
         "first_name": "Adam",
         "last_name": "Scott",
         "country": "Australia",
-        "position": 39,
+        "position": 40,
         "total_to_par": 0,
         "status": "active",
         "strokes": 220,
@@ -446,7 +457,7 @@
         "first_name": "Sam",
         "last_name": "Stevens",
         "country": "United States",
-        "position": 40,
+        "position": 41,
         "total_to_par": 0,
         "status": "active",
         "strokes": 220,
@@ -457,7 +468,7 @@
         "first_name": "Marco",
         "last_name": "Penge",
         "country": "England",
-        "position": 41,
+        "position": 42,
         "total_to_par": 0,
         "status": "active",
         "strokes": 220,
@@ -468,23 +479,12 @@
         "first_name": "Harris",
         "last_name": "English",
         "country": "United States",
-        "position": 42,
+        "position": 43,
         "total_to_par": 0,
         "status": "active",
         "strokes": 220,
         "rounds_completed": 4,
         "pga_id": "34099"
-      },
-      {
-        "first_name": "Alex",
-        "last_name": "Noren",
-        "country": "Sweden",
-        "position": 43,
-        "total_to_par": 1,
-        "status": "active",
-        "strokes": 230,
-        "rounds_completed": 4,
-        "pga_id": "27349"
       },
       {
         "first_name": "Si-woo",
@@ -535,9 +535,9 @@
         "last_name": "Rahm",
         "country": "Spain",
         "position": 48,
-        "total_to_par": 4,
+        "total_to_par": 3,
         "status": "active",
-        "strokes": 247,
+        "strokes": 251,
         "rounds_completed": 4,
         "pga_id": "46970"
       },
@@ -570,7 +570,7 @@
         "position": 51,
         "total_to_par": 6,
         "status": "active",
-        "strokes": 258,
+        "strokes": 262,
         "rounds_completed": 4,
         "pga_id": "46414"
       },
@@ -581,7 +581,7 @@
         "position": 52,
         "total_to_par": 7,
         "status": "active",
-        "strokes": 250,
+        "strokes": 255,
         "rounds_completed": 4,
         "pga_id": "21209"
       },
@@ -601,7 +601,7 @@
         "last_name": "Schwartzel",
         "country": "South Africa",
         "position": 54,
-        "total_to_par": 11,
+        "total_to_par": 12,
         "status": "active",
         "strokes": 263,
         "rounds_completed": 4,
