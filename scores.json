@@ -5,10 +5,10 @@
       "name": "Masters Tournament",
       "start_date": "2026-04-09T04:00Z",
       "live_details": {
-        "status": "inprogress",
+        "status": "completed",
         "current_round": 4,
         "total_rounds": 4,
-        "updated": "2026-04-12T22:55:03.000Z",
+        "updated": "2026-04-12T23:00:04.000Z",
         "players": 91
       }
     },
@@ -405,27 +405,10 @@
         "pga_id": "51766"
       },
       {
-        "first_name": "Matt",
-        "last_name": "McCarty",
-        "country": "United States",
-        "position": 24,
-        "total_to_par": -2,
-        "status": "active",
-        "strokes": 286,
-        "rounds_completed": 4,
-        "round_scores": [
-          72,
-          73,
-          72,
-          69
-        ],
-        "pga_id": "59141"
-      },
-      {
         "first_name": "Adam",
         "last_name": "Scott",
         "country": "Australia",
-        "position": 25,
+        "position": 24,
         "total_to_par": -2,
         "status": "active",
         "strokes": 286,
@@ -442,7 +425,7 @@
         "first_name": "Sam",
         "last_name": "Stevens",
         "country": "United States",
-        "position": 26,
+        "position": 25,
         "total_to_par": -2,
         "status": "active",
         "strokes": 286,
@@ -459,7 +442,7 @@
         "first_name": "Brian",
         "last_name": "Campbell",
         "country": "United States",
-        "position": 27,
+        "position": 26,
         "total_to_par": -2,
         "status": "active",
         "strokes": 286,
@@ -476,7 +459,7 @@
         "first_name": "Michael",
         "last_name": "Brennan",
         "country": "United States",
-        "position": 28,
+        "position": 27,
         "total_to_par": -2,
         "status": "active",
         "strokes": 286,
@@ -493,7 +476,7 @@
         "first_name": "Chris",
         "last_name": "Gotterup",
         "country": "United States",
-        "position": 29,
+        "position": 28,
         "total_to_par": -2,
         "status": "active",
         "strokes": 286,
@@ -505,6 +488,23 @@
           73
         ],
         "pga_id": "59095"
+      },
+      {
+        "first_name": "Matt",
+        "last_name": "McCarty",
+        "country": "United States",
+        "position": 29,
+        "total_to_par": -2,
+        "status": "active",
+        "strokes": 286,
+        "rounds_completed": 4,
+        "round_scores": [
+          72,
+          73,
+          72,
+          69
+        ],
+        "pga_id": "59141"
       },
       {
         "first_name": "Alex",
