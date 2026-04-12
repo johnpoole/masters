@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 4,
         "total_rounds": 4,
-        "updated": "2026-04-12T13:25:03.000Z",
+        "updated": "2026-04-12T13:30:03.000Z",
         "players": 91
       }
     },
@@ -564,37 +564,37 @@
         "pga_id": "21209"
       },
       {
-        "first_name": "Gary",
-        "last_name": "Woodland",
+        "first_name": "Kurt",
+        "last_name": "Kitayama",
         "country": "United States",
         "position": 51,
         "total_to_par": 6,
         "status": "active",
-        "strokes": 222,
-        "rounds_completed": 3,
+        "strokes": 226,
+        "rounds_completed": 4,
+        "pga_id": "48117"
+      },
+      {
+        "first_name": "Gary",
+        "last_name": "Woodland",
+        "country": "United States",
+        "position": 52,
+        "total_to_par": 6,
+        "status": "active",
+        "strokes": 226,
+        "rounds_completed": 4,
         "pga_id": "31323"
       },
       {
         "first_name": "Aaron",
         "last_name": "Rai",
         "country": "England",
-        "position": 52,
+        "position": 53,
         "total_to_par": 7,
         "status": "active",
         "strokes": 227,
         "rounds_completed": 4,
         "pga_id": "46414"
-      },
-      {
-        "first_name": "Kurt",
-        "last_name": "Kitayama",
-        "country": "United States",
-        "position": 53,
-        "total_to_par": 7,
-        "status": "active",
-        "strokes": 223,
-        "rounds_completed": 3,
-        "pga_id": "48117"
       },
       {
         "first_name": "Charl",
