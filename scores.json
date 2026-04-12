@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 4,
         "total_rounds": 4,
-        "updated": "2026-04-12T20:25:03.000Z",
+        "updated": "2026-04-12T20:30:03.000Z",
         "players": 91
       }
     },
@@ -30,10 +30,42 @@
         "pga_id": "22405"
       },
       {
+        "first_name": "Cameron",
+        "last_name": "Young",
+        "country": "United States",
+        "position": 2,
+        "total_to_par": -11,
+        "status": "active",
+        "strokes": 237,
+        "rounds_completed": 4,
+        "round_scores": [
+          73,
+          67,
+          65
+        ],
+        "pga_id": "57366"
+      },
+      {
+        "first_name": "Rory",
+        "last_name": "McIlroy",
+        "country": "Northern Ireland",
+        "position": 3,
+        "total_to_par": -11,
+        "status": "active",
+        "strokes": 237,
+        "rounds_completed": 4,
+        "round_scores": [
+          67,
+          65,
+          73
+        ],
+        "pga_id": "28237"
+      },
+      {
         "first_name": "Tyrrell",
         "last_name": "Hatton",
         "country": "England",
-        "position": 2,
+        "position": 4,
         "total_to_par": -10,
         "status": "active",
         "strokes": 270,
@@ -50,7 +82,7 @@
         "first_name": "Russell",
         "last_name": "Henley",
         "country": "United States",
-        "position": 3,
+        "position": 5,
         "total_to_par": -10,
         "status": "active",
         "strokes": 250,
@@ -61,38 +93,6 @@
           66
         ],
         "pga_id": "34098"
-      },
-      {
-        "first_name": "Cameron",
-        "last_name": "Young",
-        "country": "United States",
-        "position": 4,
-        "total_to_par": -10,
-        "status": "active",
-        "strokes": 233,
-        "rounds_completed": 4,
-        "round_scores": [
-          73,
-          67,
-          65
-        ],
-        "pga_id": "57366"
-      },
-      {
-        "first_name": "Rory",
-        "last_name": "McIlroy",
-        "country": "Northern Ireland",
-        "position": 5,
-        "total_to_par": -10,
-        "status": "active",
-        "strokes": 233,
-        "rounds_completed": 4,
-        "round_scores": [
-          67,
-          65,
-          73
-        ],
-        "pga_id": "28237"
       },
       {
         "first_name": "Scottie",
@@ -134,7 +134,7 @@
         "position": 8,
         "total_to_par": -8,
         "status": "active",
-        "strokes": 240,
+        "strokes": 244,
         "rounds_completed": 4,
         "round_scores": [
           67,
@@ -182,12 +182,13 @@
         "position": 11,
         "total_to_par": -6,
         "status": "active",
-        "strokes": 262,
+        "strokes": 266,
         "rounds_completed": 4,
         "round_scores": [
           73,
           69,
-          69
+          69,
+          55
         ],
         "pga_id": "47420"
       },
@@ -198,7 +199,7 @@
         "position": 12,
         "total_to_par": -6,
         "status": "active",
-        "strokes": 242,
+        "strokes": 246,
         "rounds_completed": 4,
         "round_scores": [
           70,
@@ -363,38 +364,21 @@
         "position": 22,
         "total_to_par": -4,
         "status": "active",
-        "strokes": 280,
+        "strokes": 284,
         "rounds_completed": 4,
         "round_scores": [
           74,
           69,
           70,
-          67
+          71
         ],
         "pga_id": "40098"
-      },
-      {
-        "first_name": "Ludvig",
-        "last_name": "Åberg",
-        "country": "Sweden",
-        "position": 23,
-        "total_to_par": -4,
-        "status": "active",
-        "strokes": 276,
-        "rounds_completed": 4,
-        "round_scores": [
-          74,
-          70,
-          69,
-          63
-        ],
-        "pga_id": "52955"
       },
       {
         "first_name": "Keegan",
         "last_name": "Bradley",
         "country": "United States",
-        "position": 24,
+        "position": 23,
         "total_to_par": -3,
         "status": "active",
         "strokes": 285,
@@ -408,18 +392,36 @@
         "pga_id": "33141"
       },
       {
+        "first_name": "Ludvig",
+        "last_name": "Åberg",
+        "country": "Sweden",
+        "position": 24,
+        "total_to_par": -3,
+        "status": "active",
+        "strokes": 281,
+        "rounds_completed": 4,
+        "round_scores": [
+          74,
+          70,
+          69,
+          68
+        ],
+        "pga_id": "52955"
+      },
+      {
         "first_name": "Ben",
         "last_name": "Griffin",
         "country": "United States",
         "position": 25,
         "total_to_par": -3,
         "status": "active",
-        "strokes": 265,
+        "strokes": 269,
         "rounds_completed": 4,
         "round_scores": [
           72,
           69,
-          70
+          70,
+          58
         ],
         "pga_id": "49771"
       },
@@ -515,13 +517,13 @@
         "position": 31,
         "total_to_par": -2,
         "status": "active",
-        "strokes": 278,
+        "strokes": 282,
         "rounds_completed": 4,
         "round_scores": [
           71,
           73,
           69,
-          65
+          69
         ],
         "pga_id": "46443"
       },
@@ -713,10 +715,27 @@
         "pga_id": "49960"
       },
       {
+        "first_name": "Nick",
+        "last_name": "Taylor",
+        "country": "Canada",
+        "position": 43,
+        "total_to_par": 2,
+        "status": "active",
+        "strokes": 290,
+        "rounds_completed": 4,
+        "round_scores": [
+          71,
+          72,
+          70,
+          77
+        ],
+        "pga_id": "25493"
+      },
+      {
         "first_name": "Kristoffer",
         "last_name": "Reitan",
         "country": "Norway",
-        "position": 43,
+        "position": 44,
         "total_to_par": 2,
         "status": "active",
         "strokes": 290,
@@ -733,7 +752,7 @@
         "first_name": "Ryan",
         "last_name": "Gerard",
         "country": "United States",
-        "position": 44,
+        "position": 45,
         "total_to_par": 2,
         "status": "active",
         "strokes": 274,
@@ -750,7 +769,7 @@
         "first_name": "Sung-jae",
         "last_name": "Im",
         "country": "South Korea",
-        "position": 45,
+        "position": 46,
         "total_to_par": 3,
         "status": "active",
         "strokes": 291,
@@ -762,23 +781,6 @@
           77
         ],
         "pga_id": "39971"
-      },
-      {
-        "first_name": "Nick",
-        "last_name": "Taylor",
-        "country": "Canada",
-        "position": 46,
-        "total_to_par": 3,
-        "status": "active",
-        "strokes": 287,
-        "rounds_completed": 4,
-        "round_scores": [
-          71,
-          72,
-          70,
-          74
-        ],
-        "pga_id": "25493"
       },
       {
         "first_name": "Si-woo",
