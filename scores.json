@@ -8,7 +8,7 @@
         "status": "inprogress",
         "current_round": 4,
         "total_rounds": 4,
-        "updated": "2026-04-12T21:45:03.000Z",
+        "updated": "2026-04-12T21:50:03.000Z",
         "players": 91
       }
     },
@@ -351,27 +351,10 @@
         "pga_id": "40098"
       },
       {
-        "first_name": "Shane",
-        "last_name": "Lowry",
-        "country": "Ireland",
-        "position": 21,
-        "total_to_par": -4,
-        "status": "active",
-        "strokes": 264,
-        "rounds_completed": 4,
-        "round_scores": [
-          70,
-          69,
-          68,
-          57
-        ],
-        "pga_id": "33204"
-      },
-      {
         "first_name": "Keegan",
         "last_name": "Bradley",
         "country": "United States",
-        "position": 22,
+        "position": 21,
         "total_to_par": -3,
         "status": "active",
         "strokes": 285,
@@ -388,7 +371,7 @@
         "first_name": "Ludvig",
         "last_name": "Åberg",
         "country": "Sweden",
-        "position": 23,
+        "position": 22,
         "total_to_par": -3,
         "status": "active",
         "strokes": 285,
@@ -405,7 +388,7 @@
         "first_name": "Wyndham",
         "last_name": "Clark",
         "country": "United States",
-        "position": 24,
+        "position": 23,
         "total_to_par": -3,
         "status": "active",
         "strokes": 285,
@@ -417,6 +400,23 @@
           73
         ],
         "pga_id": "51766"
+      },
+      {
+        "first_name": "Shane",
+        "last_name": "Lowry",
+        "country": "Ireland",
+        "position": 24,
+        "total_to_par": -3,
+        "status": "active",
+        "strokes": 269,
+        "rounds_completed": 4,
+        "round_scores": [
+          70,
+          69,
+          68,
+          62
+        ],
+        "pga_id": "33204"
       },
       {
         "first_name": "Matt",
